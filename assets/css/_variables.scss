@@ -1,0 +1,22 @@
+// Boostrap Override
+:root {
+  --bs-body-bg: #F5F5F5;
+}
+
+// Typography
+$dc-heading: "Playfair Display", serif;
+$dc-body: "Roboto", serif;
+
+$ww-light: 300;
+$ww-medium: 500;
+$ww-bold: 700;
+
+// Colors
+$dc-background-off-white: #F5F5F5;
+$dc-background-dark-blue: #000F20;
+$ww-text: #000F20;
+$ww-primary: #EE243D;
+$ww-secondary: #00375B;
+
+//Other
+$ww-transition-all: all .3s;
