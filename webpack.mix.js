@@ -1,9 +1,9 @@
 const mix = require('laravel-mix');
 
-// mix.js([
-//     'assets/js/header/menu.js',
-//     'assets/js/header/mobile-menu.js',
-// ], 'js/header.js');
+mix.js([
+    'assets/js/homepage/hero.js',
+    'assets/js/homepage/trusted-by.js',
+], 'js/homepage.js');
 
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({

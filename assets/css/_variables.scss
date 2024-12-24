@@ -5,18 +5,21 @@
 
 // Typography
 $dc-heading: "Playfair Display", serif;
-$dc-body: "Roboto", serif;
+$dc-body: "Montserrat", serif;
 
-$ww-light: 300;
-$ww-medium: 500;
-$ww-bold: 700;
+$dc-light: 300;
+$dc-normal: 400;
+$dc-medium: 500;
+$dc-semi-bold: 600;
+$dc-bold: 700;
 
 // Colors
 $dc-background-off-white: #F5F5F5;
 $dc-background-dark-blue: #000F20;
-$ww-text: #000F20;
-$ww-primary: #EE243D;
-$ww-secondary: #00375B;
+$dc-text-light: #F5F5F5;
+$dc-text-dark: #000F20;
+$dc-primary: #EE243D;
+$dc-secondary: #00375B;
 
 //Other
-$ww-transition-all: all .3s;
+$dc-transition-all: all .3s;

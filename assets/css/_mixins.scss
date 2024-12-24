@@ -1,0 +1,13 @@
+@mixin dc-button($color, $hover-color) {
+  font-family: $dc-body;
+  font-weight: $dc-semi-bold;
+  background-color: $color;
+  color: $dc-text-light;
+  padding: 10px 23px;
+  transition: $dc-transition-all;
+  border: none;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
