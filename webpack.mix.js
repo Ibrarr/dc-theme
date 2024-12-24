@@ -3,6 +3,7 @@ const mix = require('laravel-mix');
 mix.js([
     'assets/js/homepage/hero.js',
     'assets/js/homepage/trusted-by.js',
+    'assets/js/homepage/services.js',
 ], 'js/homepage.js');
 
 mix.sass('assets/css/app.scss', 'css/app.css')

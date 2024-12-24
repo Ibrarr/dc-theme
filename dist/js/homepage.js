@@ -4329,6 +4329,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+
+// Scroll animation
 document.addEventListener('DOMContentLoaded', function () {
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.first-row-images', {
     y: -200,
@@ -4352,6 +4354,138 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Load Animation
+document.addEventListener('DOMContentLoaded', function () {
+  // Reset initial positions to prevent jumping
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.first-row-images', {
+    y: -125
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.second-row-images', {
+    y: 125
+  });
+
+  // Timeline for the hero section animations
+  var heroTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top 100%',
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in h1 and first-row-images
+  heroTimeline.from('.content h1', {
+    opacity: 0,
+    x: -30,
+    duration: 0.6,
+    ease: 'power2.out'
+  }).from('.first-row-images', {
+    opacity: 0,
+    y: 0,
+    // Transition from y: 0 to their already set y position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4');
+
+  // Step 2: Fade in p and second-row-images
+  heroTimeline.from('.content p', {
+    opacity: 0,
+    x: -30,
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.3').from('.second-row-images', {
+    opacity: 0,
+    y: 0,
+    // Transition from y: 0 to their already set y position
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.4');
+
+  // Step 3: Simplified fade-up animation for the button
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.content .button', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.content .button',
+      start: 'top 100%',
+      toggleActions: 'play none none none'
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./assets/js/homepage/services.js":
+/*!****************************************!*\
+  !*** ./assets/js/homepage/services.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the heading animations in .services
+  var servicesTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.services',
+      start: 'top 90%',
+      // Start when .services enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading .tag from left to right
+  servicesTimeline.from('.services .heading .tag', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading h2 from left to right, slightly delayed
+  servicesTimeline.from('.services .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.3'); // Overlap the animation slightly with the previous step
+
+  // Step 3: Fade in .heading p from left to right, slightly delayed
+  servicesTimeline.from('.services .heading p', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5'); // Overlap the animation slightly with the previous step
+
+  // Separate scroll animation for .service-list staggered fade-up
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.services .service-list', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.2,
+    // Staggered delay between items
+    scrollTrigger: {
+      trigger: '.services .service-list',
+      start: 'top 90%',
+      // Start when the first .service-list enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./assets/js/homepage/trusted-by.js":
@@ -4363,12 +4497,17 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 /* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
   new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#trusted-by-slider', {
     type: 'loop',
     perPage: 4,
+    gap: 30,
     drag: 'free',
     focus: 'center',
     arrows: false,
@@ -4378,12 +4517,28 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     breakpoints: {
       991: {
-        gap: 30,
         perPage: 3
       }
     }
   }).mount({
     AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll
+  });
+});
+
+// Load Animation
+gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Fade-up animation for the .trusted-by section
+  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].from('.trusted-by', {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.trusted-by',
+      start: 'top 100%',
+      toggleActions: 'play none none none'
+    }
   });
 });
 
@@ -14145,6 +14300,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/hero.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/trusted-by.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/services.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

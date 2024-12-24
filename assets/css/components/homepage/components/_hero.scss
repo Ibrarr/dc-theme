@@ -24,6 +24,7 @@
         font-size: 56px;
         margin-bottom: 20px;
         color: $dc-text-dark;
+        opacity: 1;
 
         @include media-breakpoint-down(lg) {
           font-size: 50px;
@@ -34,11 +35,13 @@
         font-family: $dc-body;
         font-size: 16px;
         color: $dc-text-dark;
+        opacity: 1;
       }
 
-      button {
+      .button {
         margin-top: 20px;
-        @include dc-button($dc-secondary, lighten($dc-secondary, 10%))
+        @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+        opacity: 1;
       }
     }
   }
@@ -55,6 +58,7 @@
       padding-right: 10px;
       height: 700px;
       margin-top: -100px;
+      opacity: 1;
 
       img {
         width: 100%;
@@ -67,6 +71,7 @@
     .second-row-images {
       height: 700px;
       margin-top: -200px;
+      opacity: 1;
 
       img {
         width: 100%;

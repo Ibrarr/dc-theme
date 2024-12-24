@@ -6,8 +6,19 @@
   padding: 10px 23px;
   transition: $dc-transition-all;
   border: none;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
 
   &:hover {
     background-color: $hover-color;
   }
+}
+
+@mixin tag($color) {
+  font-family: $dc-heading;
+  font-weight: $dc-semi-bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: $color;
 }
