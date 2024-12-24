@@ -4317,6 +4317,78 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./assets/js/homepage/feedback.js":
+/*!****************************************!*\
+  !*** ./assets/js/homepage/feedback.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#feedback-slider', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: 50,
+    drag: 'free',
+    arrows: true,
+    pagination: true,
+    snap: true,
+    breakpoints: {
+      991: {
+        perPage: 2
+      },
+      798: {
+        perPage: 1
+      }
+    }
+  }).mount();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the feedback section animations
+  var feedbackTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.feedback',
+      start: 'top 90%',
+      // Start when the .feedback section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading h2 from left to right
+  feedbackTimeline.from('.feedback .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading p from left to right, slightly delayed
+  feedbackTimeline.from('.feedback .heading p', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.4'); // Overlap the animation slightly with the previous step
+
+  // Step 3: Fade up #feedback-slider from down to up
+  feedbackTimeline.from('#feedback-slider', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.3'); // Overlap the animation slightly with the previous step
+});
+
+/***/ }),
+
 /***/ "./assets/js/homepage/hero.js":
 /*!************************************!*\
   !*** ./assets/js/homepage/hero.js ***!
@@ -14301,6 +14373,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/hero.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/trusted-by.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/services.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/feedback.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

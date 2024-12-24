@@ -1,0 +1,96 @@
+.feedback {
+  margin-bottom: 80px;
+
+  .heading {
+    margin-bottom: 50px;
+
+    h2 {
+      font-family: $dc-heading;
+      font-weight: $dc-bold;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: $dc-text-dark;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 44px;
+      }
+    }
+
+    p {
+      font-family: $dc-body;
+      font-size: 16px;
+      color: $dc-text-dark;
+      max-width: 560px;
+
+      a {
+        color: $dc-primary;
+      }
+    }
+  }
+
+  #feedback-slider {
+    .splide__slide {
+      .stars {
+        margin-bottom: 20px;
+        width: 115px;
+      }
+
+      .testimonial {
+        font-family: $dc-heading;
+        font-size: 20px;
+        color: $dc-text-dark;
+        font-weight: $dc-bold;
+        margin-bottom: 15px;
+      }
+
+      .person {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border-radius: 50px;
+      }
+
+      .name {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        font-weight: $dc-semi-bold;
+        margin-bottom: 0;
+      }
+
+      .job-company {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        margin-bottom: 15px;
+      }
+
+      .logo {
+        height: 60px;
+      }
+    }
+
+    .splide__pagination {
+      display: block !important;
+      opacity: 1 !important;
+      margin-top: -50px;
+      position: relative;
+
+      .splide__pagination__page {
+        width: 8px;
+        height: 8px;
+        background: #CCCCCC;
+        border-radius: 50%;
+        margin: 5px;
+        opacity: 1;
+
+        &.is-active {
+          background: $dc-primary;
+        }
+      }
+    }
+
+    @import "../../misc/splide-arrow";
+  }
+}

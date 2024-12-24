@@ -1,0 +1,44 @@
+.splide__arrows {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+
+  .splide__arrow {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    background-color: $dc-background-off-white;
+    border: 2px solid $dc-primary;
+    transition: $dc-transition-all;
+    opacity: 1;
+
+    &:hover {
+      background-color: $dc-primary;
+    }
+
+    &:hover path {
+      fill: $dc-text-light;
+    }
+
+    svg {
+      height: 1em;
+      width: 1em;
+      margin-bottom: -2px;
+    }
+
+    path {
+      transition: $dc-transition-all;
+    }
+
+    &.splide__arrow--prev {
+      margin-right: 50px;
+
+      svg {
+        transform: none;
+      }
+    }
+
+    &.splide__arrow--next {
+    }
+  }
+}
