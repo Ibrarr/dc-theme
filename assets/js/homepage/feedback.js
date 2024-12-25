@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedbackTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: '.feedback',
-            start: 'top 100%', // Start when the .feedback section enters the viewport
+            start: 'top 90%', // Start when the .feedback section enters the viewport
             toggleActions: 'play none none none', // Play once on scroll
         }
     });
