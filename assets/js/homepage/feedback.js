@@ -48,11 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out',
     }, '-=0.4'); // Overlap the animation slightly with the previous step
 
-    // Step 3: Fade up #feedback-slider from down to up
-    feedbackTimeline.from('#feedback-slider', {
+    // New animation for #feedback-slider
+    gsap.from('#feedback-slider', {
+        scrollTrigger: {
+            trigger: '#feedback-slider',
+            start: 'top 90%', // Start when #feedback-slider enters the viewport
+            toggleActions: 'play none none none', // Play once on scroll
+        },
         opacity: 0,
         y: 50, // Start below its final position
         duration: 0.6,
         ease: 'power2.out',
-    }, '-=0.3'); // Overlap the animation slightly with the previous step
+    });
 });
