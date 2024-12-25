@@ -13632,6 +13632,9 @@ textarea.form-control-lg {
 .home.page .services .service-list .button:hover {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
 }
+.home.page .services .service-list:last-child .button {
+  margin-bottom: 0;
+}
 .home.page .feedback {
   margin-bottom: 80px;
 }

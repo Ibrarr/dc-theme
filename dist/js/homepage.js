@@ -4353,7 +4353,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var feedbackTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
     scrollTrigger: {
       trigger: '.feedback',
-      start: 'top 90%',
+      start: 'top 100%',
       // Start when the .feedback section enters the viewport
       toggleActions: 'play none none none' // Play once on scroll
     }

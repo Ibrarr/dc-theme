@@ -57,5 +57,9 @@
       margin-bottom: 40px;
       @include dc-button($dc-primary, darken($dc-primary, 10%));
     }
+
+    &:last-child .button {
+      margin-bottom: 0;
+    }
   }
 }
