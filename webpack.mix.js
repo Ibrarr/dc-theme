@@ -5,6 +5,7 @@ mix.js([
     'assets/js/homepage/trusted-by.js',
     'assets/js/homepage/services.js',
     'assets/js/homepage/feedback.js',
+    'assets/js/homepage/our-approach.js',
 ], 'js/homepage.js');
 
 mix.sass('assets/css/app.scss', 'css/app.css')

@@ -4499,6 +4499,113 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./assets/js/homepage/our-approach.js":
+/*!********************************************!*\
+  !*** ./assets/js/homepage/our-approach.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the our-approach section animations
+  var approachTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.our-approach',
+      start: 'top 90%',
+      // Start when the .our-approach section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading h1 from left to right
+  approachTimeline.from('.our-approach .heading h1', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading h2 from left to right, then .approach .timeline up
+  approachTimeline.from('.our-approach .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4') // Overlap slightly with the previous animation
+  .from('.our-approach .approach .timeline', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.6'); // Overlap slightly with the previous animation
+
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.our-approach .heading .button', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.content .button',
+      start: 'top 90%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  // Sequential Scroll animations for .item divs in .timeline
+  var items = document.querySelectorAll('.timeline .item');
+  var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.timeline',
+      start: 'top 90%',
+      // Start lower on the screen
+      end: 'bottom 90%',
+      scrub: true,
+      pin: false,
+      // No pinning required
+      onUpdate: function onUpdate(self) {
+        if (self.progress === 1) {
+          // Ensure all lines are filled when at the bottom
+          items.forEach(function (item) {
+            item.style.setProperty('--line-fill-percentage', '100%');
+          });
+        }
+      }
+    }
+  });
+  items.forEach(function (item, index) {
+    var img = item.querySelector('img');
+
+    // Animate grayscale removal on the image
+    timeline.fromTo(img, {
+      filter: 'grayscale(1)'
+    }, {
+      filter: 'grayscale(0)',
+      duration: 0.3,
+      ease: 'power2.out'
+    }, "+=".concat(index * 0.8) // Delay each animation slightly for sequence
+    );
+
+    // Animate the filling of the vertical line
+    timeline.to(item, {
+      '--line-fill-percentage': '100%',
+      duration: 3,
+      // Slower and smoother fill duration
+      ease: 'power1.inOut' // Smooth easing for the fill
+    }, "+=".concat(index * 0.8)); // Ensure it starts after the previous completes
+  });
+});
+
+/***/ }),
+
 /***/ "./assets/js/homepage/services.js":
 /*!****************************************!*\
   !*** ./assets/js/homepage/services.js ***!
@@ -4617,7 +4724,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'power2.out',
     scrollTrigger: {
       trigger: '.trusted-by',
-      start: 'top 100%',
+      start: 'top 90%',
       toggleActions: 'play none none none'
     }
   });
@@ -14383,6 +14490,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/trusted-by.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/services.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/feedback.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/our-approach.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

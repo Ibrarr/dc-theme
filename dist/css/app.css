@@ -13422,9 +13422,6 @@ textarea.form-control-lg {
   display: none !important;
 }
 
-.home.page {
-  height: 2000px;
-}
 .home.page .hero {
   overflow: hidden;
   margin-bottom: 80px;
@@ -13703,6 +13700,7 @@ textarea.form-control-lg {
   opacity: 1 !important;
   margin-top: -50px;
   position: relative;
+  padding: 0;
 }
 .home.page .feedback #feedback-slider .splide__pagination .splide__pagination__page {
   width: 8px;
@@ -13756,4 +13754,92 @@ textarea.form-control-lg {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+.home.page .our-approach {
+  margin-bottom: 80px;
+}
+@media (max-width: 991.98px) {
+  .home.page .our-approach .heading {
+    margin-bottom: 50px;
+  }
+}
+.home.page .our-approach .heading .tag {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+}
+.home.page .our-approach .heading h2, .home.page .our-approach .heading .h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #000F20;
+}
+@media (max-width: 991.98px) {
+  .home.page .our-approach .heading h2, .home.page .our-approach .heading .h2 {
+    font-size: 44px;
+  }
+}
+.home.page .our-approach .heading .button {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  background-color: #EE243D;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home.page .our-approach .heading .button:hover {
+  background-color: rgb(206.936440678, 16.063559322, 39.686440678);
+}
+.home.page .our-approach .approach .timeline .item {
+  position: relative;
+  overflow: hidden;
+}
+.home.page .our-approach .approach .timeline .item:not(:last-child):before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 60px;
+  height: 55%;
+  width: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE243D), to(grey));
+  background: linear-gradient(to bottom, #EE243D var(--line-fill-percentage, 0%), grey var(--line-fill-percentage, 0%));
+}
+.home.page .our-approach .approach .timeline .item .content {
+  position: relative;
+  min-height: 166px;
+}
+.home.page .our-approach .approach .timeline .item .content img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #F5F5F5;
+}
+.home.page .our-approach .approach .timeline .item .content .text {
+  margin-left: 90px;
+}
+.home.page .our-approach .approach .timeline .item .content .text h3, .home.page .our-approach .approach .timeline .item .content .text .h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #000F20;
+  font-weight: 700;
+}
+.home.page .our-approach .approach .timeline .item .content .text p {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
 }
