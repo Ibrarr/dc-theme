@@ -13639,6 +13639,13 @@ textarea.form-control-lg {
 .home.page .feedback .heading {
   margin-bottom: 50px;
 }
+.home.page .feedback .heading .tag {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+}
 .home.page .feedback .heading h2, .home.page .feedback .heading .h2 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
@@ -13756,7 +13763,7 @@ textarea.form-control-lg {
   transform: none;
 }
 .home.page .our-approach {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading {
@@ -13815,9 +13822,11 @@ textarea.form-control-lg {
   background: -webkit-gradient(linear, left top, left bottom, from(#EE243D), to(grey));
   background: linear-gradient(to bottom, #EE243D var(--line-fill-percentage, 0%), grey var(--line-fill-percentage, 0%));
 }
+.home.page .our-approach .approach .timeline .item:not(:last-child) .content {
+  min-height: 166px;
+}
 .home.page .our-approach .approach .timeline .item .content {
   position: relative;
-  min-height: 166px;
 }
 .home.page .our-approach .approach .timeline .item .content img {
   width: 50px;
@@ -13842,4 +13851,166 @@ textarea.form-control-lg {
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
+}
+.home.page .case-notes {
+  margin-bottom: 80px;
+}
+.home.page .case-notes .heading {
+  margin-bottom: 50px;
+}
+.home.page .case-notes .heading .tag {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+}
+.home.page .case-notes .heading h2, .home.page .case-notes .heading .h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+}
+@media (max-width: 991.98px) {
+  .home.page .case-notes .heading h2, .home.page .case-notes .heading .h2 {
+    font-size: 44px;
+  }
+}
+.home.page .case-notes .heading p {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+.home.page .case-notes #case-notes-slider .splide__track {
+  overflow: visible;
+  position: relative;
+}
+.home.page .case-notes #case-notes-slider .splide__track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+  z-index: 1;
+  pointer-events: none;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a {
+  text-decoration: none;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a:hover img {
+  scale: 1.05;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a:hover .title {
+  text-decoration: underline;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a:hover i {
+  margin-left: 15px !important;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .image-wrapper {
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .image-wrapper img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .content .term {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #F5F5F5;
+  background-color: #00375B;
+  padding: 5px 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .content .title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #000F20;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .content .excerpt {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .content .read-more {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #000F20;
+}
+.home.page .case-notes #case-notes-slider .standard-case-note-card a .content .read-more i {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+.home.page .case-notes #case-notes-slider .splide__pagination {
+  display: block !important;
+  opacity: 1 !important;
+  margin-top: -50px;
+  position: relative;
+  padding: 0;
+}
+.home.page .case-notes #case-notes-slider .splide__pagination .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: #CCCCCC;
+  border-radius: 50%;
+  margin: 5px;
+  opacity: 1;
+}
+.home.page .case-notes #case-notes-slider .splide__pagination .splide__pagination__page.is-active {
+  background: #EE243D;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background-color: #F5F5F5;
+  border: 2px solid #EE243D;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow:hover {
+  background-color: #EE243D;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow:hover path {
+  fill: #F5F5F5;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow svg {
+  height: 1em;
+  width: 1em;
+  margin-bottom: -2px;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow.splide__arrow--prev {
+  margin-right: 50px;
+}
+.home.page .case-notes #case-notes-slider .splide__arrows .splide__arrow.splide__arrow--prev svg {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }

@@ -1,5 +1,5 @@
 .our-approach {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 
   .heading {
     @include media-breakpoint-down(lg) {
@@ -44,11 +44,14 @@
             width: 2px;
             background: linear-gradient(to bottom, #EE243D var(--line-fill-percentage, 0%), grey var(--line-fill-percentage, 0%));
           }
+
+          .content {
+            min-height: 166px;
+          }
         }
 
         .content {
           position: relative;
-          min-height: 166px;
 
           img {
             width: 50px;

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: '.timeline',
             start: 'top 90%', // Start lower on the screen
-            end: 'bottom 90%',
+            end: 'bottom 85%',
             scrub: true,
             pin: false, // No pinning required
             onUpdate: (self) => {

@@ -4,6 +4,10 @@
   .heading {
     margin-bottom: 50px;
 
+    .tag {
+      @include tag($dc-primary);
+    }
+
     h2 {
       font-family: $dc-heading;
       font-weight: $dc-bold;
@@ -71,27 +75,7 @@
       }
     }
 
-    .splide__pagination {
-      display: block !important;
-      opacity: 1 !important;
-      margin-top: -50px;
-      position: relative;
-      padding: 0;
-
-      .splide__pagination__page {
-        width: 8px;
-        height: 8px;
-        background: #CCCCCC;
-        border-radius: 50%;
-        margin: 5px;
-        opacity: 1;
-
-        &.is-active {
-          background: $dc-primary;
-        }
-      }
-    }
-
+    @import "../../misc/splide-pagination";
     @import "../../misc/splide-arrow";
   }
 }

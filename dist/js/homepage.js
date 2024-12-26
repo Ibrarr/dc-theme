@@ -4317,6 +4317,105 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./assets/js/homepage/case-notes-slider.js":
+/*!*************************************************!*\
+  !*** ./assets/js/homepage/case-notes-slider.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#case-notes-slider', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: 50,
+    drag: 'free',
+    arrows: true,
+    pagination: true,
+    snap: true,
+    breakpoints: {
+      991: {
+        perPage: 2
+      },
+      798: {
+        perPage: 1
+      }
+    }
+  }).mount();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  // Set initial state for cards to hidden
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set('.case-notes .splide .standard-case-note-card', {
+    opacity: 0,
+    y: 50 // Slightly below the final position
+  });
+
+  // Heading animations
+  var caseNotesTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.case-notes',
+      start: 'top 90%',
+      // Start when the .case-notes section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+  caseNotesTimeline.from('.case-notes .heading h1', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }).from('.case-notes .heading h2', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5').from('.case-notes .heading p', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5');
+
+  // Optimize staggered animation for cards
+  var cards = document.querySelectorAll('.case-notes #case-notes-slider .standard-case-note-card');
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(cards, {
+    opacity: 1,
+    y: 0,
+    // Animate to original position
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: {
+      amount: 0.5 // Spread total stagger across all cards
+    },
+    scrollTrigger: {
+      trigger: '.case-notes .splide',
+      start: 'top 90%',
+      // Trigger as soon as the container is visible
+      toggleActions: 'play none none none' // Play once
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].from('#case-notes-slider', {
+    scrollTrigger: {
+      trigger: '#feedback-slider',
+      start: 'top 90%',
+      // Start when #feedback-slider enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    },
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+});
+
+/***/ }),
+
 /***/ "./assets/js/homepage/feedback.js":
 /*!****************************************!*\
   !*** ./assets/js/homepage/feedback.js ***!
@@ -4567,7 +4666,7 @@ document.addEventListener('DOMContentLoaded', function () {
       trigger: '.timeline',
       start: 'top 90%',
       // Start lower on the screen
-      end: 'bottom 90%',
+      end: 'bottom 85%',
       scrub: true,
       pin: false,
       // No pinning required
@@ -14491,6 +14590,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/services.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/feedback.js"); })
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/our-approach.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/case-notes-slider.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

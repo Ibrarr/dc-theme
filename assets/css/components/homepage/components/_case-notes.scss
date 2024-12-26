@@ -1,0 +1,55 @@
+.case-notes {
+  margin-bottom: 80px;
+
+  .heading {
+    margin-bottom: 50px;
+
+    .tag {
+      @include tag($dc-primary);
+    }
+
+    h2 {
+      font-family: $dc-heading;
+      font-weight: $dc-bold;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: $dc-text-dark;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 44px;
+      }
+    }
+
+    p {
+      font-family: $dc-body;
+      font-size: 16px;
+      color: $dc-text-dark;
+    }
+  }
+
+  #case-notes-slider {
+    .splide__track {
+      overflow: visible;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: #F5F5F5;
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+
+    .standard-case-note-card {
+      @import "../../misc/standard-case-note-card";
+    }
+
+    @import "../../misc/splide-pagination";
+    @import "../../misc/splide-arrow";
+  }
+}
