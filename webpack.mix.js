@@ -7,6 +7,7 @@ mix.js([
     'assets/js/homepage/feedback.js',
     'assets/js/homepage/our-approach.js',
     'assets/js/homepage/case-notes-slider.js',
+    'assets/js/homepage/enquire-now.js',
 ], 'js/homepage.js');
 
 mix.sass('assets/css/app.scss', 'css/app.css')

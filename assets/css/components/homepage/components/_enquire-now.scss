@@ -1,0 +1,125 @@
+#enquire-now {
+  margin-bottom: 80px;
+
+  .content {
+    .heading {
+      margin-bottom: 30px;
+
+      .tag {
+        @include tag($dc-primary);
+      }
+
+      h2 {
+        font-family: $dc-heading;
+        font-weight: $dc-bold;
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: $dc-text-dark;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 44px;
+        }
+      }
+
+      p {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        margin: 0;
+      }
+    }
+
+    .what-to-expect {
+      margin-bottom: 30px;
+
+      p {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+      }
+
+      .bold {
+        font-weight: $dc-semi-bold;
+      }
+
+      .heading {
+        font-weight: $dc-semi-bold;
+        color: $dc-primary;
+        margin: 0;
+      }
+
+      ul {
+        li {
+          font-family: $dc-body;
+          font-size: 16px;
+          color: $dc-text-dark;
+        }
+      }
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .gform_wrapper {
+    .gform_heading {
+      display: none;
+    }
+
+    .gform_validation_errors {
+      margin-bottom: 30px;
+    }
+
+    .gform_fields {
+      row-gap: 20px !important;
+    }
+
+    label {
+      font-family: $dc-body;
+      font-size: 14px;
+      color: $dc-text-dark;
+      font-weight: $dc-semi-bold;
+    }
+
+    textarea {
+      font-family: $dc-body;
+      font-size: 14px;
+      color: $dc-text-dark;
+      min-height: 180px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: $dc-primary;
+      --gf-local-shadow: none;
+    }
+
+    input[type="submit"] {
+      @include dc-button($dc-primary, lighten($dc-primary, 10%));
+    }
+  }
+
+  .gform_confirmation_wrapper {
+    .gform_confirmation_message {
+      font-family: $dc-body;
+      font-size: 16px;
+      color: $dc-text-dark;
+    }
+  }
+}

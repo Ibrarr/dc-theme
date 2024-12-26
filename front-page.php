@@ -126,7 +126,7 @@ get_header();
 <section class="feedback">
     <div class="container px-4">
         <div class="heading">
-            <h2>Legal Services</h2>
+            <h2>Client Feedback</h2>
             <p>We’re proud to partner with clients who trust us to deliver exceptional results. Their feedback reflects our commitment to professionalism, precision, and putting client needs first. If you’re ready to experience the Drake & Case difference, <a href="">get in touch with us today.</a></p>
         </div>
         <div class="splide" id="feedback-slider">
@@ -287,6 +287,38 @@ get_header();
                 >
                     <?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/right-arrow.svg' ) ?>
                 </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="enquire-now">
+    <div class="container px-4">
+        <div class="row">
+            <div class="col-lg-6 content">
+                <div class="heading">
+                    <h1 class="tag">Get in Touch</h1>
+                    <h2>Enquire Now</h2>
+                    <p>We’re here to assist you with your legal needs.</p>
+                </div>
+                <div class="what-to-expect">
+                    <p class="bold">Book a quick chat to take the first step toward resolving your legal challenges with expert advice.</p>
+                    <ul>
+                        <li>Free 10-minute consultation</li>
+                        <li>Discuss your case and objectives</li>
+                        <li>No obligations – just clarity and next steps</li>
+                    </ul>
+                    <p class="heading">What happens next?</p>
+                    <p class="final-p">After your chat, you’ll receive clear, actionable advice tailored to your needs, sent directly to your inbox.</p>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:hello@drakeandcase.com"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> hello@drakeandcase.com</a>
+                    <a href="tel:0208 826 1200"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> 0208 826 1200</a>
+                    <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/location.svg' ) ?></i> 42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
+                </div>
+            </div>
+            <div class="col-lg-6 form">
+                <?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' ); ?>
             </div>
         </div>
     </div>

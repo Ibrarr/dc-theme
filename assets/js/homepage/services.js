@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         x: -50, // Start from the left
         duration: 0.6,
         ease: 'power2.out',
-    }, '-=0.3'); // Overlap the animation slightly with the previous step
+    }, '-=0.4'); // Overlap the animation slightly with the previous step
 
     // Step 3: Fade in .heading p from left to right, slightly delayed
     servicesTimeline.from('.services .heading p', {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         y: 50, // Start below its final position
         duration: 0.6,
         ease: 'power2.out',
-        stagger: 0.2, // Staggered delay between items
+        stagger: 0.1, // Staggered delay between items
         scrollTrigger: {
             trigger: '.services .service-list',
             start: 'top 90%', // Start when the first .service-list enters the viewport

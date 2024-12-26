@@ -13911,7 +13911,7 @@ textarea.form-control-lg {
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .image-wrapper {
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .image-wrapper img {
@@ -14013,4 +14013,120 @@ textarea.form-control-lg {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+.home.page #enquire-now {
+  margin-bottom: 80px;
+}
+.home.page #enquire-now .content .heading {
+  margin-bottom: 30px;
+}
+.home.page #enquire-now .content .heading .tag {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+}
+.home.page #enquire-now .content .heading h2, .home.page #enquire-now .content .heading .h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+}
+@media (max-width: 991.98px) {
+  .home.page #enquire-now .content .heading h2, .home.page #enquire-now .content .heading .h2 {
+    font-size: 44px;
+  }
+}
+.home.page #enquire-now .content .heading p {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+  margin: 0;
+}
+.home.page #enquire-now .content .what-to-expect {
+  margin-bottom: 30px;
+}
+.home.page #enquire-now .content .what-to-expect p {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+.home.page #enquire-now .content .what-to-expect .bold {
+  font-weight: 600;
+}
+.home.page #enquire-now .content .what-to-expect .heading {
+  font-weight: 600;
+  color: #EE243D;
+  margin: 0;
+}
+.home.page #enquire-now .content .what-to-expect ul li {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+.home.page #enquire-now .content .contact-info {
+  margin-bottom: 30px;
+}
+.home.page #enquire-now .content .contact-info i {
+  margin-right: 10px;
+}
+.home.page #enquire-now .content .contact-info a {
+  display: block;
+  text-decoration: none;
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+.home.page #enquire-now .content .contact-info a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.home.page #enquire-now .gform_wrapper .gform_heading {
+  display: none;
+}
+.home.page #enquire-now .gform_wrapper .gform_validation_errors {
+  margin-bottom: 30px;
+}
+.home.page #enquire-now .gform_wrapper .gform_fields {
+  row-gap: 20px !important;
+}
+.home.page #enquire-now .gform_wrapper label {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #000F20;
+  font-weight: 600;
+}
+.home.page #enquire-now .gform_wrapper textarea {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #000F20;
+  min-height: 180px;
+}
+.home.page #enquire-now .gform_wrapper input:focus, .home.page #enquire-now .gform_wrapper textarea:focus {
+  border-color: #EE243D;
+  --gf-local-shadow: none;
+}
+.home.page #enquire-now .gform_wrapper input[type=submit] {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  background-color: #EE243D;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home.page #enquire-now .gform_wrapper input[type=submit]:hover {
+  background-color: rgb(241.6737288136, 83.3262711864, 102.9237288136);
+}
+.home.page #enquire-now .gform_confirmation_wrapper .gform_confirmation_message {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #000F20;
 }
