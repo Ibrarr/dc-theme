@@ -92,6 +92,10 @@
             text-decoration: none;
             transition: $dc-transition-all;
 
+            @include media-breakpoint-down(lg) {
+              font-size: 14px;
+            }
+
             &:hover {
               color: $dc-primary;
             }

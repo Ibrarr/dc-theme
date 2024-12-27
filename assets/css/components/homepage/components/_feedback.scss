@@ -16,7 +16,7 @@
       color: $dc-text-dark;
 
       @include media-breakpoint-down(lg) {
-        font-size: 44px;
+        font-size: 40px;
       }
     }
 
@@ -25,6 +25,10 @@
       font-size: 16px;
       color: $dc-text-dark;
       max-width: 560px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 14px;
+      }
 
       a {
         color: $dc-primary;
@@ -61,6 +65,10 @@
         color: $dc-text-dark;
         font-weight: $dc-semi-bold;
         margin-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
 
       .job-company {
@@ -68,6 +76,10 @@
         font-size: 16px;
         color: $dc-text-dark;
         margin-bottom: 15px;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
 
       .logo {

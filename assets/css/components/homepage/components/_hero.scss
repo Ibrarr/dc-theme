@@ -27,7 +27,7 @@
         opacity: 1;
 
         @include media-breakpoint-down(lg) {
-          font-size: 50px;
+          font-size: 45px;
         }
       }
 
@@ -36,6 +36,10 @@
         font-size: 16px;
         color: $dc-text-dark;
         opacity: 1;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
 
       .button {

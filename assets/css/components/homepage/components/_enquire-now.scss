@@ -17,7 +17,7 @@
         color: $dc-text-dark;
 
         @include media-breakpoint-down(lg) {
-          font-size: 44px;
+          font-size: 40px;
         }
       }
 
@@ -26,6 +26,10 @@
         font-size: 16px;
         color: $dc-text-dark;
         margin: 0;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -36,6 +40,10 @@
         font-family: $dc-body;
         font-size: 16px;
         color: $dc-text-dark;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
 
       .bold {
@@ -53,6 +61,10 @@
           font-family: $dc-body;
           font-size: 16px;
           color: $dc-text-dark;
+
+          @include media-breakpoint-down(lg) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -71,6 +83,10 @@
         font-size: 16px;
         color: $dc-text-dark;
         transition: color .3s;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
 
         &:hover {
           color: $dc-primary;
@@ -130,6 +146,10 @@
       font-family: $dc-body;
       font-size: 16px;
       color: $dc-text-dark;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 14px;
+      }
     }
   }
 }

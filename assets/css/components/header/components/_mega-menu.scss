@@ -21,12 +21,20 @@
       color: $dc-primary;
       font-size: 18px;
       margin-bottom: 20px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+      }
     }
 
     p {
       font-family: $dc-body;
       font-size: 16px;
       color: $dc-text-dark;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 14px;
+      }
 
       a {
         text-decoration: none;
@@ -60,6 +68,10 @@
         transition: color .3s;
         display: block;
 
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
+
         &:hover {
           color: $dc-primary;
         }
@@ -70,6 +82,10 @@
         font-size: 16px;
         color: $dc-text-dark;
         margin: 0;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
       }
 
       .heading {
