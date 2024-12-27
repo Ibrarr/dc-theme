@@ -4317,631 +4317,6 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/js/homepage/case-notes-slider.js":
-/*!*************************************************!*\
-  !*** ./assets/js/homepage/case-notes-slider.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#case-notes-slider', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    gap: 50,
-    drag: 'free',
-    arrows: true,
-    pagination: true,
-    snap: true,
-    breakpoints: {
-      991: {
-        perPage: 2
-      },
-      798: {
-        perPage: 1
-      }
-    }
-  }).mount();
-});
-document.addEventListener('DOMContentLoaded', function () {
-  // Set initial state for cards to hidden
-  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set('.case-notes .splide .standard-case-note-card', {
-    opacity: 0,
-    y: 50 // Slightly below the final position
-  });
-
-  // Heading animations
-  var caseNotesTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.case-notes',
-      start: 'top 90%',
-      // Start when the .case-notes section enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-  caseNotesTimeline.from('.case-notes .heading h1', {
-    opacity: 0,
-    x: -50,
-    duration: 0.6,
-    ease: 'power2.out'
-  }).from('.case-notes .heading h2', {
-    opacity: 0,
-    x: -50,
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.5').from('.case-notes .heading p', {
-    opacity: 0,
-    x: -50,
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.5');
-
-  // Optimize staggered animation for cards
-  var cards = document.querySelectorAll('.case-notes #case-notes-slider .standard-case-note-card');
-  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(cards, {
-    opacity: 1,
-    y: 0,
-    // Animate to original position
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: {
-      amount: 0.5 // Spread total stagger across all cards
-    },
-    scrollTrigger: {
-      trigger: '.case-notes .splide',
-      start: 'top 90%',
-      // Trigger as soon as the container is visible
-      toggleActions: 'play none none none' // Play once
-    }
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].from('#case-notes-slider', {
-    scrollTrigger: {
-      trigger: '#feedback-slider',
-      start: 'top 90%',
-      // Start when #feedback-slider enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    },
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/enquire-now.js":
-/*!*******************************************!*\
-  !*** ./assets/js/homepage/enquire-now.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
-document.addEventListener('DOMContentLoaded', function () {
-  // Timeline for animations inside #enquire-now
-  var enquireTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '#enquire-now',
-      start: 'top 95%',
-      // Start when #enquire-now enters the viewport
-      toggleActions: 'play none none none'
-    }
-  });
-
-  // Step 1: Fade in .content .heading h1 from left to right
-  enquireTimeline.from('#enquire-now .content .heading h1', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-
-  // Step 2: Fade in .content .heading h2 from left to right with a tiny delay
-  enquireTimeline.from('#enquire-now .content .heading h2', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.4'); // Slight overlap with the previous step
-
-  // Step 3: Fade in .content .heading p from left and .form up from down
-  enquireTimeline.from(['#enquire-now .content .heading p', '#enquire-now .form'], {
-    opacity: 0,
-    x: function x(i) {
-      return i === 0 ? -50 : 0;
-    },
-    // Heading p fades from left, .form moves vertically
-    y: function y(i) {
-      return i === 1 ? 50 : 0;
-    },
-    // Only .form moves up
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: 0.2 // Slight stagger between elements
-  }, '-=0.5');
-
-  // Separate animation for .content .what-to-expect
-  var whatToExpectTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '#enquire-now .content .what-to-expect',
-      start: 'top 95%',
-      toggleActions: 'play none none none'
-    },
-    delay: 0.4 // Add delay before starting this timeline
-  });
-
-  // Step 1: Fade in .bold from left to right
-  whatToExpectTimeline.from('#enquire-now .content .what-to-expect .bold', {
-    opacity: 0,
-    x: -50,
-    duration: 0.5,
-    ease: 'power2.out'
-  });
-
-  // Step 2: Fade in ul from left to right with a tiny delay
-  whatToExpectTimeline.from('#enquire-now .content .what-to-expect ul', {
-    opacity: 0,
-    x: -50,
-    duration: 0.5,
-    ease: 'power2.out'
-  }, '-=0.4');
-
-  // Step 3: Fade in .heading and .final-p from left to right
-  whatToExpectTimeline.from(['#enquire-now .content .what-to-expect .heading', '#enquire-now .content .what-to-expect .final-p'], {
-    opacity: 0,
-    x: -50,
-    duration: 0.5,
-    ease: 'power2.out',
-    stagger: 0.2
-  }, '-=0.55');
-
-  // Separate animation for .content .contact-info a (staggered fade-in)
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('#enquire-now .content .contact-info a', {
-    opacity: 0,
-    x: -50,
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: 0.1,
-    delay: 0.6,
-    // Add delay before starting this animation
-    scrollTrigger: {
-      trigger: '#enquire-now .content .contact-info',
-      start: 'top 95%',
-      toggleActions: 'play none none none'
-    }
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/feedback.js":
-/*!****************************************!*\
-  !*** ./assets/js/homepage/feedback.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#feedback-slider', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    gap: 50,
-    drag: 'free',
-    arrows: true,
-    pagination: true,
-    snap: true,
-    breakpoints: {
-      991: {
-        perPage: 2
-      },
-      798: {
-        perPage: 1
-      }
-    }
-  }).mount();
-});
-document.addEventListener('DOMContentLoaded', function () {
-  // Timeline for the feedback section animations
-  var feedbackTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.feedback',
-      start: 'top 90%',
-      // Start when the .feedback section enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-
-  // Step 1: Fade in .heading h2 from left to right
-  feedbackTimeline.from('.feedback .heading h2', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.5,
-    ease: 'power2.out'
-  });
-
-  // Step 2: Fade in .heading p from left to right, slightly delayed
-  feedbackTimeline.from('.feedback .heading p', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.5,
-    ease: 'power2.out'
-  }, '-=0.4'); // Overlap the animation slightly with the previous step
-
-  // New animation for #feedback-slider
-  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].from('#feedback-slider', {
-    scrollTrigger: {
-      trigger: '#feedback-slider',
-      start: 'top 90%',
-      // Start when #feedback-slider enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    },
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/hero.js":
-/*!************************************!*\
-  !*** ./assets/js/homepage/hero.js ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
-
-// Scroll animation
-document.addEventListener('DOMContentLoaded', function () {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.first-row-images', {
-    y: -200,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top center',
-      end: 'bottom top',
-      scrub: 0.5
-    }
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.second-row-images', {
-    y: 200,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top center',
-      end: 'bottom top',
-      scrub: 0.5
-    }
-  });
-});
-
-// Load Animation
-document.addEventListener('DOMContentLoaded', function () {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.first-row-images', {
-    y: -125
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.second-row-images', {
-    y: 125
-  });
-
-  // Timeline for the hero section animations
-  var heroTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top 90%',
-      // Start when the .hero section enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-
-  // Step 1: Fade in .content h1 from left to right, then .first-row-images up
-  heroTimeline.from('.hero .content h1', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  }).from('.hero .first-row-images', {
-    opacity: 0,
-    y: 0,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.4'); // Overlap the animation slightly with the previous step
-
-  // Step 2: Fade in .content p from left to right, then .second-row-images up
-  heroTimeline.from('.hero .content p', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.5,
-    ease: 'power2.out'
-  }, '-=0.6') // Overlap the animation slightly with the previous step
-  .from('.hero .second-row-images', {
-    opacity: 0,
-    y: 0,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.5'); // Overlap the animation slightly with the previous step
-
-  // Step 3: Fade up .content .button from down to up
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.content .button', {
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.5,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.content .button',
-      start: 'top 100%',
-      toggleActions: 'play none none none'
-    }
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/our-approach.js":
-/*!********************************************!*\
-  !*** ./assets/js/homepage/our-approach.js ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
-document.addEventListener('DOMContentLoaded', function () {
-  // Timeline for the our-approach section animations
-  var approachTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.our-approach',
-      start: 'top 90%',
-      // Start when the .our-approach section enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-
-  // Step 1: Fade in .heading h1 from left to right
-  approachTimeline.from('.our-approach .heading h1', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-
-  // Step 2: Fade in .heading h2 from left to right, then .approach .timeline up
-  approachTimeline.from('.our-approach .heading h2', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.4') // Overlap slightly with the previous animation
-  .from('.our-approach .approach .timeline', {
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.6'); // Overlap slightly with the previous animation
-
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.our-approach .heading .button', {
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.5,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.content .button',
-      start: 'top 90%',
-      toggleActions: 'play none none none'
-    }
-  });
-
-  // Sequential Scroll animations for .item divs in .timeline
-  var items = document.querySelectorAll('.timeline .item');
-  var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.timeline',
-      start: 'top 90%',
-      // Start lower on the screen
-      end: 'bottom 85%',
-      scrub: true,
-      pin: false,
-      // No pinning required
-      onUpdate: function onUpdate(self) {
-        if (self.progress === 1) {
-          // Ensure all lines are filled when at the bottom
-          items.forEach(function (item) {
-            item.style.setProperty('--line-fill-percentage', '100%');
-          });
-        }
-      }
-    }
-  });
-  items.forEach(function (item, index) {
-    var img = item.querySelector('img');
-
-    // Animate grayscale removal on the image
-    timeline.fromTo(img, {
-      filter: 'grayscale(1)'
-    }, {
-      filter: 'grayscale(0)',
-      duration: 0.3,
-      ease: 'power2.out'
-    }, "+=".concat(index * 0.8) // Delay each animation slightly for sequence
-    );
-
-    // Animate the filling of the vertical line
-    timeline.to(item, {
-      '--line-fill-percentage': '100%',
-      duration: 3,
-      // Slower and smoother fill duration
-      ease: 'power1.inOut' // Smooth easing for the fill
-    }, "+=".concat(index * 0.8)); // Ensure it starts after the previous completes
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/services.js":
-/*!****************************************!*\
-  !*** ./assets/js/homepage/services.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
-document.addEventListener('DOMContentLoaded', function () {
-  // Timeline for the heading animations in .services
-  var servicesTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    scrollTrigger: {
-      trigger: '.services',
-      start: 'top 90%',
-      // Start when .services enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-
-  // Step 1: Fade in .heading .tag from left to right
-  servicesTimeline.from('.services .heading .tag', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.5,
-    ease: 'power2.out'
-  });
-
-  // Step 2: Fade in .heading h2 from left to right, slightly delayed
-  servicesTimeline.from('.services .heading h2', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.4'); // Overlap the animation slightly with the previous step
-
-  // Step 3: Fade in .heading p from left to right, slightly delayed
-  servicesTimeline.from('.services .heading p', {
-    opacity: 0,
-    x: -50,
-    // Start from the left
-    duration: 0.6,
-    ease: 'power2.out'
-  }, '-=0.5'); // Overlap the animation slightly with the previous step
-
-  // Separate scroll animation for .service-list staggered fade-up
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.services .service-list', {
-    opacity: 0,
-    y: 50,
-    // Start below its final position
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: 0.1,
-    // Staggered delay between items
-    scrollTrigger: {
-      trigger: '.services .service-list',
-      start: 'top 90%',
-      // Start when the first .service-list enters the viewport
-      toggleActions: 'play none none none' // Play once on scroll
-    }
-  });
-});
-
-/***/ }),
-
-/***/ "./assets/js/homepage/trusted-by.js":
-/*!******************************************!*\
-  !*** ./assets/js/homepage/trusted-by.js ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#trusted-by-slider', {
-    type: 'loop',
-    perPage: 4,
-    gap: 30,
-    drag: 'free',
-    focus: 'center',
-    arrows: false,
-    pagination: false,
-    autoScroll: {
-      speed: 0.5
-    },
-    breakpoints: {
-      991: {
-        perPage: 3
-      }
-    }
-  }).mount({
-    AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll
-  });
-});
-
-// Load Animation
-gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger);
-document.addEventListener('DOMContentLoaded', function () {
-  // Fade-up animation for the .trusted-by section
-  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].from('.trusted-by', {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.trusted-by',
-      start: 'top 90%',
-      toggleActions: 'play none none none'
-    }
-  });
-});
-
-/***/ }),
-
 /***/ "./node_modules/gsap/CSSPlugin.js":
 /*!****************************************!*\
   !*** ./node_modules/gsap/CSSPlugin.js ***!
@@ -14529,18 +13904,6 @@ var gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin
 TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 
-/***/ }),
-
-/***/ "./assets/css/app.scss":
-/*!*****************************!*\
-  !*** ./assets/css/app.scss ***!
-  \*****************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
 /***/ })
 
 /******/ 	});
@@ -14569,44 +13932,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	!function() {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = function(result, chunkIds, fn, priority) {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var chunkIds = deferred[i][0];
-/******/ 				var fn = deferred[i][1];
-/******/ 				var priority = deferred[i][2];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every(function(key) { return __webpack_require__.O[key](chunkIds[j]); })) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -14635,76 +13961,617 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	}();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	!function() {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/homepage": 0,
-/******/ 			"css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = function(chunkId) { return installedChunks[chunkId] === 0; };
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
-/******/ 			var chunkIds = data[0];
-/******/ 			var moreModules = data[1];
-/******/ 			var runtime = data[2];
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some(function(id) { return installedChunks[id] !== 0; })) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkwealthwise"] = self["webpackChunkwealthwise"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	}();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/hero.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/trusted-by.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/services.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/feedback.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/our-approach.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/case-notes-slider.js"); })
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/homepage/enquire-now.js"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!************************************!*\
+  !*** ./assets/js/homepage/hero.js ***!
+  \************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+
+// Scroll animation
+document.addEventListener('DOMContentLoaded', function () {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.first-row-images', {
+    y: -200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top center',
+      end: 'bottom top',
+      scrub: 0.5
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.second-row-images', {
+    y: 200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top center',
+      end: 'bottom top',
+      scrub: 0.5
+    }
+  });
+});
+
+// Load Animation
+document.addEventListener('DOMContentLoaded', function () {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.first-row-images', {
+    y: -125
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.second-row-images', {
+    y: 125
+  });
+
+  // Timeline for the hero section animations
+  var heroTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top 90%',
+      // Start when the .hero section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .content h1 from left to right, then .first-row-images up
+  heroTimeline.from('.hero .content h1', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }).from('.hero .first-row-images', {
+    opacity: 0,
+    y: 0,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4'); // Overlap the animation slightly with the previous step
+
+  // Step 2: Fade in .content p from left to right, then .second-row-images up
+  heroTimeline.from('.hero .content p', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.6') // Overlap the animation slightly with the previous step
+  .from('.hero .second-row-images', {
+    opacity: 0,
+    y: 0,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5'); // Overlap the animation slightly with the previous step
+
+  // Step 3: Fade up .content .button from down to up
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.content .button', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.content .button',
+      start: 'top 100%',
+      toggleActions: 'play none none none'
+    }
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!******************************************!*\
+  !*** ./assets/js/homepage/trusted-by.js ***!
+  \******************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#trusted-by-slider', {
+    type: 'loop',
+    perPage: 4,
+    gap: 30,
+    drag: 'free',
+    focus: 'center',
+    arrows: false,
+    pagination: false,
+    autoScroll: {
+      speed: 0.5
+    },
+    breakpoints: {
+      991: {
+        perPage: 3
+      }
+    }
+  }).mount({
+    AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll
+  });
+});
+
+// Load Animation
+gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Fade-up animation for the .trusted-by section
+  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].from('.trusted-by', {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.trusted-by',
+      start: 'top 90%',
+      toggleActions: 'play none none none'
+    }
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!****************************************!*\
+  !*** ./assets/js/homepage/services.js ***!
+  \****************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the heading animations in .services
+  var servicesTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.services',
+      start: 'top 90%',
+      // Start when .services enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading .tag from left to right
+  servicesTimeline.from('.services .heading .tag', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading h2 from left to right, slightly delayed
+  servicesTimeline.from('.services .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4'); // Overlap the animation slightly with the previous step
+
+  // Step 3: Fade in .heading p from left to right, slightly delayed
+  servicesTimeline.from('.services .heading p', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5'); // Overlap the animation slightly with the previous step
+
+  // Separate scroll animation for .service-list staggered fade-up
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.services .service-list', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.1,
+    // Staggered delay between items
+    scrollTrigger: {
+      trigger: '.services .service-list',
+      start: 'top 90%',
+      // Start when the first .service-list enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!****************************************!*\
+  !*** ./assets/js/homepage/feedback.js ***!
+  \****************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#feedback-slider', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: 50,
+    drag: 'free',
+    arrows: true,
+    pagination: true,
+    snap: true,
+    breakpoints: {
+      991: {
+        perPage: 2
+      },
+      798: {
+        perPage: 1
+      }
+    }
+  }).mount();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the feedback section animations
+  var feedbackTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.feedback',
+      start: 'top 90%',
+      // Start when the .feedback section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading h2 from left to right
+  feedbackTimeline.from('.feedback .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading p from left to right, slightly delayed
+  feedbackTimeline.from('.feedback .heading p', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.4'); // Overlap the animation slightly with the previous step
+
+  // New animation for #feedback-slider
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].from('#feedback-slider', {
+    scrollTrigger: {
+      trigger: '#feedback-slider',
+      start: 'top 90%',
+      // Start when #feedback-slider enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    },
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!********************************************!*\
+  !*** ./assets/js/homepage/our-approach.js ***!
+  \********************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for the our-approach section animations
+  var approachTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.our-approach',
+      start: 'top 90%',
+      // Start when the .our-approach section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+
+  // Step 1: Fade in .heading h1 from left to right
+  approachTimeline.from('.our-approach .heading h1', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .heading h2 from left to right, then .approach .timeline up
+  approachTimeline.from('.our-approach .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4') // Overlap slightly with the previous animation
+  .from('.our-approach .approach .timeline', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.6'); // Overlap slightly with the previous animation
+
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.our-approach .heading .button', {
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.content .button',
+      start: 'top 90%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  // Sequential Scroll animations for .item divs in .timeline
+  var items = document.querySelectorAll('.timeline .item');
+  var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.timeline',
+      start: 'top 90%',
+      // Start lower on the screen
+      end: 'bottom 85%',
+      scrub: true,
+      pin: false,
+      // No pinning required
+      onUpdate: function onUpdate(self) {
+        if (self.progress === 1) {
+          // Ensure all lines are filled when at the bottom
+          items.forEach(function (item) {
+            item.style.setProperty('--line-fill-percentage', '100%');
+          });
+        }
+      }
+    }
+  });
+  items.forEach(function (item, index) {
+    var img = item.querySelector('img');
+
+    // Animate grayscale removal on the image
+    timeline.fromTo(img, {
+      filter: 'grayscale(1)'
+    }, {
+      filter: 'grayscale(0)',
+      duration: 0.3,
+      ease: 'power2.out'
+    }, "+=".concat(index * 0.8) // Delay each animation slightly for sequence
+    );
+
+    // Animate the filling of the vertical line
+    timeline.to(item, {
+      '--line-fill-percentage': '100%',
+      duration: 3,
+      // Slower and smoother fill duration
+      ease: 'power1.inOut' // Smooth easing for the fill
+    }, "+=".concat(index * 0.8)); // Ensure it starts after the previous completes
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+var __webpack_exports__ = {};
+/*!*************************************************!*\
+  !*** ./assets/js/homepage/case-notes-slider.js ***!
+  \*************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#case-notes-slider', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: 50,
+    drag: 'free',
+    arrows: true,
+    pagination: true,
+    snap: true,
+    breakpoints: {
+      991: {
+        perPage: 2
+      },
+      798: {
+        perPage: 1
+      }
+    }
+  }).mount();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  // Set initial state for cards to hidden
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set('.case-notes .splide .standard-case-note-card', {
+    opacity: 0,
+    y: 50 // Slightly below the final position
+  });
+
+  // Heading animations
+  var caseNotesTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+    scrollTrigger: {
+      trigger: '.case-notes',
+      start: 'top 90%',
+      // Start when the .case-notes section enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    }
+  });
+  caseNotesTimeline.from('.case-notes .heading h1', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }).from('.case-notes .heading h2', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5').from('.case-notes .heading p', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.5');
+
+  // Optimize staggered animation for cards
+  var cards = document.querySelectorAll('.case-notes #case-notes-slider .standard-case-note-card');
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(cards, {
+    opacity: 1,
+    y: 0,
+    // Animate to original position
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: {
+      amount: 0.5 // Spread total stagger across all cards
+    },
+    scrollTrigger: {
+      trigger: '.case-notes .splide',
+      start: 'top 90%',
+      // Trigger as soon as the container is visible
+      toggleActions: 'play none none none' // Play once
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].from('#case-notes-slider', {
+    scrollTrigger: {
+      trigger: '#feedback-slider',
+      start: 'top 90%',
+      // Start when #feedback-slider enters the viewport
+      toggleActions: 'play none none none' // Play once on scroll
+    },
+    opacity: 0,
+    y: 50,
+    // Start below its final position
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+});
+}();
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+!function() {
+/*!*******************************************!*\
+  !*** ./assets/js/homepage/enquire-now.js ***!
+  \*******************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+  // Timeline for animations inside #enquire-now
+  var enquireTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '#enquire-now',
+      start: 'top 95%',
+      // Start when #enquire-now enters the viewport
+      toggleActions: 'play none none none'
+    }
+  });
+
+  // Step 1: Fade in .content .heading h1 from left to right
+  enquireTimeline.from('#enquire-now .content .heading h1', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in .content .heading h2 from left to right with a tiny delay
+  enquireTimeline.from('#enquire-now .content .heading h2', {
+    opacity: 0,
+    x: -50,
+    // Start from the left
+    duration: 0.6,
+    ease: 'power2.out'
+  }, '-=0.4'); // Slight overlap with the previous step
+
+  // Step 3: Fade in .content .heading p from left and .form up from down
+  enquireTimeline.from(['#enquire-now .content .heading p', '#enquire-now .form'], {
+    opacity: 0,
+    x: function x(i) {
+      return i === 0 ? -50 : 0;
+    },
+    // Heading p fades from left, .form moves vertically
+    y: function y(i) {
+      return i === 1 ? 50 : 0;
+    },
+    // Only .form moves up
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.2 // Slight stagger between elements
+  }, '-=0.5');
+
+  // Separate animation for .content .what-to-expect
+  var whatToExpectTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    scrollTrigger: {
+      trigger: '#enquire-now .content .what-to-expect',
+      start: 'top 95%',
+      toggleActions: 'play none none none'
+    },
+    delay: 0.4 // Add delay before starting this timeline
+  });
+
+  // Step 1: Fade in .bold from left to right
+  whatToExpectTimeline.from('#enquire-now .content .what-to-expect .bold', {
+    opacity: 0,
+    x: -50,
+    duration: 0.5,
+    ease: 'power2.out'
+  });
+
+  // Step 2: Fade in ul from left to right with a tiny delay
+  whatToExpectTimeline.from('#enquire-now .content .what-to-expect ul', {
+    opacity: 0,
+    x: -50,
+    duration: 0.5,
+    ease: 'power2.out'
+  }, '-=0.4');
+
+  // Step 3: Fade in .heading and .final-p from left to right
+  whatToExpectTimeline.from(['#enquire-now .content .what-to-expect .heading', '#enquire-now .content .what-to-expect .final-p'], {
+    opacity: 0,
+    x: -50,
+    duration: 0.5,
+    ease: 'power2.out',
+    stagger: 0.2
+  }, '-=0.55');
+
+  // Separate animation for .content .contact-info a (staggered fade-in)
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('#enquire-now .content .contact-info a', {
+    opacity: 0,
+    x: -50,
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.1,
+    delay: 0.6,
+    // Add delay before starting this animation
+    scrollTrigger: {
+      trigger: '#enquire-now .content .contact-info',
+      start: 'top 95%',
+      toggleActions: 'play none none none'
+    }
+  });
+});
+}();
 /******/ })()
 ;

@@ -15,10 +15,34 @@
   }
 }
 
+@mixin dc-button-seconday($color) {
+  font-family: $dc-body;
+  font-weight: $dc-semi-bold;
+  background-color: $dc-background-off-white;
+  color: $color;
+  padding: 10px 23px;
+  transition: $dc-transition-all;
+  border: 2px solid $color;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+
+  &:hover {
+    color: $dc-text-light;
+    background-color: $color;
+  }
+}
+
 @mixin tag($color) {
   font-family: $dc-heading;
   font-weight: $dc-semi-bold;
   font-size: 16px;
   margin-bottom: 10px;
   color: $color;
+}
+
+@mixin mobile-1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
 }
