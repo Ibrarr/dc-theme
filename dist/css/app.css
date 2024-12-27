@@ -14070,14 +14070,21 @@ textarea.form-control-lg {
   margin-bottom: 30px;
 }
 .home.page #enquire-now .content .contact-info i {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .home.page #enquire-now .content .contact-info a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.home.page #enquire-now .content .contact-info a:hover {
+  color: #EE243D;
 }
 .home.page #enquire-now .content .contact-info a:not(:last-child) {
   margin-bottom: 10px;
@@ -14090,6 +14097,9 @@ textarea.form-control-lg {
 }
 .home.page #enquire-now .gform_wrapper .gform_fields {
   row-gap: 20px !important;
+}
+.home.page #enquire-now .gform_wrapper .ginput_container_consent {
+  cursor: pointer;
 }
 .home.page #enquire-now .gform_wrapper label {
   font-family: "Montserrat", serif;

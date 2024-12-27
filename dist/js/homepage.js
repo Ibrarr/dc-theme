@@ -4515,7 +4515,7 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 0.6,
     ease: 'power2.out',
     stagger: 0.1,
-    delay: 0.8,
+    delay: 0.6,
     // Add delay before starting this animation
     scrollTrigger: {
       trigger: '#enquire-now .content .contact-info',

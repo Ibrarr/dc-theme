@@ -10,7 +10,7 @@ get_header();
                     <h1>Excellence in Legal Services</h1>
                     <p>At Drake & Case, we prioritise your needs with a commitment to integrity and innovative solutions.</p>
                     <p>Our experienced lawyers are dedicated to providing exceptional legal services tailored to your unique challenges.</p>
-                    <a href="#" class="button">Enquire now</a>
+                    <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
             </div>
             <div class="col-lg-6 right">
@@ -194,7 +194,7 @@ get_header();
             <div class="col-lg-6 heading">
                 <h1 class="tag">Process</h1>
                 <h2>Understanding Our Approach</h2>
-                <a href="#" class="button">Enquire Now</a>
+                <a href="#enquire-now" class="button">Enquire Now</a>
             </div>
             <div class="col-lg-6 approach">
                 <div class="timeline">
