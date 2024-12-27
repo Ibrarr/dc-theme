@@ -13834,7 +13834,7 @@ header .mobile-menus {
   display: none;
   background-color: #F5F5F5;
   position: absolute;
-  top: 81px;
+  top: 80px;
   left: 0;
   height: 100vh;
   background-color: #F5F5F5;
@@ -13843,17 +13843,18 @@ header .mobile-menus {
 }
 @media (max-width: 767.98px) {
   header .mobile-menus {
-    top: 63.46px;
+    top: 62.46px;
   }
 }
 header .mobile-menus .mobile-menu-inner {
+  border-top: 0.5px solid black;
   overflow-y: auto;
-  max-height: calc(100vh - 81px);
+  max-height: calc(100vh - 80px);
   padding: 25px 0;
 }
 @media (max-width: 767.98px) {
   header .mobile-menus .mobile-menu-inner {
-    max-height: calc(100vh - 63.46px);
+    max-height: calc(100vh - 62.46px);
   }
 }
 header .mobile-menus nav ul {
@@ -13928,8 +13929,8 @@ header .mobile-menus .mega-menu-mobile {
 header .mobile-menus .mega-menu-mobile .row > div {
   padding: 10px 12px;
 }
-header .mobile-menus .mega-menu-mobile .business-info, header .mobile-menus .mega-menu-mobile .service-list {
-  background-color: #F5F5F5;
+header .mobile-menus .mega-menu-mobile .business-info, header .mobile-menus .mega-menu-mobile .service-list, header .mobile-menus .mega-menu-mobile .recent-post {
+  background-color: unset;
 }
 header .mobile-menus .ctas {
   margin-top: 20px;

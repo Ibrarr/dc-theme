@@ -2,7 +2,7 @@
   display: none;
   background-color: $dc-background-off-white;
   position: absolute;
-  top: 81px;
+  top: 80px;
   left: 0;
   height: 100vh;
   background-color: $dc-background-off-white;
@@ -10,16 +10,17 @@
   z-index: 99;
 
   @include media-breakpoint-down(md) {
-    top: 63.46px;
+    top: 62.46px;
   }
 
   .mobile-menu-inner {
+    border-top: 0.5px solid black;
     overflow-y: auto;
-    max-height: calc(100vh - 81px);
+    max-height: calc(100vh - 80px);
     padding: 25px 0;
 
     @include media-breakpoint-down(md) {
-      max-height: calc(100vh - 63.46px);
+      max-height: calc(100vh - 62.46px);
     }
   }
 
@@ -98,8 +99,8 @@
       padding: 10px 12px;
     }
 
-    .business-info, .service-list {
-      background-color: $dc-background-off-white;
+    .business-info, .service-list, .recent-post {
+      background-color: unset;
     }
   }
 
