@@ -13559,13 +13559,13 @@ header .top-menu .ctas .button-secondary i path {
   transition: all 0.3s;
 }
 header .top-menu .ctas .button-secondary:hover path {
-  fill: #F5F5F5;
+  fill: rgb(0, 85.8241758242, 142);
 }
 header .top-menu .ctas .button-secondary:hover {
-  color: #F5F5F5;
-  background-color: #00375B;
+  color: rgb(0, 85.8241758242, 142);
+  border-color: rgb(0, 85.8241758242, 142);
 }
-header .top-menu .mega-menu {
+header .mega-menu {
   position: absolute;
   top: 98px;
   left: 0;
@@ -13575,34 +13575,34 @@ header .top-menu .mega-menu {
   border-bottom: 1px solid black;
   display: none;
 }
-header .top-menu .mega-menu .row > div {
+header .mega-menu .row > div {
   padding: 30px 40px;
 }
-header .top-menu .mega-menu .service-list {
+header .mega-menu .service-list {
   background-color: #fcfcfc;
 }
-header .top-menu .mega-menu .service-list h3, header .top-menu .mega-menu .service-list .h3 {
+header .mega-menu .service-list h3, header .mega-menu .service-list .h3 {
   font-family: "Montserrat", serif;
   font-weight: 700;
   color: #EE243D;
   font-size: 18px;
   margin-bottom: 20px;
 }
-header .top-menu .mega-menu .service-list p {
+header .mega-menu .service-list p {
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
 }
-header .top-menu .mega-menu .service-list p a {
+header .mega-menu .service-list p a {
   text-decoration: none;
   color: #000F20;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-header .top-menu .mega-menu .service-list p a:hover {
+header .mega-menu .service-list p a:hover {
   color: #EE243D;
 }
-header .top-menu .mega-menu .service-list .button {
+header .mega-menu .service-list .button {
   font-family: "Montserrat", serif;
   font-weight: 600;
   background-color: #EE243D;
@@ -13617,20 +13617,20 @@ header .top-menu .mega-menu .service-list .button {
   width: -moz-fit-content;
   width: fit-content;
 }
-header .top-menu .mega-menu .service-list .button:hover {
+header .mega-menu .service-list .button:hover {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
 }
-header .top-menu .mega-menu .business-info {
+header .mega-menu .business-info {
   background-color: #fcfcfc;
 }
-header .top-menu .mega-menu .business-info .contact-info, header .top-menu .mega-menu .business-info .business-hours, header .top-menu .mega-menu .business-info .out-of-hours {
+header .mega-menu .business-info .contact-info, header .mega-menu .business-info .business-hours, header .mega-menu .business-info .out-of-hours {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
   margin-bottom: 40px;
 }
-header .top-menu .mega-menu .business-info .contact-info a, header .top-menu .mega-menu .business-info .business-hours a, header .top-menu .mega-menu .business-info .out-of-hours a {
+header .mega-menu .business-info .contact-info a, header .mega-menu .business-info .business-hours a, header .mega-menu .business-info .out-of-hours a {
   text-decoration: none;
   font-family: "Montserrat", serif;
   font-size: 16px;
@@ -13639,19 +13639,19 @@ header .top-menu .mega-menu .business-info .contact-info a, header .top-menu .me
   transition: color 0.3s;
   display: block;
 }
-header .top-menu .mega-menu .business-info .contact-info a:hover, header .top-menu .mega-menu .business-info .business-hours a:hover, header .top-menu .mega-menu .business-info .out-of-hours a:hover {
+header .mega-menu .business-info .contact-info a:hover, header .mega-menu .business-info .business-hours a:hover, header .mega-menu .business-info .out-of-hours a:hover {
   color: #EE243D;
 }
-header .top-menu .mega-menu .business-info .contact-info p, header .top-menu .mega-menu .business-info .business-hours p, header .top-menu .mega-menu .business-info .out-of-hours p {
+header .mega-menu .business-info .contact-info p, header .mega-menu .business-info .business-hours p, header .mega-menu .business-info .out-of-hours p {
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
   margin: 0;
 }
-header .top-menu .mega-menu .business-info .contact-info .heading, header .top-menu .mega-menu .business-info .business-hours .heading, header .top-menu .mega-menu .business-info .out-of-hours .heading {
+header .mega-menu .business-info .contact-info .heading, header .mega-menu .business-info .business-hours .heading, header .mega-menu .business-info .out-of-hours .heading {
   font-weight: 600;
 }
-header .top-menu .mega-menu .business-info .button {
+header .mega-menu .business-info .button {
   font-family: "Montserrat", serif;
   font-weight: 600;
   background-color: #00375B;
@@ -13666,37 +13666,37 @@ header .top-menu .mega-menu .business-info .button {
   width: -moz-fit-content;
   width: fit-content;
 }
-header .top-menu .mega-menu .business-info .button:hover {
+header .mega-menu .business-info .button:hover {
   background-color: rgb(0, 85.8241758242, 142);
 }
-header .top-menu .mega-menu .recent-post {
+header .mega-menu .recent-post {
   background-color: #F5F5F5;
 }
-header .top-menu .mega-menu .recent-post .heading {
+header .mega-menu .recent-post .heading {
   font-family: "Montserrat", serif;
   font-size: 20px;
   color: #EE243D;
   margin-bottom: 20px;
   font-weight: 600;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a {
+header .mega-menu .recent-post .standard-case-note-card a {
   text-decoration: none;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a:hover img {
+header .mega-menu .recent-post .standard-case-note-card a:hover img {
   scale: 1.05;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a:hover .title {
+header .mega-menu .recent-post .standard-case-note-card a:hover .title {
   text-decoration: underline;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a:hover i {
+header .mega-menu .recent-post .standard-case-note-card a:hover i {
   margin-left: 15px !important;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .image-wrapper {
+header .mega-menu .recent-post .standard-case-note-card a .image-wrapper {
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .image-wrapper img {
+header .mega-menu .recent-post .standard-case-note-card a .image-wrapper img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 100%;
@@ -13704,7 +13704,7 @@ header .top-menu .mega-menu .recent-post .standard-case-note-card a .image-wrapp
   -o-object-fit: cover;
   object-fit: cover;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .term {
+header .mega-menu .recent-post .standard-case-note-card a .content .term {
   font-family: "Montserrat", serif;
   font-weight: 600;
   font-size: 14px;
@@ -13716,27 +13716,27 @@ header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .te
   width: fit-content;
   margin-bottom: 10px;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .title {
+header .mega-menu .recent-post .standard-case-note-card a .content .title {
   font-family: "Playfair Display", serif;
   font-size: 22px;
   color: #000F20;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .excerpt {
+header .mega-menu .recent-post .standard-case-note-card a .content .excerpt {
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .read-more {
+header .mega-menu .recent-post .standard-case-note-card a .content .read-more {
   font-family: "Montserrat", serif;
   font-size: 14px;
   color: #000F20;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card a .content .read-more i {
+header .mega-menu .recent-post .standard-case-note-card a .content .read-more i {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   margin-left: 10px;
 }
-header .top-menu .mega-menu .recent-post .standard-case-note-card img, header .top-menu .mega-menu .recent-post .standard-case-note-card .image-wrapper {
+header .mega-menu .recent-post .standard-case-note-card img, header .mega-menu .recent-post .standard-case-note-card .image-wrapper {
   max-width: 250px;
 }
 

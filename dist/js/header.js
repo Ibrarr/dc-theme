@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/js/header/menu.js":
-/*!**********************************!*\
-  !*** ./assets/js/header/menu.js ***!
-  \**********************************/
+/***/ "./assets/js/header/mega-menu.js":
+/*!***************************************!*\
+  !*** ./assets/js/header/mega-menu.js ***!
+  \***************************************/
 /***/ (function() {
 
 jQuery(document).ready(function ($) {
@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
     // Start a timeout to delay sliding down the menu
     clearTimeout(closeTimeout); // Clear any pending close timeout
     hoverTimeout = setTimeout(function () {
-      $('.top-menu .mega-menu').stop(true, true).slideDown('fast');
+      $('.mega-menu').stop(true, true).slideDown('fast');
       $(_this).addClass('active'); // Add active class to the link
     }, 200);
   }, function () {
@@ -31,13 +31,13 @@ jQuery(document).ready(function ($) {
 
     // Start a timeout to delay sliding up the menu
     closeTimeout = setTimeout(function () {
-      if (!$('.top-menu .mega-menu').is(':hover')) {
-        $('.top-menu .mega-menu').stop(true, true).slideUp('fast');
+      if (!$('.mega-menu').is(':hover')) {
+        $('.mega-menu').stop(true, true).slideUp('fast');
         $(_this2).removeClass('active'); // Remove active class when menu is closed
       }
     }, 200);
   });
-  $('.top-menu .mega-menu').hover(function () {
+  $('.mega-menu').hover(function () {
     // Clear the close timeout if hovering over the menu
     clearTimeout(closeTimeout);
     $(this).stop(true, true).slideDown('fast');
@@ -208,7 +208,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/header/menu.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/header/mega-menu.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

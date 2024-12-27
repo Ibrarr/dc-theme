@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
             // Start a timeout to delay sliding down the menu
             clearTimeout(closeTimeout); // Clear any pending close timeout
             hoverTimeout = setTimeout(() => {
-                $('.top-menu .mega-menu').stop(true, true).slideDown('fast');
+                $('.mega-menu').stop(true, true).slideDown('fast');
                 $(this).addClass('active'); // Add active class to the link
             }, 200);
         },
@@ -22,15 +22,15 @@ jQuery(document).ready(function($) {
 
             // Start a timeout to delay sliding up the menu
             closeTimeout = setTimeout(() => {
-                if (!$('.top-menu .mega-menu').is(':hover')) {
-                    $('.top-menu .mega-menu').stop(true, true).slideUp('fast');
+                if (!$('.mega-menu').is(':hover')) {
+                    $('.mega-menu').stop(true, true).slideUp('fast');
                     $(this).removeClass('active'); // Remove active class when menu is closed
                 }
             }, 200);
         }
     );
 
-    $('.top-menu .mega-menu').hover(
+    $('.mega-menu').hover(
         function() {
             // Clear the close timeout if hovering over the menu
             clearTimeout(closeTimeout);

@@ -1,0 +1,104 @@
+.mega-menu {
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: none;
+
+  .row > div {
+    padding: 30px 40px;
+  }
+
+  .service-list {
+    background-color: #fcfcfc;
+
+    h3 {
+      font-family: $dc-body;
+      font-weight: $dc-bold;
+      color: $dc-primary;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: $dc-body;
+      font-size: 16px;
+      color: $dc-text-dark;
+
+      a {
+        text-decoration: none;
+        color: $dc-text-dark;
+        transition: $dc-transition-all;
+
+        &:hover {
+          color: $dc-primary;
+        }
+      }
+    }
+
+    .button {
+      @include dc-button($dc-primary, darken($dc-primary, 10%));
+    }
+  }
+
+  .business-info {
+    background-color: #fcfcfc;
+
+    .contact-info, .business-hours, .out-of-hours {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 40px;
+
+      a {
+        text-decoration: none;
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        transition: color .3s;
+        display: block;
+
+        &:hover {
+          color: $dc-primary;
+        }
+      }
+
+      p {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        margin: 0;
+      }
+
+      .heading {
+        font-weight: $dc-semi-bold;
+      }
+    }
+
+    .button {
+      @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+    }
+  }
+
+  .recent-post {
+    background-color: $dc-background-off-white;
+
+    .heading {
+      font-family: $dc-body;
+      font-size: 20px;
+      color: $dc-primary;
+      margin-bottom: 20px;
+      font-weight: $dc-semi-bold;
+    }
+
+    .standard-case-note-card {
+      @import "../../misc/standard-case-note-card";
+
+      img, .image-wrapper {
+        max-width: 250px;
+      }
+    }
+  }
+}

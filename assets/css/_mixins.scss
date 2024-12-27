@@ -15,7 +15,7 @@
   }
 }
 
-@mixin dc-button-seconday($color) {
+@mixin dc-button-secondary($color, $hover-color) {
   font-family: $dc-body;
   font-weight: $dc-semi-bold;
   background-color: $dc-background-off-white;
@@ -28,8 +28,8 @@
   width: fit-content;
 
   &:hover {
-    color: $dc-text-light;
-    background-color: $color;
+    color: $hover-color;
+    border-color: $hover-color;
   }
 }
 
