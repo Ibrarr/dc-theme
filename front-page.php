@@ -15,14 +15,14 @@ get_header();
             </div>
             <div class="col-lg-6 right">
                 <div class="first-row-images">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/header-one.png" alt="test">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/image-two.png" alt="test">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/image-three.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/header-one.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/image-two.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/image-three.png" alt="test">
                 </div>
                 <div class="second-row-images">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/image-four-e1735053498440.png" alt="test">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/image-five.png" alt="test">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/image-six.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/image-four-e1735053498440.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/image-five.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/image-six.png" alt="test">
                 </div>
             </div>
         </div>
@@ -37,16 +37,16 @@ get_header();
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/fexi-logo.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/fexi-logo.png" alt="test">
                 </li>
                 <li class="splide__slide">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/one-av-logo.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/one-av-logo.png" alt="test">
                 </li>
                 <li class="splide__slide">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/tmt-logo.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/tmt-logo.png" alt="test">
                 </li>
                 <li class="splide__slide">
-                    <img src="http://drakeandcase.test/wp-content/uploads/2024/12/vulkan-logo.png" alt="test">
+                    <img src="/wp-content/uploads/2024/12/vulkan-logo.png" alt="test">
                 </li>
             </ul>
         </div>
@@ -135,34 +135,34 @@ get_header();
                     <li class="splide__slide">
                         <div class="stars"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/stars.svg' ) ?></div>
                         <p class="testimonial">"The level of professionalism and dedication is unmatched in the legal industry."</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/keval.jpeg"  class="person" alt="image">
+                        <img src="/wp-content/uploads/2024/12/keval.jpeg"  class="person" alt="image">
                         <p class="name">Keval Pankhania</p>
                         <p class="job-company">CEO, One Avenue Group Ltd</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/one-av-logo-e1735082158193.png" class="logo" alt="image">
+                        <img src="/wp-content/uploads/2024/12/one-av-logo-e1735082158193.png" class="logo" alt="image">
                     </li>
                     <li class="splide__slide">
                         <div class="stars"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/stars.svg' ) ?></div>
                         <p class="testimonial">"Their attention to detail and client care is truly exceptional and reassuring."</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/floyd.jpg"  class="person" alt="image">
+                        <img src="/wp-content/uploads/2024/12/floyd.jpg"  class="person" alt="image">
                         <p class="name">Floyd Mayweather Jr</p>
                         <p class="job-company">Former Professional Boxer</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/tmt-logo-e1735082284251.png" class="logo" alt="image">
+                        <img src="/wp-content/uploads/2024/12/tmt-logo-e1735082284251.png" class="logo" alt="image">
                     </li>
                     <li class="splide__slide">
                         <div class="stars"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/stars.svg' ) ?></div>
                         <p class="testimonial">"They provided exceptional support and care, guiding me through every detail with reassurance."</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/ibrarr.png"  class="person" alt="image">
+                        <img src="/wp-content/uploads/2024/12/ibrarr.png"  class="person" alt="image">
                         <p class="name">Ibrarr Khan</p>
                         <p class="job-company">Director, Vulkan Creative Limited</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/vulkan-logo-e1735082475249.png" class="logo" alt="image">
+                        <img src="/wp-content/uploads/2024/12/vulkan-logo-e1735082475249.png" class="logo" alt="image">
                     </li>
                     <li class="splide__slide">
                         <div class="stars"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/stars.svg' ) ?></div>
                         <p class="testimonial">"Their attention to detail and client care is truly exceptional and reassuring."</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/floyd.jpg"  class="person" alt="image">
+                        <img src="/wp-content/uploads/2024/12/floyd.jpg"  class="person" alt="image">
                         <p class="name">Floyd Mayweather Jr</p>
                         <p class="job-company">Former Professional Boxer</p>
-                        <img src="http://drakeandcase.test/wp-content/uploads/2024/12/tmt-logo-e1735082284251.png" class="logo" alt="image">
+                        <img src="/wp-content/uploads/2024/12/tmt-logo-e1735082284251.png" class="logo" alt="image">
                     </li>
                 </ul>
             </div>
