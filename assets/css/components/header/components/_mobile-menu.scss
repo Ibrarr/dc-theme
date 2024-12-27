@@ -20,7 +20,7 @@
     padding: 25px 0;
 
     @include media-breakpoint-down(md) {
-      max-height: calc(100vh - 120px);
+      max-height: calc(100vh - 130px);
     }
   }
 
