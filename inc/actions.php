@@ -85,6 +85,7 @@ function dc_pingback_header() {
  * Register menus
  */
 register_nav_menus( array( 'footer-menu' => esc_html__( 'Footer Menu', 'dc' ) ) );
+register_nav_menus( array( 'footer-menu-practise-areas' => esc_html__( 'Footer Menu Practise Areas', 'dc' ) ) );
 
 /**
  * Setup 404 page

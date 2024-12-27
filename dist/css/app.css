@@ -14140,3 +14140,104 @@ textarea.form-control-lg {
   font-size: 16px;
   color: #000F20;
 }
+
+footer {
+  background-color: #00375B;
+  padding-top: 50px;
+}
+@media (max-width: 991.98px) {
+  footer .info {
+    margin-bottom: 40px;
+  }
+}
+footer .info .logo {
+  margin-bottom: 20px;
+}
+footer .info p {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #F5F5F5;
+}
+footer .info p.heading {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+footer .info a {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #F5F5F5;
+  text-decoration: none;
+  display: block;
+}
+footer .info a:hover {
+  text-decoration: underline;
+}
+footer .info .sra {
+  margin: 20px 0;
+}
+footer .info .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+@media (min-width: 992px) {
+  footer .menus .all-footer-menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  footer .menus .all-footer-menus #footer-menu {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 991.98px) {
+  footer .menus .all-footer-menus #footer-menu {
+    margin-bottom: 30px;
+  }
+}
+footer .menus .all-footer-menus ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .menus .all-footer-menus ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .menus .all-footer-menus ul li a {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+footer .menus .all-footer-menus ul li a:hover {
+  text-decoration: underline;
+}
+footer .bottom .content {
+  border-top: 1px solid #F5F5F5;
+  margin-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+@media (min-width: 992px) {
+  footer .bottom .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+footer .bottom .content p, footer .bottom .content a {
+  font-family: "Montserrat", serif;
+  font-size: 14px;
+  color: #F5F5F5;
+  text-decoration: none;
+}
+footer .bottom .content a:hover {
+  text-decoration: underline;
+}
