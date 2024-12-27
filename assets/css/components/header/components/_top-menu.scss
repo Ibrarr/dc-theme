@@ -6,6 +6,10 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
 
+  @include media-breakpoint-down(md) {
+    padding: 15px 0;
+  }
+
   .logo-menu {
     display: flex;
     justify-content: space-between;
@@ -13,6 +17,24 @@
 
     .logo {
       margin-right: 30px;
+
+      .mobile {
+        display: none;
+
+        svg {
+          width: 40px;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: block;
+        }
+      }
     }
 
     nav {
@@ -107,6 +129,31 @@
       }
 
       @include dc-button-secondary($dc-secondary, lighten($dc-secondary, 10%));
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+
+    @include mobile-1280 {
+      display: block;
+    }
+
+    > div {
+      cursor: pointer;
+    }
+
+    .close {
+      display: none;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path {
+        fill: $dc-text-dark;
+      }
     }
   }
 }

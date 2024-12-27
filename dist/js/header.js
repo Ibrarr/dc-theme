@@ -9,46 +9,101 @@
 
 jQuery(document).ready(function ($) {
   var hoverTimeout, closeTimeout;
+  function isSmallScreen() {
+    return $(window).width() < 1280;
+  }
 
   // Disable default link behavior for .mega-menu-link a
-  $('.mega-menu-link a').on('click', function (event) {
+  $('.mega-menu-link a').on('click.megaMenu', function (event) {
     event.preventDefault();
   });
 
-  // Functionality for sliding down/up the mega menu with delay
-  $('.mega-menu-link').hover(function () {
-    var _this = this;
-    // Start a timeout to delay sliding down the menu
-    clearTimeout(closeTimeout); // Clear any pending close timeout
-    hoverTimeout = setTimeout(function () {
-      $('.mega-menu').stop(true, true).slideDown('fast');
-      $(_this).addClass('active'); // Add active class to the link
-    }, 200);
-  }, function () {
-    var _this2 = this;
-    // Clear the open timeout if mouse leaves before delay ends
-    clearTimeout(hoverTimeout);
+  // Hover functionality for large screens
+  function addHoverFunctionality() {
+    $('.mega-menu-link').hover(function () {
+      var _this = this;
+      if (isSmallScreen()) return;
+      clearTimeout(closeTimeout);
+      hoverTimeout = setTimeout(function () {
+        $('.mega-menu').stop(true, true).slideDown('fast');
+        $(_this).addClass('active');
+      }, 200);
+    }, function () {
+      var _this2 = this;
+      if (isSmallScreen()) return;
+      clearTimeout(hoverTimeout);
+      closeTimeout = setTimeout(function () {
+        if (!$('.mega-menu').is(':hover')) {
+          $('.mega-menu').stop(true, true).slideUp('fast');
+          $(_this2).removeClass('active');
+        }
+      }, 200);
+    });
+    $('.mega-menu').hover(function () {
+      if (isSmallScreen()) return;
+      clearTimeout(closeTimeout);
+      $(this).stop(true, true).slideDown('fast');
+      $('.mega-menu-link').addClass('active');
+    }, function () {
+      var _this3 = this;
+      if (isSmallScreen()) return;
+      closeTimeout = setTimeout(function () {
+        $(_this3).stop(true, true).slideUp('fast');
+        $('.mega-menu-link').removeClass('active');
+      }, 100);
+    });
+  }
 
-    // Start a timeout to delay sliding up the menu
-    closeTimeout = setTimeout(function () {
-      if (!$('.mega-menu').is(':hover')) {
-        $('.mega-menu').stop(true, true).slideUp('fast');
-        $(_this2).removeClass('active'); // Remove active class when menu is closed
+  // Click-to-toggle functionality for small screens
+  function addClickFunctionality() {
+    $('.mega-menu-link').off('.megaMenu'); // Remove any existing hover or click handlers
+
+    $('.mega-menu-link').on('click.megaMenu', function () {
+      if (!isSmallScreen()) return;
+      var $menu = $('.mega-menu-mobile');
+      if ($menu.is(':visible')) {
+        $menu.slideUp('fast');
+        $(this).removeClass('active');
+      } else {
+        $menu.slideDown('fast');
+        $(this).addClass('active');
       }
-    }, 200);
+    });
+  }
+  function initializeMenu() {
+    if (isSmallScreen()) {
+      addClickFunctionality();
+    } else {
+      addHoverFunctionality();
+    }
+  }
+  initializeMenu();
+  $(window).on('resize.megaMenu', function () {
+    initializeMenu();
   });
-  $('.mega-menu').hover(function () {
-    // Clear the close timeout if hovering over the menu
-    clearTimeout(closeTimeout);
-    $(this).stop(true, true).slideDown('fast');
-    $('.mega-menu-link').addClass('active'); // Keep active class while hovering over the menu
-  }, function () {
-    var _this3 = this;
-    // Start a timeout to delay sliding up the menu
-    closeTimeout = setTimeout(function () {
-      $(_this3).stop(true, true).slideUp('fast');
-      $('.mega-menu-link').removeClass('active'); // Remove active class when menu is closed
-    }, 100);
+});
+
+/***/ }),
+
+/***/ "./assets/js/header/mobile-menu.js":
+/*!*****************************************!*\
+  !*** ./assets/js/header/mobile-menu.js ***!
+  \*****************************************/
+/***/ (function() {
+
+jQuery(document).ready(function ($) {
+  // Scoped handlers for mobile menu
+  $('.mobile-menu .open').on('click.mobileMenu', function () {
+    $('.mobile-menus').slideDown(); // Slide down the mobile menus
+    $(this).hide(); // Hide the open button
+    $('.mobile-menu .close').show(); // Show the close button
+    $('body').addClass('no-scroll'); // Disable scrolling on the body
+  });
+  $('.mobile-menu .close').on('click.mobileMenu', function () {
+    $('.mobile-menus').slideUp(); // Slide up the mobile menus
+    $(this).hide(); // Hide the close button
+    $('.mobile-menu .open').show(); // Show the open button
+    $('body').removeClass('no-scroll'); // Enable scrolling on the body
   });
 });
 
@@ -209,6 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/header/mega-menu.js"); })
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/js/header/mobile-menu.js"); })
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./assets/css/app.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

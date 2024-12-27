@@ -2,6 +2,7 @@ const mix = require('laravel-mix');
 
 mix.js([
     'assets/js/header/mega-menu.js',
+    'assets/js/header/mobile-menu.js',
 ], 'js/header.js');
 
 mix.js([
