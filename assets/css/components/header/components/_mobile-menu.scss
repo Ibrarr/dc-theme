@@ -10,7 +10,7 @@
   z-index: 99;
 
   @include media-breakpoint-down(md) {
-    top: 62.46px;
+    top: 64.46px;
   }
 
   .mobile-menu-inner {
@@ -20,7 +20,7 @@
     padding: 25px 0;
 
     @include media-breakpoint-down(md) {
-      max-height: calc(100vh - 62.46px);
+      max-height: calc(100vh - 120px);
     }
   }
 
