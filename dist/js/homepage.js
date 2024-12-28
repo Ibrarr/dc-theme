@@ -14003,10 +14003,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // Load Animation
 document.addEventListener('DOMContentLoaded', function () {
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.first-row-images', {
-    y: -125
+    y: -110
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.second-row-images', {
-    y: 125
+    y: 110
   });
 
   // Timeline for the hero section animations
@@ -14113,7 +14113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'power2.out',
     scrollTrigger: {
       trigger: '.trusted-by',
-      start: 'top 90%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });

@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load Animation
 document.addEventListener('DOMContentLoaded', () => {
-    gsap.set('.first-row-images', { y: -125 });
-    gsap.set('.second-row-images', { y: 125 });
+    gsap.set('.first-row-images', { y: -110 });
+    gsap.set('.second-row-images', { y: 110 });
 
     // Timeline for the hero section animations
     const heroTimeline = gsap.timeline({

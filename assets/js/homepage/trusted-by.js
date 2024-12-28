@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.trusted-by',
-            start: 'top 90%',
+            start: 'top 100%',
             toggleActions: 'play none none none',
         }
     });
