@@ -14210,7 +14210,7 @@ header .mobile-menus .ctas a {
   filter: grayscale(0) brightness(1);
 }
 .home.page .services {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   background: #00375B;
   padding: 60px 0;
 }
@@ -14498,6 +14498,13 @@ header .mobile-menus .ctas a {
 }
 .home.page .our-approach {
   margin-bottom: 60px;
+  background: #000F20;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .home.page .our-approach {
+    padding: 40px 0;
+  }
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading {
@@ -14521,7 +14528,7 @@ header .mobile-menus .ctas a {
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 30px;
-  color: #000F20;
+  color: #F5F5F5;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading h2, .home.page .our-approach .heading .h2 {
@@ -14556,6 +14563,9 @@ header .mobile-menus .ctas a {
   position: relative;
   overflow: hidden;
 }
+.home.page .our-approach .approach .timeline .item:last-child p {
+  margin-bottom: 0;
+}
 .home.page .our-approach .approach .timeline .item:not(:last-child):before {
   content: "";
   display: block;
@@ -14581,7 +14591,6 @@ header .mobile-menus .ctas a {
   filter: grayscale(1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #f9f9f9;
 }
 .home.page .our-approach .approach .timeline .item .content .text {
   margin-left: 90px;
@@ -14589,13 +14598,13 @@ header .mobile-menus .ctas a {
 .home.page .our-approach .approach .timeline .item .content .text h3, .home.page .our-approach .approach .timeline .item .content .text .h3 {
   font-family: "Playfair Display", serif;
   font-size: 20px;
-  color: #000F20;
+  color: #F5F5F5;
   font-weight: 700;
 }
 .home.page .our-approach .approach .timeline .item .content .text p {
   font-family: "Montserrat", serif;
   font-size: 16px;
-  color: #000F20;
+  color: #F5F5F5;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .approach .timeline .item .content .text p {
@@ -14603,7 +14612,11 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .case-notes {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+.home.page .case-notes > div {
+  max-width: 1600px;
+  margin: auto;
 }
 .home.page .case-notes .heading {
   margin-bottom: 50px;
@@ -14780,7 +14793,13 @@ header .mobile-menus .ctas a {
   transform: none;
 }
 .home.page #enquire-now {
-  margin-bottom: 80px;
+  padding: 60px 0;
+  background-color: #eeeeee;
+}
+@media (max-width: 991.98px) {
+  .home.page #enquire-now {
+    padding: 40px 0;
+  }
 }
 .home.page #enquire-now .content .heading {
   margin-bottom: 30px;
@@ -14970,9 +14989,11 @@ footer .info a {
   color: #F5F5F5;
   text-decoration: none;
   display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 footer .info a:hover {
-  text-decoration: underline;
+  color: #EE243D;
 }
 footer .info .sra {
   margin: 20px 0;
@@ -14982,6 +15003,13 @@ footer .info .socials {
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+}
+footer .info .socials svg path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+footer .info .socials a:hover path {
+  fill: #EE243D;
 }
 @media (min-width: 992px) {
   footer .menus .all-footer-menus {
@@ -15014,9 +15042,11 @@ footer .menus .all-footer-menus ul li a {
   font-size: 14px;
   color: #F5F5F5;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 footer .menus .all-footer-menus ul li a:hover {
-  text-decoration: underline;
+  color: #EE243D;
 }
 footer .bottom .content {
   border-top: 1px solid #f9f9f9;
@@ -15039,7 +15069,9 @@ footer .bottom .content p, footer .bottom .content a {
   font-size: 14px;
   color: #F5F5F5;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 footer .bottom .content a:hover {
-  text-decoration: underline;
+  color: #EE243D;
 }

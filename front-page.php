@@ -257,7 +257,7 @@ get_header();
 </section>
 
 <section class="case-notes">
-    <div class="container px-4">
+    <div class="px-4">
         <div class="heading">
             <h1 class="tag">Content</h1>
             <h2>Case Notes</h2>

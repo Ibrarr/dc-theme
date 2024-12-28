@@ -1,5 +1,10 @@
 .case-notes {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+
+  > div {
+    max-width: 1600px;
+    margin: auto;
+  }
 
   .heading {
     margin-bottom: 50px;

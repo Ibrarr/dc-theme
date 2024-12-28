@@ -1,5 +1,10 @@
 #enquire-now {
-  margin-bottom: 80px;
+  padding: 60px 0;
+  background-color: $dc-background-grey;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
 
   .content {
     .heading {

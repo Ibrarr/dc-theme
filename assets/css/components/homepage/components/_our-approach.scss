@@ -1,5 +1,11 @@
 .our-approach {
   margin-bottom: 60px;
+  background: $dc-background-dark-blue;
+  padding: 60px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
 
   .heading {
     @include media-breakpoint-down(lg) {
@@ -15,7 +21,7 @@
       font-weight: $dc-bold;
       font-size: 48px;
       margin-bottom: 30px;
-      color: $dc-text-dark;
+      color: $dc-text-light;
 
       @include media-breakpoint-down(lg) {
         font-size: 40px;
@@ -32,6 +38,12 @@
       .item {
         position: relative;
         overflow: hidden;
+
+        &:last-child {
+          p {
+            margin-bottom: 0;
+          }
+        }
 
         &:not(:last-child) {
           &:before {
@@ -59,7 +71,6 @@
             position: absolute;
             filter: grayscale(1);
             transition: $dc-transition-all;
-            background-color: $dc-background-off-white;
           }
 
           .text {
@@ -68,14 +79,14 @@
             h3 {
               font-family: $dc-heading;
               font-size: 20px;
-              color: $dc-text-dark;
+              color: $dc-text-light;
               font-weight: $dc-bold;
             }
 
             p {
               font-family: $dc-body;
               font-size: 16px;
-              color: $dc-text-dark;
+              color: $dc-text-light;
 
               @include media-breakpoint-down(lg) {
                 font-size: 14px;

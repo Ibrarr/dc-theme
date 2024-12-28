@@ -28,9 +28,10 @@ footer {
       color: $dc-text-light;
       text-decoration: none;
       display: block;
+      transition: $dc-transition-all;
 
       &:hover {
-        text-decoration: underline;
+        color: $dc-primary;
       }
     }
 
@@ -41,6 +42,14 @@ footer {
     .socials {
       display: flex;
       gap: 12px;
+
+      svg path {
+        transition: $dc-transition-all;
+      }
+
+      a:hover path {
+        fill: $dc-primary;
+      }
     }
   }
 
@@ -76,9 +85,10 @@ footer {
             font-size: 14px;
             color: $dc-text-light;
             text-decoration: none;
+            transition: $dc-transition-all;
 
             &:hover {
-              text-decoration: underline;
+              color: $dc-primary;
             }
           }
         }
@@ -103,10 +113,11 @@ footer {
         font-size: 14px;
         color: $dc-text-light;
         text-decoration: none;
+        transition: $dc-transition-all;
       }
 
       a:hover {
-        text-decoration: underline;
+        color: $dc-primary;
       }
     }
   }
