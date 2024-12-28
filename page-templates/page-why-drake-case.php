@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: About Us
+Template Name: Why Drake & Case
 */
 get_header();
 
