@@ -14158,7 +14158,7 @@ header .mobile-menus .ctas a {
     margin-bottom: 50px;
   }
 }
-.home.page .trusted-by h3, .home.page .trusted-by .h3 {
+.home.page .trusted-by h2, .home.page .trusted-by .h2 {
   text-align: center;
   font-family: "Montserrat", serif;
   font-weight: 600;
@@ -14167,11 +14167,11 @@ header .mobile-menus .ctas a {
   margin-bottom: 30px;
 }
 @media (max-width: 991.98px) {
-  .home.page .trusted-by h3, .home.page .trusted-by .h3 {
+  .home.page .trusted-by h2, .home.page .trusted-by .h2 {
     font-size: 16px;
   }
 }
-.home.page .trusted-by h3 span, .home.page .trusted-by .h3 span {
+.home.page .trusted-by h2 span, .home.page .trusted-by .h2 span {
   font-weight: 700;
   color: #EE243D;
 }

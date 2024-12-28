@@ -31,7 +31,7 @@ get_header();
 
 <section class="trusted-by">
     <div class="container px-4">
-        <h3><span>Trusted</span> by Industry Leaders Worldwide</h3>
+        <h2><span>Trusted</span> by Industry Leaders Worldwide</h2>
     </div>
     <div class="splide" id="trusted-by-slider">
         <div class="splide__track">
