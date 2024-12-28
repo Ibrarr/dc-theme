@@ -13397,7 +13397,7 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --bs-body-bg: #F5F5F5;
+  --bs-body-bg: #f9f9f9;
 }
 
 :root {
@@ -13427,9 +13427,8 @@ header .top-menu {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
+  border-bottom: 0.5px solid #000F20;
 }
 @media (max-width: 767.98px) {
   header .top-menu {
@@ -13567,7 +13566,7 @@ header .top-menu .ctas .button:hover {
 header .top-menu .ctas .button-secondary {
   font-family: "Montserrat", serif;
   font-weight: 600;
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
   color: #00375B;
   padding: 10px 23px;
   -webkit-transition: all 0.3s;
@@ -13626,8 +13625,8 @@ header .mega-menu, header .mega-menu-mobile {
   left: 0;
   width: 100%;
   z-index: 99;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 0.5px solid #000F20;
+  border-bottom: 0.5px solid #000F20;
   display: none;
 }
 header .mega-menu .row > div, header .mega-menu-mobile .row > div {
@@ -13757,7 +13756,7 @@ header .mega-menu .business-info .button:hover, header .mega-menu-mobile .busine
   background-color: rgb(0, 85.8241758242, 142);
 }
 header .mega-menu .recent-post, header .mega-menu-mobile .recent-post {
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
 }
 header .mega-menu .recent-post .heading, header .mega-menu-mobile .recent-post .heading {
   font-family: "Montserrat", serif;
@@ -13833,18 +13832,18 @@ header .mega-menu .recent-post .standard-case-note-card img, header .mega-menu .
 }
 header .mobile-menus {
   display: none;
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
   position: absolute;
   top: 80px;
   left: 0;
   height: 100vh;
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
   width: 100%;
   z-index: 99;
 }
 @media (max-width: 767.98px) {
   header .mobile-menus {
-    top: 64.46px;
+    top: 62.46px;
   }
 }
 header .mobile-menus .mobile-menu-inner {
@@ -13980,7 +13979,7 @@ header .mobile-menus .ctas .button:hover {
 header .mobile-menus .ctas .button-secondary {
   font-family: "Montserrat", serif;
   font-weight: 600;
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
   color: #00375B;
   padding: 10px 23px;
   -webkit-transition: all 0.3s;
@@ -14407,7 +14406,7 @@ header .mobile-menus .ctas a {
   position: relative;
   width: 3em;
   height: 3em;
-  background-color: #F5F5F5;
+  background-color: unset;
   border: 2px solid #EE243D;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -14521,7 +14520,7 @@ header .mobile-menus .ctas a {
   filter: grayscale(1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
 }
 .home.page .our-approach .approach .timeline .item .content .text {
   margin-left: 90px;
@@ -14690,7 +14689,7 @@ header .mobile-menus .ctas a {
   position: relative;
   width: 3em;
   height: 3em;
-  background-color: #F5F5F5;
+  background-color: unset;
   border: 2px solid #EE243D;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -14959,7 +14958,7 @@ footer .menus .all-footer-menus ul li a:hover {
   text-decoration: underline;
 }
 footer .bottom .content {
-  border-top: 1px solid #F5F5F5;
+  border-top: 1px solid #f9f9f9;
   margin-top: 60px;
   padding-top: 30px;
   padding-bottom: 50px;
