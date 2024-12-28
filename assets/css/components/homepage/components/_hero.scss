@@ -44,8 +44,12 @@
 
       .button {
         margin-top: 20px;
-        @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
         opacity: 1;
+        @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+
+        @include mobile-1280 {
+          @include dc-button($dc-primary, darken($dc-primary, 10%));
+        }
       }
     }
   }

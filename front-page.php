@@ -64,60 +64,76 @@ get_header();
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 service-list">
-                <h3>Individuals</h3>
-                <p><a href="#">Family Law</a></p>
-                <p><a href="#">Criminal Defense</a></p>
-                <p><a href="#">Personal Injury Claims</a></p>
-                <p><a href="#">Employment Law</a></p>
-                <p><a href="#">Immigration Services</a></p>
-                <p><a href="#">Wills and Probate</a></p>
-                <p><a href="#">Landlord-Tenant Disputes</a></p>
-                <p><a href="#">Consumer Rights</a></p>
-                <p><a href="#">Debt and Bankruptcy Advice</a></p>
-                <p><a href="#">Defamation and Libel</a></p>
-                <a href="#" class="button">All individual services</a>
+                <div class="service-list-inner">
+                    <div class="content">
+                        <h3>Individuals</h3>
+                        <p><a href="#">Family Law</a></p>
+                        <p><a href="#">Criminal Defense</a></p>
+                        <p><a href="#">Personal Injury Claims</a></p>
+                        <p><a href="#">Employment Law</a></p>
+                        <p><a href="#">Immigration Services</a></p>
+                        <p><a href="#">Wills and Probate</a></p>
+                        <p><a href="#">Landlord-Tenant Disputes</a></p>
+                        <p><a href="#">Consumer Rights</a></p>
+                        <p><a href="#">Debt and Bankruptcy Advice</a></p>
+                        <p><a href="#">Defamation and Libel</a></p>
+                    </div>
+                    <a href="#" class="button">All individual services</a>
+                </div>
             </div>
             <div class="col-xl-3 col-lg-6 service-list">
-                <h3>Businesses</h3>
-                <p><a href="#">Corporate Law</a></p>
-                <p><a href="#">Contract Drafting and Review</a></p>
-                <p><a href="#">Employment Law</a></p>
-                <p><a href="#">Intellectual Property Protection</a></p>
-                <p><a href="#">Commercial Litigation</a></p>
-                <p><a href="#">Regulatory Compliance</a></p>
-                <p><a href="#">Mergers and Acquisitions</a></p>
-                <p><a href="#">Tax Law</a></p>
-                <p><a href="#">Real Estate Transactions</a></p>
-                <p><a href="#">Data Protection and Privacy</a></p>
-                <a href="#" class="button">All individual services</a>
+                <div class="service-list-inner">
+                    <div class="content">
+                        <h3>Businesses</h3>
+                        <p><a href="#">Corporate Law</a></p>
+                        <p><a href="#">Contract Drafting and Review</a></p>
+                        <p><a href="#">Employment Law</a></p>
+                        <p><a href="#">Intellectual Property Protection</a></p>
+                        <p><a href="#">Commercial Litigation</a></p>
+                        <p><a href="#">Regulatory Compliance</a></p>
+                        <p><a href="#">Mergers and Acquisitions</a></p>
+                        <p><a href="#">Tax Law</a></p>
+                        <p><a href="#">Real Estate Transactions</a></p>
+                        <p><a href="#">Data Protection and Privacy</a></p>
+                    </div>
+                    <a href="#" class="button">All individual services</a>
+                </div>
             </div>
             <div class="col-xl-3 col-lg-6 service-list">
-                <h3>Family Law</h3>
-                <p><a href="#">Divorce and Separation</a></p>
-                <p><a href="#">Child Custody and Visitation</a></p>
-                <p><a href="#">Child Support</a></p>
-                <p><a href="#">Spousal Support (Alimony)</a></p>
-                <p><a href="#">Prenuptial and Postnuptial Agreements</a></p>
-                <p><a href="#">Adoption</a></p>
-                <p><a href="#">Domestic Violence Protection</a></p>
-                <p><a href="#">Property Division</a></p>
-                <p><a href="#">Guardianship</a></p>
-                <p><a href="#">Paternity Disputes</a></p>
-                <a href="#" class="button">All family services</a>
+                <div class="service-list-inner">
+                    <div class="content">
+                        <h3>Family Law</h3>
+                        <p><a href="#">Divorce and Separation</a></p>
+                        <p><a href="#">Child Custody and Visitation</a></p>
+                        <p><a href="#">Child Support</a></p>
+                        <p><a href="#">Spousal Support (Alimony)</a></p>
+                        <p><a href="#">Prenuptial and Postnuptial Agreements</a></p>
+                        <p><a href="#">Adoption</a></p>
+                        <p><a href="#">Domestic Violence Protection</a></p>
+                        <p><a href="#">Property Division</a></p>
+                        <p><a href="#">Guardianship</a></p>
+                        <p><a href="#">Paternity Disputes</a></p>
+                    </div>
+                    <a href="#" class="button">All family services</a>
+                </div>
             </div>
             <div class="col-xl-3 col-lg-6 service-list">
-                <h3>Employment Law</h3>
-                <p><a href="#">Wrongful Termination</a></p>
-                <p><a href="#">Workplace Discrimination</a></p>
-                <p><a href="#">Harassment Claims</a></p>
-                <p><a href="#">Employment Contracts</a></p>
-                <p><a href="#">Wage and Hour Disputes</a></p>
-                <p><a href="#">Workplace Health and Safety</a></p>
-                <p><a href="#">Redundancy and Severance</a></p>
-                <p><a href="#">Employee Rights Advocacy</a></p>
-                <p><a href="#">Whistleblower Protection</a></p>
-                <p><a href="#">Non-Compete and Non-Disclosure</a></p>
-                <a href="#" class="button">All employment services</a>
+                <div class="service-list-inner">
+                    <div class="content">
+                        <h3>Employment Law</h3>
+                        <p><a href="#">Wrongful Termination</a></p>
+                        <p><a href="#">Workplace Discrimination</a></p>
+                        <p><a href="#">Harassment Claims</a></p>
+                        <p><a href="#">Employment Contracts</a></p>
+                        <p><a href="#">Wage and Hour Disputes</a></p>
+                        <p><a href="#">Workplace Health and Safety</a></p>
+                        <p><a href="#">Redundancy and Severance</a></p>
+                        <p><a href="#">Employee Rights Advocacy</a></p>
+                        <p><a href="#">Whistleblower Protection</a></p>
+                        <p><a href="#">Non-Compete and Non-Disclosure</a></p>
+                    </div>
+                    <a href="#" class="button">All employment services</a>
+                </div>
             </div>
         </div>
     </div>

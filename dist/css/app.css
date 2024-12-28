@@ -14079,6 +14079,7 @@ header .mobile-menus .ctas a {
 }
 .home.page .hero .left .content .button {
   margin-top: 20px;
+  opacity: 1;
   font-family: "Montserrat", serif;
   font-weight: 600;
   background-color: #00375B;
@@ -14093,7 +14094,6 @@ header .mobile-menus .ctas a {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
-  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .hero .left .content .button {
@@ -14102,6 +14102,34 @@ header .mobile-menus .ctas a {
 }
 .home.page .hero .left .content .button:hover {
   background-color: rgb(0, 85.8241758242, 142);
+}
+@media (max-width: 1280px) {
+  .home.page .hero .left .content .button {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    background-color: #EE243D;
+    color: #F5F5F5;
+    padding: 10px 23px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    text-decoration: none;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1280px) and (max-width: 991.98px) {
+  .home.page .hero .left .content .button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1280px) {
+  .home.page .hero .left .content .button:hover {
+    background-color: rgb(206.936440678, 16.063559322, 39.686440678);
+  }
 }
 .home.page .hero .right {
   display: -webkit-box;
@@ -14182,7 +14210,18 @@ header .mobile-menus .ctas a {
   filter: grayscale(0) brightness(1);
 }
 .home.page .services {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  background: #00375B;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .home.page .services {
+    padding: 40px 0;
+  }
+}
+.home.page .services > div {
+  max-width: 1600px;
+  margin: auto;
 }
 .home.page .services .heading {
   margin-bottom: 50px;
@@ -14197,7 +14236,7 @@ header .mobile-menus .ctas a {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
-  color: #EE243D;
+  color: #F5F5F5;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading .tag {
@@ -14209,7 +14248,7 @@ header .mobile-menus .ctas a {
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
-  color: #000F20;
+  color: #F5F5F5;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading h2, .home.page .services .heading .h2 {
@@ -14219,7 +14258,7 @@ header .mobile-menus .ctas a {
 .home.page .services .heading p {
   font-family: "Montserrat", serif;
   font-size: 16px;
-  color: #000F20;
+  color: #F5F5F5;
   max-width: 768px;
 }
 @media (max-width: 991.98px) {
@@ -14227,7 +14266,33 @@ header .mobile-menus .ctas a {
     font-size: 14px;
   }
 }
-.home.page .services .service-list h3, .home.page .services .service-list .h3 {
+@media (max-width: 1199.98px) {
+  .home.page .services .service-list:nth-child(-n+3) {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 991.98px) {
+  .home.page .services .service-list {
+    margin-bottom: 20px;
+  }
+}
+.home.page .services .service-list .service-list-inner {
+  padding: 30px;
+  border-radius: 5px;
+  background: #f9f9f9;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.home.page .services .service-list .service-list-inner h3, .home.page .services .service-list .service-list-inner .h3 {
   font-family: "Montserrat", serif;
   font-weight: 700;
   color: #EE243D;
@@ -14235,31 +14300,30 @@ header .mobile-menus .ctas a {
   margin-bottom: 20px;
 }
 @media (max-width: 991.98px) {
-  .home.page .services .service-list h3, .home.page .services .service-list .h3 {
+  .home.page .services .service-list .service-list-inner h3, .home.page .services .service-list .service-list-inner .h3 {
     font-size: 16px;
   }
 }
-.home.page .services .service-list p {
+.home.page .services .service-list .service-list-inner p {
   font-family: "Montserrat", serif;
   font-size: 16px;
   color: #000F20;
 }
 @media (max-width: 991.98px) {
-  .home.page .services .service-list p {
+  .home.page .services .service-list .service-list-inner p {
     font-size: 14px;
   }
 }
-.home.page .services .service-list p a {
+.home.page .services .service-list .service-list-inner p a {
   text-decoration: none;
   color: #000F20;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.home.page .services .service-list p a:hover {
+.home.page .services .service-list .service-list-inner p a:hover {
   color: #EE243D;
 }
-.home.page .services .service-list .button {
-  margin-bottom: 40px;
+.home.page .services .service-list .service-list-inner .button {
   font-family: "Montserrat", serif;
   font-weight: 600;
   background-color: #EE243D;
@@ -14276,15 +14340,12 @@ header .mobile-menus .ctas a {
   font-size: 16px;
 }
 @media (max-width: 991.98px) {
-  .home.page .services .service-list .button {
+  .home.page .services .service-list .service-list-inner .button {
     font-size: 14px;
   }
 }
-.home.page .services .service-list .button:hover {
+.home.page .services .service-list .service-list-inner .button:hover {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
-}
-.home.page .services .service-list:last-child .button {
-  margin-bottom: 0;
 }
 .home.page .feedback {
   margin-bottom: 80px;

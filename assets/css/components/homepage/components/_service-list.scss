@@ -1,5 +1,16 @@
 .services {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  background: $dc-secondary;
+  padding: 60px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
+
+  > div {
+    max-width: 1600px;
+    margin: auto;
+  }
 
   .heading {
     margin-bottom: 50px;
@@ -9,7 +20,7 @@
     }
 
     .tag {
-      @include tag($dc-primary);
+      @include tag($dc-text-light);
     }
 
     h2 {
@@ -17,7 +28,7 @@
       font-weight: $dc-bold;
       font-size: 48px;
       margin-bottom: 20px;
-      color: $dc-text-dark;
+      color: $dc-text-light;
 
       @include media-breakpoint-down(lg) {
         font-size: 40px;
@@ -27,7 +38,7 @@
     p {
       font-family: $dc-body;
       font-size: 16px;
-      color: $dc-text-dark;
+      color: $dc-text-light;
       max-width: 768px;
 
       @include media-breakpoint-down(lg) {
@@ -37,45 +48,60 @@
   }
 
   .service-list {
-    h3 {
-      font-family: $dc-body;
-      font-weight: $dc-bold;
-      color: $dc-primary;
-      font-size: 18px;
-      margin-bottom: 20px;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 16px;
+    @include media-breakpoint-down(xl) {
+      &:nth-child(-n+3) {
+        margin-bottom: 25px;
       }
     }
 
-    p {
-      font-family: $dc-body;
-      font-size: 16px;
-      color: $dc-text-dark;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
 
-      @include media-breakpoint-down(lg) {
-        font-size: 14px;
-      }
+    .service-list-inner {
+      padding: 30px;
+      border-radius: 5px;
+      background: $dc-background-off-white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-      a {
-        text-decoration: none;
-        color: $dc-text-dark;
-        transition: $dc-transition-all;
+      h3 {
+        font-family: $dc-body;
+        font-weight: $dc-bold;
+        color: $dc-primary;
+        font-size: 18px;
+        margin-bottom: 20px;
 
-        &:hover {
-          color: $dc-primary;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
         }
       }
-    }
 
-    .button {
-      margin-bottom: 40px;
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
-    }
+      p {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
 
-    &:last-child .button {
-      margin-bottom: 0;
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $dc-text-dark;
+          transition: $dc-transition-all;
+
+          &:hover {
+            color: $dc-primary;
+          }
+        }
+      }
+
+      .button {
+        @include dc-button($dc-primary, darken($dc-primary, 10%));
+      }
     }
   }
 }
