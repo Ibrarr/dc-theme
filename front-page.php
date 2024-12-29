@@ -321,7 +321,7 @@ get_header();
 <section id="enquire-now">
     <div class="container px-4">
         <div class="row">
-            <div class="col-lg-6 content">
+            <section class="col-lg-6 content">
                 <div class="heading">
                     <h2 class="tag">Get in Touch</h2>
                     <h3>Enquire Now</h3>
@@ -342,10 +342,10 @@ get_header();
                     <a href="tel:02088261200"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> 0208 826 1200</a>
                     <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/location.svg' ) ?></i> 42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
                 </div>
-            </div>
-            <div class="col-lg-6 form">
+            </section>
+            <section class="col-lg-6 form">
                 <?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' ); ?>
-            </div>
+            </section>
         </div>
     </div>
 </section>

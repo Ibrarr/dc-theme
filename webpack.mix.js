@@ -20,8 +20,6 @@ mix.sass('assets/css/app.scss', 'css/app.css')
         processCssUrls: false
     });
 
-mix.setPublicPath('dist');
-
 mix.options({
     postCss: [
         require('autoprefixer')({
@@ -31,4 +29,7 @@ mix.options({
     ]
 });
 
+mix.setPublicPath('dist');
+mix.sourceMaps();
 mix.disableNotifications();
+mix.version();
