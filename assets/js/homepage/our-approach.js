@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Step 1: Fade in .heading h1 from left to right
-    approachTimeline.from('.our-approach .heading h1', {
+    approachTimeline.from('.our-approach .heading h2', {
         opacity: 0,
         x: -50, // Start from the left
         duration: 0.6,
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Step 2: Fade in .heading h2 from left to right, then .approach .timeline up
     approachTimeline
-        .from('.our-approach .heading h2', {
+        .from('.our-approach .heading h3', {
             opacity: 0,
             x: -50, // Start from the left
             duration: 0.6,

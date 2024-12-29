@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Step 2: Fade in .heading h2 from left to right, slightly delayed
-    servicesTimeline.from('.services .heading h2', {
+    servicesTimeline.from('.services .heading h3', {
         opacity: 0,
         x: -50, // Start from the left
         duration: 0.6,

@@ -1,31 +1,35 @@
 <div class="row">
     <div class="col-xl-3 service-list">
         <h3>Individuals</h3>
-        <p><a href="#">Family Law</a></p>
-        <p><a href="#">Criminal Defense</a></p>
-        <p><a href="#">Personal Injury Claims</a></p>
-        <p><a href="#">Employment Law</a></p>
-        <p><a href="#">Immigration Services</a></p>
-        <p><a href="#">Wills and Probate</a></p>
-        <p><a href="#">Landlord-Tenant Disputes</a></p>
-        <p><a href="#">Consumer Rights</a></p>
-        <p><a href="#">Debt and Bankruptcy Advice</a></p>
-        <p><a href="#">Defamation and Libel</a></p>
+        <ul>
+            <li><a href="#">Family Law</a></li>
+            <li><a href="#">Criminal Defense</a></li>
+            <li><a href="#">Personal Injury Claims</a></li>
+            <li><a href="#">Employment Law</a></li>
+            <li><a href="#">Immigration Services</a></li>
+            <li><a href="#">Wills and Probate</a></li>
+            <li><a href="#">Landlord-Tenant Disputes</a></li>
+            <li><a href="#">Consumer Rights</a></li>
+            <li><a href="#">Debt and Bankruptcy Advice</a></li>
+            <li><a href="#">Defamation and Libel</a></li>
+        </ul>
         <a href="#" class="button">All individual services</a>
     </div>
     <div class="col-xl-3 service-list">
         <h3>Businesses</h3>
-        <p><a href="#">Corporate Law</a></p>
-        <p><a href="#">Contract Drafting and Review</a></p>
-        <p><a href="#">Employment Law</a></p>
-        <p><a href="#">Intellectual Property Protection</a></p>
-        <p><a href="#">Commercial Litigation</a></p>
-        <p><a href="#">Regulatory Compliance</a></p>
-        <p><a href="#">Mergers and Acquisitions</a></p>
-        <p><a href="#">Tax Law</a></p>
-        <p><a href="#">Real Estate Transactions</a></p>
-        <p><a href="#">Data Protection and Privacy</a></p>
-        <a href="#" class="button">All individual services</a>
+        <ul>
+            <li><a href="#">Corporate Law</a></li>
+            <li><a href="#">Contract Drafting and Review</a></li>
+            <li><a href="#">Employment Law</a></li>
+            <li><a href="#">Intellectual Property Protection</a></li>
+            <li><a href="#">Commercial Litigation</a></li>
+            <li><a href="#">Regulatory Compliance</a></li>
+            <li><a href="#">Mergers and Acquisitions</a></li>
+            <li><a href="#">Tax Law</a></li>
+            <li><a href="#">Real Estate Transactions</a></li>
+            <li><a href="#">Data Protection and Privacy</a></li>
+        </ul>
+        <a href="#" class="button">All businesses services</a>
     </div>
     <div class="col-xl-3 business-info">
         <div class="contact-info">
@@ -66,9 +70,9 @@
         $query = new WP_Query($args);
         while ($query->have_posts()) : $query->the_post();
             ?>
-            <div class="standard-case-note-card">
+            <article class="standard-case-note-card">
                 <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
-            </div>
+            </article>
         <?php endwhile; ?>
     </div>
 </div>

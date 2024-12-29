@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Step 1: Fade in .content .heading h1 from left to right
-    enquireTimeline.from('#enquire-now .content .heading h1', {
+    enquireTimeline.from('#enquire-now .content .heading h2', {
         opacity: 0,
         x: -50, // Start from the left
         duration: 0.6,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Step 2: Fade in .content .heading h2 from left to right with a tiny delay
-    enquireTimeline.from('#enquire-now .content .heading h2', {
+    enquireTimeline.from('#enquire-now .content .heading h3', {
         opacity: 0,
         x: -50, // Start from the left
         duration: 0.6,

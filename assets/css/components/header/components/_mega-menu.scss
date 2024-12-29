@@ -27,22 +27,29 @@
       }
     }
 
-    p {
-      font-family: $dc-body;
-      font-size: 16px;
-      color: $dc-text-dark;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-      @include media-breakpoint-down(lg) {
-        font-size: 14px;
-      }
-
-      a {
-        text-decoration: none;
+      li {
+        font-family: $dc-body;
+        font-size: 16px;
         color: $dc-text-dark;
-        transition: $dc-transition-all;
+        margin-bottom: 15px;
 
-        &:hover {
-          color: $dc-primary;
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $dc-text-dark;
+          transition: $dc-transition-all;
+
+          &:hover {
+            color: $dc-primary;
+          }
         }
       }
     }

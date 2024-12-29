@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    caseNotesTimeline.from('.case-notes .heading h1', {
+    caseNotesTimeline.from('.case-notes .heading h2', {
         opacity: 0,
         x: -50,
         duration: 0.6,
         ease: 'power2.out',
-    }).from('.case-notes .heading h2', {
+    }).from('.case-notes .heading h3', {
         opacity: 0,
         x: -50,
         duration: 0.6,

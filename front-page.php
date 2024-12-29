@@ -58,83 +58,93 @@ get_header();
         <div class="row">
             <div class="col-12">
                 <div class="heading">
-                    <h1 class="tag">Expertise</h1>
-                    <h2>Legal Services</h2>
+                    <h2 class="tag">Expertise</h2>
+                    <h3>Legal Services</h3>
                     <p>At Drake & Case, we offer tailored legal solutions for individuals and businesses alike. Our dedicated team is here to guide you through every legal challenge with professionalism and care.</p>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6 service-list">
+            <article class="col-xl-3 col-lg-6 service-list">
                 <div class="service-list-inner">
                     <div class="content">
-                        <h3>Individuals</h3>
-                        <p><a href="#">Family Law</a></p>
-                        <p><a href="#">Criminal Defense</a></p>
-                        <p><a href="#">Personal Injury Claims</a></p>
-                        <p><a href="#">Employment Law</a></p>
-                        <p><a href="#">Immigration Services</a></p>
-                        <p><a href="#">Wills and Probate</a></p>
-                        <p><a href="#">Landlord-Tenant Disputes</a></p>
-                        <p><a href="#">Consumer Rights</a></p>
-                        <p><a href="#">Debt and Bankruptcy Advice</a></p>
-                        <p><a href="#">Defamation and Libel</a></p>
+                        <h4>Individuals</h4>
+                        <ul>
+                            <li><a href="#">Family Law</a></li>
+                            <li><a href="#">Criminal Defense</a></li>
+                            <li><a href="#">Personal Injury Claims</a></li>
+                            <li><a href="#">Employment Law</a></li>
+                            <li><a href="#">Immigration Services</a></li>
+                            <li><a href="#">Wills and Probate</a></li>
+                            <li><a href="#">Landlord-Tenant Disputes</a></li>
+                            <li><a href="#">Consumer Rights</a></li>
+                            <li><a href="#">Debt and Bankruptcy Advice</a></li>
+                            <li><a href="#">Defamation and Libel</a></li>
+                        </ul>
                     </div>
                     <a href="#" class="button">All individual services</a>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 service-list">
+            </article>
+            <article class="col-xl-3 col-lg-6 service-list">
                 <div class="service-list-inner">
                     <div class="content">
-                        <h3>Businesses</h3>
-                        <p><a href="#">Corporate Law</a></p>
-                        <p><a href="#">Contract Drafting and Review</a></p>
-                        <p><a href="#">Employment Law</a></p>
-                        <p><a href="#">Intellectual Property Protection</a></p>
-                        <p><a href="#">Commercial Litigation</a></p>
-                        <p><a href="#">Regulatory Compliance</a></p>
-                        <p><a href="#">Mergers and Acquisitions</a></p>
-                        <p><a href="#">Tax Law</a></p>
-                        <p><a href="#">Real Estate Transactions</a></p>
-                        <p><a href="#">Data Protection and Privacy</a></p>
+                        <h4>Businesses</h4>
+                        <ul>
+                            <li><a href="#">Corporate Law</a></li>
+                            <li><a href="#">Contract Drafting and Review</a></li>
+                            <li><a href="#">Employment Law</a></li>
+                            <li><a href="#">Intellectual Property Protection</a></li>
+                            <li><a href="#">Commercial Litigation</a></li>
+                            <li><a href="#">Regulatory Compliance</a></li>
+                            <li><a href="#">Mergers and Acquisitions</a></li>
+                            <li><a href="#">Tax Law</a></li>
+                            <li><a href="#">Real Estate Transactions</a></li>
+                            <li><a href="#">Data Protection and Privacy</a></li>
+                        </ul>
                     </div>
-                    <a href="#" class="button">All individual services</a>
+                    <a href="#" class="button">All business services</a>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 service-list">
+            </article>
+
+            <article class="col-xl-3 col-lg-6 service-list">
                 <div class="service-list-inner">
                     <div class="content">
-                        <h3>Family Law</h3>
-                        <p><a href="#">Divorce and Separation</a></p>
-                        <p><a href="#">Child Custody and Visitation</a></p>
-                        <p><a href="#">Child Support</a></p>
-                        <p><a href="#">Spousal Support (Alimony)</a></p>
-                        <p><a href="#">Prenuptial and Postnuptial Agreements</a></p>
-                        <p><a href="#">Adoption</a></p>
-                        <p><a href="#">Domestic Violence Protection</a></p>
-                        <p><a href="#">Property Division</a></p>
-                        <p><a href="#">Guardianship</a></p>
-                        <p><a href="#">Paternity Disputes</a></p>
+                        <h4>Family Law</h4>
+                        <ul>
+                            <li><a href="#">Divorce and Separation</a></li>
+                            <li><a href="#">Child Custody and Visitation</a></li>
+                            <li><a href="#">Child Support</a></li>
+                            <li><a href="#">Spousal Support (Alimony)</a></li>
+                            <li><a href="#">Prenuptial and Postnuptial Agreements</a></li>
+                            <li><a href="#">Adoption</a></li>
+                            <li><a href="#">Domestic Violence Protection</a></li>
+                            <li><a href="#">Property Division</a></li>
+                            <li><a href="#">Guardianship</a></li>
+                            <li><a href="#">Paternity Disputes</a></li>
+                        </ul>
                     </div>
                     <a href="#" class="button">All family services</a>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 service-list">
+            </article>
+
+            <article class="col-xl-3 col-lg-6 service-list">
                 <div class="service-list-inner">
                     <div class="content">
-                        <h3>Employment Law</h3>
-                        <p><a href="#">Wrongful Termination</a></p>
-                        <p><a href="#">Workplace Discrimination</a></p>
-                        <p><a href="#">Harassment Claims</a></p>
-                        <p><a href="#">Employment Contracts</a></p>
-                        <p><a href="#">Wage and Hour Disputes</a></p>
-                        <p><a href="#">Workplace Health and Safety</a></p>
-                        <p><a href="#">Redundancy and Severance</a></p>
-                        <p><a href="#">Employee Rights Advocacy</a></p>
-                        <p><a href="#">Whistleblower Protection</a></p>
-                        <p><a href="#">Non-Compete and Non-Disclosure</a></p>
+                        <h4>Employment Law</h4>
+                        <ul>
+                            <li><a href="#">Wrongful Termination</a></li>
+                            <li><a href="#">Workplace Discrimination</a></li>
+                            <li><a href="#">Harassment Claims</a></li>
+                            <li><a href="#">Employment Contracts</a></li>
+                            <li><a href="#">Wage and Hour Disputes</a></li>
+                            <li><a href="#">Workplace Health and Safety</a></li>
+                            <li><a href="#">Redundancy and Severance</a></li>
+                            <li><a href="#">Employee Rights Advocacy</a></li>
+                            <li><a href="#">Whistleblower Protection</a></li>
+                            <li><a href="#">Non-Compete and Non-Disclosure</a></li>
+                        </ul>
                     </div>
                     <a href="#" class="button">All employment services</a>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
@@ -208,8 +218,8 @@ get_header();
     <div class="container px-4">
         <div class="row">
             <div class="col-lg-6 heading">
-                <h1 class="tag">Process</h1>
-                <h2>Understanding Our Approach</h2>
+                <h2 class="tag">Process</h2>
+                <h3>Understanding Our Approach</h3>
                 <a href="#enquire-now" class="button">Enquire Now</a>
             </div>
             <div class="col-lg-6 approach">
@@ -259,8 +269,8 @@ get_header();
 <section class="case-notes">
     <div class="px-4">
         <div class="heading">
-            <h1 class="tag">Content</h1>
-            <h2>Case Notes</h2>
+            <h2 class="tag">Content</h2>
+            <h3>Case Notes</h3>
             <p>Welcome to Case Notes by Drake & Case, your source for expert legal insights and updates.</p>
             <p>From complex litigation to emerging legal trends, our team shares valuable perspectives to keep you informed and empowered.</p>
         </div>
@@ -279,9 +289,9 @@ get_header();
                     while ($query->have_posts()) : $query->the_post();
                     ?>
                         <li class="splide__slide">
-                            <div class="standard-case-note-card">
+                            <article class="standard-case-note-card">
                                 <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
-                            </div>
+                            </article>
                         </li>
                     <?php endwhile; ?>
                 </ul>
@@ -313,8 +323,8 @@ get_header();
         <div class="row">
             <div class="col-lg-6 content">
                 <div class="heading">
-                    <h1 class="tag">Get in Touch</h1>
-                    <h2>Enquire Now</h2>
+                    <h2 class="tag">Get in Touch</h2>
+                    <h3>Enquire Now</h3>
                     <p>We’re here to assist you with your legal needs.</p>
                 </div>
                 <div class="what-to-expect">

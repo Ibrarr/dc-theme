@@ -14152,7 +14152,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Step 2: Fade in .heading h2 from left to right, slightly delayed
-  servicesTimeline.from('.services .heading h2', {
+  servicesTimeline.from('.services .heading h3', {
     opacity: 0,
     x: -50,
     // Start from the left
@@ -14287,7 +14287,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Step 1: Fade in .heading h1 from left to right
-  approachTimeline.from('.our-approach .heading h1', {
+  approachTimeline.from('.our-approach .heading h2', {
     opacity: 0,
     x: -50,
     // Start from the left
@@ -14296,7 +14296,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Step 2: Fade in .heading h2 from left to right, then .approach .timeline up
-  approachTimeline.from('.our-approach .heading h2', {
+  approachTimeline.from('.our-approach .heading h3', {
     opacity: 0,
     x: -50,
     // Start from the left
@@ -14415,12 +14415,12 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleActions: 'play none none none' // Play once on scroll
     }
   });
-  caseNotesTimeline.from('.case-notes .heading h1', {
+  caseNotesTimeline.from('.case-notes .heading h2', {
     opacity: 0,
     x: -50,
     duration: 0.6,
     ease: 'power2.out'
-  }).from('.case-notes .heading h2', {
+  }).from('.case-notes .heading h3', {
     opacity: 0,
     x: -50,
     duration: 0.6,
@@ -14488,7 +14488,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Step 1: Fade in .content .heading h1 from left to right
-  enquireTimeline.from('#enquire-now .content .heading h1', {
+  enquireTimeline.from('#enquire-now .content .heading h2', {
     opacity: 0,
     x: -50,
     // Start from the left
@@ -14497,7 +14497,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Step 2: Fade in .content .heading h2 from left to right with a tiny delay
-  enquireTimeline.from('#enquire-now .content .heading h2', {
+  enquireTimeline.from('#enquire-now .content .heading h3', {
     opacity: 0,
     x: -50,
     // Start from the left
