@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, '-=0.5'); // Overlap the animation slightly with the previous step
 
     // Step 3: Fade up .content .button from down to up
-    gsap.from('.content .button', {
+    gsap.from('.hero .content .button', {
         opacity: 0,
         y: 50, // Start below its final position
         duration: 0.5,

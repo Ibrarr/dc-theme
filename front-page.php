@@ -5,14 +5,14 @@ get_header();
 <section class="hero">
     <div class="container px-4">
         <div class="row">
-            <div class="col-lg-6 left">
+            <section class="col-lg-6 left">
                 <div class="content">
                     <h1>Excellence in Legal Services</h1>
                     <p>At Drake & Case, we prioritise your needs with a commitment to integrity and innovative solutions.</p>
                     <p>Our experienced lawyers are dedicated to providing exceptional legal services tailored to your unique challenges.</p>
                     <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
-            </div>
+            </section>
             <div class="col-lg-6 right">
                 <div class="first-row-images">
                     <img src="/wp-content/uploads/2024/12/header-one.png" alt="test">
@@ -56,13 +56,13 @@ get_header();
 <section class="services">
     <div class="container px-4">
         <div class="row">
-            <div class="col-12">
+            <section class="col-12">
                 <div class="heading">
                     <h2 class="tag">Expertise</h2>
                     <h3>Legal Services</h3>
                     <p>At Drake & Case, we offer tailored legal solutions for individuals and businesses alike. Our dedicated team is here to guide you through every legal challenge with professionalism and care.</p>
                 </div>
-            </div>
+            </section>
             <article class="col-xl-3 col-lg-6 service-list">
                 <div class="service-list-inner">
                     <div class="content">
@@ -151,11 +151,11 @@ get_header();
 
 <section class="feedback">
     <div class="container px-4">
-        <div class="heading">
+        <section class="heading">
             <h2>Client Feedback</h2>
             <p>We’re proud to partner with clients who trust us to deliver exceptional results. Their feedback reflects our commitment to professionalism, precision, and putting client needs first. If you’re ready to experience the Drake & Case difference, <a href="">get in touch with us today.</a></p>
-        </div>
-        <div class="splide" id="feedback-slider">
+        </section>
+        <section class="splide" id="feedback-slider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
@@ -210,19 +210,19 @@ get_header();
                     <?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/right-arrow.svg' ) ?>
                 </button>
             </div>
-        </div>
+        </section>
     </div>
 </section>
 
 <section class="our-approach">
     <div class="container px-4">
         <div class="row">
-            <div class="col-lg-6 heading">
+            <section class="col-lg-6 heading">
                 <h2 class="tag">Process</h2>
                 <h3>Understanding Our Approach</h3>
                 <a href="#enquire-now" class="button">Enquire Now</a>
-            </div>
-            <div class="col-lg-6 approach">
+            </section>
+            <section class="col-lg-6 approach">
                 <div class="timeline">
                     <div class="item">
                         <div class="content">
@@ -261,20 +261,20 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 </section>
 
 <section class="case-notes">
     <div class="px-4">
-        <div class="heading">
+        <section class="heading">
             <h2 class="tag">Content</h2>
             <h3>Case Notes</h3>
             <p>Welcome to Case Notes by Drake & Case, your source for expert legal insights and updates.</p>
             <p>From complex litigation to emerging legal trends, our team shares valuable perspectives to keep you informed and empowered.</p>
-        </div>
-        <div class="splide" id="case-notes-slider">
+        </section>
+        <section class="splide" id="case-notes-slider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <?php
@@ -314,7 +314,7 @@ get_header();
                     <?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/right-arrow.svg' ) ?>
                 </button>
             </div>
-        </div>
+        </section>
     </div>
 </section>
 
