@@ -7,9 +7,11 @@ get_header();
 $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
 $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
 ?>
-<div class="container px-4 page-content">
+<section class="hero">
+    <div class="container px-4">
 
-</div>
+    </div>
+</section>
 <?php
 get_footer();
 ?>

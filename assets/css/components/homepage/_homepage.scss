@@ -1,9 +1,9 @@
 .home.page {
   @import "components/hero";
-  @import "components/trusted-by";
+  @import "../misc/sections/trusted-by";
   @import "components/service-list";
-  @import "components/feedback";
-  @import "components/our-approach";
-  @import "components/case-notes";
-  @import "components/enquire-now";
+  @import "../misc/sections/client-feedback";
+  @import "../misc/sections/our-approach";
+  @import "../misc/sections/case-notes-slider";
+  @import "../misc/sections/enquire-bottom-section";
 }

@@ -45,7 +45,6 @@
 
       .button {
         margin-top: 20px;
-        opacity: 1;
         @include dc-button($dc-primary, darken($dc-primary, 10%));
       }
     }
