@@ -12,7 +12,7 @@
         <div class="top-menu px-4">
             <div class="logo-menu">
                 <div class="logo">
-                    <a href="/">
+                    <a href="/" aria-label="Home">
                         <div class="desktop"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/dc-logo-header.svg' ) ?></div>
                         <div class="mobile"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/favicon.svg' ) ?></div>
                     </a>
