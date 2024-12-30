@@ -87,17 +87,17 @@ function modify_partner_post_link( $url, $post ) {
 /**
  * Fetch all Gravity Forms for ACF dropdown field
  */
-//add_filter( 'acf/load_field/name=newsletter_form', 'acf_populate_gf_forms_ids' );
-//function acf_populate_gf_forms_ids( $field ) {
-//	if ( class_exists( 'GFFormsModel' ) ) {
-//		$choices = [];
-//
-//		foreach ( \GFFormsModel::get_forms() as $form ) {
-//			$choices[ $form->id ] = $form->title;
-//		}
-//
-//		$field['choices'] = $choices;
-//	}
-//
-//	return $field;
-//}
+add_filter( 'acf/load_field/name=enquire_form', 'acf_populate_gf_forms_ids' );
+function acf_populate_gf_forms_ids( $field ) {
+	if ( class_exists( 'GFFormsModel' ) ) {
+		$choices = [];
+
+		foreach ( \GFFormsModel::get_forms() as $form ) {
+			$choices[ $form->id ] = $form->title;
+		}
+
+		$field['choices'] = $choices;
+	}
+
+	return $field;
+}

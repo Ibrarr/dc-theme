@@ -7,19 +7,19 @@
                 <p class="heading">Address:</p>
                 <p>42 Upper Berkeley Street, Marylebone, London, W1H 5QL</p>
                 <p class="heading">Contact:</p>
-                <a href="tel:02088261200">0208 826 1200</a>
-                <a href="mailto:info@drakeandcase.com">info@drakeandcase.com</a>
+                <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><?php the_field( 'main_phone_number', 'option' ); ?></a>
+                <a href="mailto:<?php the_field( 'main_email', 'option' ); ?>"><?php the_field( 'main_email', 'option' ); ?></a>
                 <div class="sra" style="max-width:225px;max-height:163px; margin-left:0px!important">
                     <div style="position: relative;padding-bottom: 59.1%;height: auto;overflow: hidden;">
                         <iframe frameborder="0" scrolling="no" allowtransparency="true" title="SRA Check" src="https://cdn.yoshki.com/iframe/55845r.html" style="border:0px; margin:0px; padding:0px; backgroundColor:transparent; top:0px; left:0px; width:100%; height:100%; position: absolute;"></iframe>
                     </div>
                 </div>
                 <div class="socials">
-                    <a href="#" aria-label="LinkedIn"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/linkedin.svg' ) ?></a>
-                    <a href="#" aria-label="Instagram"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/instagram.svg' ) ?></a>
-                    <a href="#" aria-label="Facebook"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/facebook.svg' ) ?></a>
-                    <a href="#" aria-label="X"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/x.svg' ) ?></a>
-                    <a href="#" aria-label="YouTube"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/youtube.svg' ) ?></a>
+                    <a href="<?php the_field( 'linkedin', 'option' ); ?>" target="_blank" aria-label="LinkedIn"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/linkedin.svg' ) ?></a>
+                    <a href="<?php the_field( 'instagram', 'option' ); ?>" target="_blank" aria-label="Instagram"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/instagram.svg' ) ?></a>
+                    <a href="<?php the_field( 'facebook', 'option' ); ?>" target="_blank" aria-label="Facebook"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/facebook.svg' ) ?></a>
+                    <a href="<?php the_field( 'x', 'option' ); ?>" target="_blank" aria-label="X"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/x.svg' ) ?></a>
+                    <a href="<?php the_field( 'youtube', 'option' ); ?>" target="_blank" aria-label="YouTube"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/youtube.svg' ) ?></a>
                 </div>
             </div>
             <div class="col-lg-6 menus">

@@ -27,7 +27,7 @@
   img {
     filter: grayscale(1) brightness(0);
     transition: $dc-transition-all;
-    width: 150px;
+    height: 75px;
 
     @include media-breakpoint-down(md) {
       width: 100%;

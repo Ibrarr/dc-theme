@@ -14,13 +14,17 @@
 
   .service-list {
     background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    h3 {
+    span {
       font-family: $dc-body;
       font-weight: $dc-bold;
       color: $dc-primary;
       font-size: 18px;
       margin-bottom: 20px;
+      display: block;
 
       @include media-breakpoint-down(lg) {
         font-size: 16px;

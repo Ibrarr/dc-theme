@@ -13634,16 +13634,27 @@ header .mega-menu .row > div, header .mega-menu-mobile .row > div {
 }
 header .mega-menu .service-list, header .mega-menu-mobile .service-list {
   background-color: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-header .mega-menu .service-list h3, header .mega-menu .service-list .h3, header .mega-menu-mobile .service-list h3, header .mega-menu-mobile .service-list .h3 {
+header .mega-menu .service-list span, header .mega-menu-mobile .service-list span {
   font-family: "Montserrat", serif;
   font-weight: 700;
   color: #EE243D;
   font-size: 18px;
   margin-bottom: 20px;
+  display: block;
 }
 @media (max-width: 991.98px) {
-  header .mega-menu .service-list h3, header .mega-menu .service-list .h3, header .mega-menu-mobile .service-list h3, header .mega-menu-mobile .service-list .h3 {
+  header .mega-menu .service-list span, header .mega-menu-mobile .service-list span {
     font-size: 16px;
   }
 }
@@ -14185,7 +14196,7 @@ header .mobile-menus .ctas a {
   filter: grayscale(1) brightness(0);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  width: 150px;
+  height: 75px;
 }
 @media (max-width: 767.98px) {
   .home.page .trusted-by img {

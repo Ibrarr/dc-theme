@@ -25,7 +25,7 @@
                 </nav>
             </div>
             <div class="ctas">
-                <a href="tel:02088261200" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i>0208 826 1200</a>
+                <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
                 <a href="#enquire-now" class="button">Enquire now</a>
             </div>
             <div class="mobile-menu">
@@ -45,7 +45,7 @@
                     <?php require get_template_directory() . '/template-parts/mega-menu.php'; ?>
                 </div>
                 <div class="ctas">
-                    <a href="tel:02088261200" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i>0208 826 1200</a>
+                    <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
                     <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
             </div>

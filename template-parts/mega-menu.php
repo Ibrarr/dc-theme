@@ -1,35 +1,51 @@
 <div class="row">
     <div class="col-xl-3 service-list">
-        <h3>Individuals</h3>
-        <ul>
-            <li><a href="#">Family Law</a></li>
-            <li><a href="#">Criminal Defense</a></li>
-            <li><a href="#">Personal Injury Claims</a></li>
-            <li><a href="#">Employment Law</a></li>
-            <li><a href="#">Immigration Services</a></li>
-            <li><a href="#">Wills and Probate</a></li>
-            <li><a href="#">Landlord-Tenant Disputes</a></li>
-            <li><a href="#">Consumer Rights</a></li>
-            <li><a href="#">Debt and Bankruptcy Advice</a></li>
-            <li><a href="#">Defamation and Libel</a></li>
-        </ul>
-        <a href="#" class="button">All individual services</a>
+        <div class="content">
+            <span>Individuals</span>
+            <ul>
+                <?php
+                $individual_term = get_term_by('slug', 'individuals', 'practice_area');
+
+                $individual_child_terms = get_terms([
+                    'taxonomy'   => 'practice_area',
+                    'parent'     => $individual_term->term_id,
+                    'orderby'    => 'term_id',
+                    'order'      => 'ASC',
+                    'hide_empty' => false,
+                    'number'     => 10,
+                ]);
+
+                foreach ($individual_child_terms as $term) {
+                    echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+        <a href="<?php echo $individual_term->slug; ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
     </div>
     <div class="col-xl-3 service-list">
-        <h3>Businesses</h3>
-        <ul>
-            <li><a href="#">Corporate Law</a></li>
-            <li><a href="#">Contract Drafting and Review</a></li>
-            <li><a href="#">Employment Law</a></li>
-            <li><a href="#">Intellectual Property Protection</a></li>
-            <li><a href="#">Commercial Litigation</a></li>
-            <li><a href="#">Regulatory Compliance</a></li>
-            <li><a href="#">Mergers and Acquisitions</a></li>
-            <li><a href="#">Tax Law</a></li>
-            <li><a href="#">Real Estate Transactions</a></li>
-            <li><a href="#">Data Protection and Privacy</a></li>
-        </ul>
-        <a href="#" class="button">All businesses services</a>
+        <div class="content">
+            <span>Businesses</span>
+            <ul>
+                <?php
+                $business_term = get_term_by('slug', 'businesses', 'practice_area');
+
+                $business_child_terms = get_terms([
+                    'taxonomy'   => 'practice_area',
+                    'parent'     => $business_term->term_id,
+                    'orderby'    => 'term_id',
+                    'order'      => 'ASC',
+                    'hide_empty' => false,
+                    'number'     => 10,
+                ]);
+
+                foreach ($business_child_terms as $term) {
+                    echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+        <a href="<?php echo $business_term->slug; ?>" class="button">All <?php echo $business_term->name; ?> services</a>
     </div>
     <div class="col-xl-3 business-info">
         <div class="contact-info">

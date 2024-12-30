@@ -1,28 +1,29 @@
 <?php
 get_header();
-?>
 
+$first_image_column = get_field('first_image_column', get_option( 'page_on_front' ));
+$second_image_column = get_field('second_image_column', get_option( 'page_on_front' ));
+?>
 <section class="hero">
     <div class="container px-4">
         <div class="row">
             <section class="col-lg-6 left">
                 <div class="content">
-                    <h1>Excellence in Legal Services</h1>
-                    <p>At Drake & Case, we prioritise your needs with a commitment to integrity and innovative solutions.</p>
-                    <p>Our experienced lawyers are dedicated to providing exceptional legal services tailored to your unique challenges.</p>
+                    <h1><?php the_field( 'hero_heading', get_option( 'page_on_front' ) ); ?></h1>
+                    <?php the_field( 'hero_text', get_option( 'page_on_front' ) ); ?>
                     <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
             </section>
             <div class="col-lg-6 right">
                 <div class="first-row-images">
-                    <img src="/wp-content/uploads/2024/12/header-one.png" alt="test">
-                    <img src="/wp-content/uploads/2024/12/image-two.png" alt="test">
-                    <img src="/wp-content/uploads/2024/12/image-three.png" alt="test">
+                    <?php foreach( $first_image_column as $image ): ?>
+                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+                    <?php endforeach; ?>
                 </div>
                 <div class="second-row-images">
-                    <img src="/wp-content/uploads/2024/12/image-four-e1735053498440.png" alt="test">
-                    <img src="/wp-content/uploads/2024/12/image-five.png" alt="test">
-                    <img src="/wp-content/uploads/2024/12/image-six.png" alt="test">
+                    <?php foreach( $second_image_column as $image ): ?>
+                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -46,19 +47,25 @@ get_header();
                     <div class="content">
                         <h4>Individuals</h4>
                         <ul>
-                            <li><a href="#">Family Law</a></li>
-                            <li><a href="#">Criminal Defense</a></li>
-                            <li><a href="#">Personal Injury Claims</a></li>
-                            <li><a href="#">Employment Law</a></li>
-                            <li><a href="#">Immigration Services</a></li>
-                            <li><a href="#">Wills and Probate</a></li>
-                            <li><a href="#">Landlord-Tenant Disputes</a></li>
-                            <li><a href="#">Consumer Rights</a></li>
-                            <li><a href="#">Debt and Bankruptcy Advice</a></li>
-                            <li><a href="#">Defamation and Libel</a></li>
+                            <?php
+                            $individual_term = get_term_by('slug', 'individuals', 'practice_area');
+
+                            $child_terms = get_terms([
+                                'taxonomy'   => 'practice_area',
+                                'parent'     => $individual_term->term_id,
+                                'orderby'    => 'term_id',
+                                'order'      => 'ASC',
+                                'hide_empty' => false,
+                                'number'     => 10,
+                            ]);
+
+                            foreach ($child_terms as $term) {
+                                echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                            }
+                            ?>
                         </ul>
                     </div>
-                    <a href="#" class="button">All individual services</a>
+                    <a href="<?php echo $individual_term->slug; ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
                 </div>
             </article>
             <article class="col-xl-3 col-lg-6 service-list">
@@ -66,19 +73,25 @@ get_header();
                     <div class="content">
                         <h4>Businesses</h4>
                         <ul>
-                            <li><a href="#">Corporate Law</a></li>
-                            <li><a href="#">Contract Drafting and Review</a></li>
-                            <li><a href="#">Employment Law</a></li>
-                            <li><a href="#">Intellectual Property Protection</a></li>
-                            <li><a href="#">Commercial Litigation</a></li>
-                            <li><a href="#">Regulatory Compliance</a></li>
-                            <li><a href="#">Mergers and Acquisitions</a></li>
-                            <li><a href="#">Tax Law</a></li>
-                            <li><a href="#">Real Estate Transactions</a></li>
-                            <li><a href="#">Data Protection and Privacy</a></li>
+                            <?php
+                            $business_term = get_term_by('slug', 'businesses', 'practice_area');
+
+                            $business_child_terms = get_terms([
+                                'taxonomy'   => 'practice_area',
+                                'parent'     => $business_term->term_id,
+                                'orderby'    => 'term_id',
+                                'order'      => 'ASC',
+                                'hide_empty' => false,
+                                'number'     => 10,
+                            ]);
+
+                            foreach ($business_child_terms as $term) {
+                                echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                            }
+                            ?>
                         </ul>
                     </div>
-                    <a href="#" class="button">All business services</a>
+                    <a href="<?php echo $business_term->slug; ?>" class="button">All <?php echo $business_term->name; ?> services</a>
                 </div>
             </article>
 
@@ -87,19 +100,25 @@ get_header();
                     <div class="content">
                         <h4>Family Law</h4>
                         <ul>
-                            <li><a href="#">Divorce and Separation</a></li>
-                            <li><a href="#">Child Custody and Visitation</a></li>
-                            <li><a href="#">Child Support</a></li>
-                            <li><a href="#">Spousal Support (Alimony)</a></li>
-                            <li><a href="#">Prenuptial and Postnuptial Agreements</a></li>
-                            <li><a href="#">Adoption</a></li>
-                            <li><a href="#">Domestic Violence Protection</a></li>
-                            <li><a href="#">Property Division</a></li>
-                            <li><a href="#">Guardianship</a></li>
-                            <li><a href="#">Paternity Disputes</a></li>
+                            <?php
+                            $family_law_term = get_term_by('slug', 'family-law', 'practice_area');
+
+                            $family_law_child_terms = get_terms([
+                                'taxonomy'   => 'practice_area',
+                                'parent'     => $family_law_term->term_id,
+                                'orderby'    => 'term_id',
+                                'order'      => 'ASC',
+                                'hide_empty' => false,
+                                'number'     => 10,
+                            ]);
+
+                            foreach ($family_law_child_terms as $term) {
+                                echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                            }
+                            ?>
                         </ul>
                     </div>
-                    <a href="#" class="button">All family services</a>
+                    <a href="<?php echo $family_law_term->slug; ?>" class="button">All <?php echo $family_law_term->name; ?> services</a>
                 </div>
             </article>
 
@@ -108,19 +127,25 @@ get_header();
                     <div class="content">
                         <h4>Employment Law</h4>
                         <ul>
-                            <li><a href="#">Wrongful Termination</a></li>
-                            <li><a href="#">Workplace Discrimination</a></li>
-                            <li><a href="#">Harassment Claims</a></li>
-                            <li><a href="#">Employment Contracts</a></li>
-                            <li><a href="#">Wage and Hour Disputes</a></li>
-                            <li><a href="#">Workplace Health and Safety</a></li>
-                            <li><a href="#">Redundancy and Severance</a></li>
-                            <li><a href="#">Employee Rights Advocacy</a></li>
-                            <li><a href="#">Whistleblower Protection</a></li>
-                            <li><a href="#">Non-Compete and Non-Disclosure</a></li>
+                            <?php
+                            $employment_law_term = get_term_by('slug', 'employment-law', 'practice_area');
+
+                            $employment_law_child_terms = get_terms([
+                                'taxonomy'   => 'practice_area',
+                                'parent'     => $employment_law_term->term_id,
+                                'orderby'    => 'term_id',
+                                'order'      => 'ASC',
+                                'hide_empty' => false,
+                                'number'     => 10,
+                            ]);
+
+                            foreach ($employment_law_child_terms as $term) {
+                                echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                            }
+                            ?>
                         </ul>
                     </div>
-                    <a href="#" class="button">All employment services</a>
+                    <a href="<?php echo $employment_law_term->slug; ?>" class="button">All <?php echo $employment_law_term->name; ?> services</a>
                 </div>
             </article>
         </div>
@@ -134,7 +159,7 @@ get_header();
 <?php include( 'template-parts/sections/case-notes-slider.php'); ?>
 
 <?php
-$enquireFormId = 1;
+$enquireFormId = get_field( 'enquire_form', get_option( 'page_on_front' ) );
 include( 'template-parts/sections/enquire-bottom-section.php');
 ?>
 

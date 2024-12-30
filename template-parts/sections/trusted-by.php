@@ -1,3 +1,7 @@
+<?php
+$images = get_field('trusted_by_images', 'option');
+?>
+
 <section class="trusted-by">
     <div class="container px-4">
         <h2><span>Trusted</span> by Industry Leaders Worldwide</h2>
@@ -5,18 +9,11 @@
     <div class="splide" id="trusted-by-slider">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
-                    <img src="/wp-content/uploads/2024/12/fexi-logo.png" alt="test">
-                </li>
-                <li class="splide__slide">
-                    <img src="/wp-content/uploads/2024/12/one-av-logo.png" alt="test">
-                </li>
-                <li class="splide__slide">
-                    <img src="/wp-content/uploads/2024/12/tmt-logo.png" alt="test">
-                </li>
-                <li class="splide__slide">
-                    <img src="/wp-content/uploads/2024/12/vulkan-logo.png" alt="test">
-                </li>
+                <?php foreach( $images as $image ): ?>
+                    <li class="splide__slide">
+                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
