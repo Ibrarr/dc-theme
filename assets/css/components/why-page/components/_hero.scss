@@ -1,7 +1,5 @@
 .hero {
   overflow: hidden;
-  margin-bottom: 60px;
-  background: $dc-background-dark-blue;
 
   .left {
     display: flex;
@@ -11,7 +9,7 @@
 
     @include media-breakpoint-down(lg) {
       margin-bottom: 20px;
-      min-height: 500px;
+      min-height: 350px;
     }
 
     .content {
@@ -20,11 +18,11 @@
       }
 
       h1 {
-        @include dc-h1($dc-text-light);
+        @include dc-h1($dc-text-dark);
       }
 
       p {
-        @include dc-p($dc-text-light);
+        @include dc-p($dc-text-dark);
       }
 
       .button {
@@ -39,12 +37,12 @@
     overflow: hidden;
 
     @include media-breakpoint-down(lg) {
-      height: 400px;
+      height: 300px;
     }
 
     .first-row-images {
       padding-right: 10px;
-      height: 800px;
+      height: 700px;
       opacity: 1;
 
       img {
@@ -53,6 +51,10 @@
         object-fit: cover;
         padding-bottom: 10px;
 
+        &:first-child {
+          margin-top: -50px;
+        }
+
         @include media-breakpoint-down(lg) {
           height: 250px;
         }
@@ -60,7 +62,7 @@
     }
 
     .second-row-images {
-      height: 800px;
+      height: 700px;
       margin-top: -150px;
       opacity: 1;
 

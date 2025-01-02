@@ -17,15 +17,7 @@
     }
 
     h3 {
-      font-family: $dc-heading;
-      font-weight: $dc-bold;
-      font-size: 48px;
-      margin-bottom: 30px;
-      color: $dc-text-light;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 40px;
-      }
+      @include dc-h3($dc-text-light);
     }
 
     .button {
@@ -84,13 +76,7 @@
             }
 
             p {
-              font-family: $dc-body;
-              font-size: 16px;
-              color: $dc-text-light;
-
-              @include media-breakpoint-down(lg) {
-                font-size: 14px;
-              }
+              @include dc-p($dc-text-light);
             }
           }
         }

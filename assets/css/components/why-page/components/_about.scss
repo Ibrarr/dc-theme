@@ -1,0 +1,24 @@
+.about {
+  margin-bottom: 60px;
+  background: $dc-secondary;
+  padding: 60px 0;
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
+
+  h2 {
+    @include dc-h3($dc-text-light)
+  }
+
+  p {
+    @include dc-p($dc-text-light)
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

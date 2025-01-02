@@ -89,6 +89,9 @@
             <article class="standard-case-note-card">
                 <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
             </article>
-        <?php endwhile; ?>
+        <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
     </div>
 </div>

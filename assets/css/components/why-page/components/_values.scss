@@ -1,0 +1,33 @@
+.values {
+  margin-bottom: 60px;
+  background: $dc-background-grey;
+  padding: 60px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
+
+  .top {
+    margin-bottom: 30px;
+
+    h2 {
+      @include dc-h3($dc-text-dark);
+      max-width: 1000px;
+    }
+
+    p {
+      @include dc-p($dc-text-dark);
+      max-width: 750px;
+    }
+  }
+
+  .value {
+    h3 {
+      @include dc-h3($dc-primary)
+    }
+
+    p {
+      @include dc-p($dc-text-dark)
+    }
+  }
+}

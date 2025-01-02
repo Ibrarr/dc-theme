@@ -24,26 +24,12 @@
     }
 
     h3 {
-      font-family: $dc-heading;
-      font-weight: $dc-bold;
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: $dc-text-light;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 40px;
-      }
+      @include dc-h3($dc-text-light);
     }
 
     p {
-      font-family: $dc-body;
-      font-size: 16px;
-      color: $dc-text-light;
+      @include dc-p($dc-text-light);
       max-width: 768px;
-
-      @include media-breakpoint-down(lg) {
-        font-size: 14px;
-      }
     }
   }
 
@@ -85,14 +71,8 @@
         margin: 0;
 
         li {
-          font-family: $dc-body;
-          font-size: 16px;
-          color: $dc-text-dark;
+          @include dc-p($dc-text-light);
           margin-bottom: 15px;
-
-          @include media-breakpoint-down(lg) {
-            font-size: 14px;
-          }
 
           a {
             text-decoration: none;

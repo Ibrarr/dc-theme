@@ -15,26 +15,11 @@
       }
 
       h3 {
-        font-family: $dc-heading;
-        font-weight: $dc-bold;
-        font-size: 48px;
-        margin-bottom: 20px;
-        color: $dc-text-dark;
-
-        @include media-breakpoint-down(lg) {
-          font-size: 40px;
-        }
+        @include dc-h3($dc-text-dark);
       }
 
       p {
-        font-family: $dc-body;
-        font-size: 16px;
-        color: $dc-text-dark;
-        margin: 0;
-
-        @include media-breakpoint-down(lg) {
-          font-size: 14px;
-        }
+        @include dc-p($dc-text-dark);
       }
     }
 
@@ -42,13 +27,7 @@
       margin-bottom: 30px;
 
       p {
-        font-family: $dc-body;
-        font-size: 16px;
-        color: $dc-text-dark;
-
-        @include media-breakpoint-down(lg) {
-          font-size: 14px;
-        }
+        @include dc-p($dc-text-dark);
       }
 
       .bold {

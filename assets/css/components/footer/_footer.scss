@@ -2,6 +2,11 @@ footer {
   background-color: $dc-background-dark-blue;
   padding-top: 50px;
 
+  > div {
+    max-width: 1600px !important;
+    margin: auto;
+  }
+
   .info {
     @include media-breakpoint-down(lg) {
       margin-bottom: 40px;

@@ -13507,7 +13507,7 @@ header .top-menu .logo-menu nav ul li:not(:last-child) {
   margin-right: 15px;
 }
 header .top-menu .logo-menu nav ul li a {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   text-decoration: none;
@@ -13534,7 +13534,7 @@ header .top-menu .ctas {
   }
 }
 header .top-menu .ctas .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -13548,6 +13548,7 @@ header .top-menu .ctas .button {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13564,7 +13565,7 @@ header .top-menu .ctas .button:hover {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
 }
 header .top-menu .ctas .button-secondary {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #f9f9f9;
   color: #00375B;
@@ -13578,6 +13579,7 @@ header .top-menu .ctas .button-secondary {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 header .top-menu .ctas .button-secondary i {
   margin-right: 5px;
@@ -13646,7 +13648,7 @@ header .mega-menu .service-list, header .mega-menu-mobile .service-list {
   justify-content: space-between;
 }
 header .mega-menu .service-list span, header .mega-menu-mobile .service-list span {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 700;
   color: #EE243D;
   font-size: 18px;
@@ -13664,7 +13666,7 @@ header .mega-menu .service-list ul, header .mega-menu-mobile .service-list ul {
   margin: 0;
 }
 header .mega-menu .service-list ul li, header .mega-menu-mobile .service-list ul li {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   margin-bottom: 15px;
@@ -13684,7 +13686,7 @@ header .mega-menu .service-list ul li a:hover, header .mega-menu-mobile .service
   color: #EE243D;
 }
 header .mega-menu .service-list .button, header .mega-menu-mobile .service-list .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -13698,6 +13700,7 @@ header .mega-menu .service-list .button, header .mega-menu-mobile .service-list 
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .service-list .button, header .mega-menu-mobile .service-list .button {
@@ -13719,7 +13722,7 @@ header .mega-menu .business-info .contact-info, header .mega-menu .business-info
 }
 header .mega-menu .business-info .contact-info a, header .mega-menu .business-info .business-hours a, header .mega-menu .business-info .out-of-hours a, header .mega-menu-mobile .business-info .contact-info a, header .mega-menu-mobile .business-info .business-hours a, header .mega-menu-mobile .business-info .out-of-hours a {
   text-decoration: none;
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   -webkit-transition: color 0.3s;
@@ -13735,7 +13738,7 @@ header .mega-menu .business-info .contact-info a:hover, header .mega-menu .busin
   color: #EE243D;
 }
 header .mega-menu .business-info .contact-info p, header .mega-menu .business-info .business-hours p, header .mega-menu .business-info .out-of-hours p, header .mega-menu-mobile .business-info .contact-info p, header .mega-menu-mobile .business-info .business-hours p, header .mega-menu-mobile .business-info .out-of-hours p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   margin: 0;
@@ -13749,7 +13752,7 @@ header .mega-menu .business-info .contact-info .heading, header .mega-menu .busi
   font-weight: 600;
 }
 header .mega-menu .business-info .button, header .mega-menu-mobile .business-info .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #00375B;
   color: #F5F5F5;
@@ -13763,6 +13766,7 @@ header .mega-menu .business-info .button, header .mega-menu-mobile .business-inf
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .business-info .button, header .mega-menu-mobile .business-info .button {
@@ -13776,7 +13780,7 @@ header .mega-menu .recent-post, header .mega-menu-mobile .recent-post {
   background-color: #f9f9f9;
 }
 header .mega-menu .recent-post .heading, header .mega-menu-mobile .recent-post .heading {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 20px;
   color: #EE243D;
   margin-bottom: 20px;
@@ -13808,7 +13812,7 @@ header .mega-menu .recent-post .standard-case-note-card a .image-wrapper img, he
   object-fit: cover;
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .term, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .term {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   font-size: 14px;
   color: #F5F5F5;
@@ -13820,14 +13824,15 @@ header .mega-menu .recent-post .standard-case-note-card a .content .term, header
   margin-bottom: 10px;
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .title, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .title {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-size: 22px;
   color: #000F20;
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .excerpt, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .excerpt {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .recent-post .standard-case-note-card a .content .excerpt, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .excerpt {
@@ -13835,7 +13840,7 @@ header .mega-menu .recent-post .standard-case-note-card a .content .excerpt, hea
   }
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .read-more, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .read-more {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
 }
@@ -13923,7 +13928,7 @@ header .mobile-menus nav ul li:not(:last-child) {
   margin-right: 15px;
 }
 header .mobile-menus nav ul li a {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   text-decoration: none;
@@ -13964,7 +13969,7 @@ header .mobile-menus .ctas {
   align-items: center;
 }
 header .mobile-menus .ctas .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -13978,6 +13983,7 @@ header .mobile-menus .ctas .button {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13994,7 +14000,7 @@ header .mobile-menus .ctas .button:hover {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
 }
 header .mobile-menus .ctas .button-secondary {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #f9f9f9;
   color: #00375B;
@@ -14008,6 +14014,7 @@ header .mobile-menus .ctas .button-secondary {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 header .mobile-menus .ctas .button-secondary i {
   margin-right: 5px;
@@ -14072,7 +14079,7 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .hero .left .content h1, .home.page .hero .left .content .h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 56px;
   margin-bottom: 20px;
@@ -14085,7 +14092,7 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .hero .left .content p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #F5F5F5;
   opacity: 1;
@@ -14097,7 +14104,7 @@ header .mobile-menus .ctas a {
 }
 .home.page .hero .left .content .button {
   margin-top: 20px;
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -14111,6 +14118,7 @@ header .mobile-menus .ctas a {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .hero .left .content .button {
@@ -14176,7 +14184,7 @@ header .mobile-menus .ctas a {
 }
 .home.page .trusted-by h2, .home.page .trusted-by .h2 {
   text-align: center;
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   color: #000F20;
   font-size: 18px;
@@ -14230,11 +14238,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .services .heading .tag {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
   color: #F5F5F5;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading .tag {
@@ -14242,11 +14251,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .services .heading h3, .home.page .services .heading .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
   color: #F5F5F5;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading h3, .home.page .services .heading .h3 {
@@ -14254,9 +14264,10 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .services .heading p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #F5F5F5;
+  opacity: 1;
   max-width: 768px;
 }
 @media (max-width: 991.98px) {
@@ -14291,7 +14302,7 @@ header .mobile-menus .ctas a {
   justify-content: space-between;
 }
 .home.page .services .service-list .service-list-inner h4, .home.page .services .service-list .service-list-inner .h4 {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 700;
   color: #EE243D;
   font-size: 18px;
@@ -14308,9 +14319,10 @@ header .mobile-menus .ctas a {
   margin: 0;
 }
 .home.page .services .service-list .service-list-inner ul li {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
-  color: #000F20;
+  color: #F5F5F5;
+  opacity: 1;
   margin-bottom: 15px;
 }
 @media (max-width: 991.98px) {
@@ -14328,7 +14340,7 @@ header .mobile-menus .ctas a {
   color: #EE243D;
 }
 .home.page .services .service-list .service-list-inner .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -14342,6 +14354,7 @@ header .mobile-menus .ctas a {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .services .service-list .service-list-inner .button {
@@ -14358,11 +14371,12 @@ header .mobile-menus .ctas a {
   margin-bottom: 50px;
 }
 .home.page .feedback .heading h2, .home.page .feedback .heading .h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .feedback .heading h2, .home.page .feedback .heading .h2 {
@@ -14370,9 +14384,10 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .feedback .heading p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
+  opacity: 1;
   max-width: 560px;
 }
 @media (max-width: 991.98px) {
@@ -14388,7 +14403,7 @@ header .mobile-menus .ctas a {
   width: 115px;
 }
 .home.page .feedback #feedback-slider .splide__slide .testimonial {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-size: 20px;
   color: #000F20;
   font-weight: 700;
@@ -14403,7 +14418,7 @@ header .mobile-menus .ctas a {
   border-radius: 50px;
 }
 .home.page .feedback #feedback-slider .splide__slide .name {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   font-weight: 600;
@@ -14415,7 +14430,7 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .feedback #feedback-slider .splide__slide .job-company {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   margin-bottom: 15px;
@@ -14504,11 +14519,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .our-approach .heading .tag {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
   color: #EE243D;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading .tag {
@@ -14516,11 +14532,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .our-approach .heading h3, .home.page .our-approach .heading .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #F5F5F5;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading h3, .home.page .our-approach .heading .h3 {
@@ -14528,7 +14545,7 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .our-approach .heading .button {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -14542,6 +14559,7 @@ header .mobile-menus .ctas a {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading .button {
@@ -14588,15 +14606,16 @@ header .mobile-menus .ctas a {
   margin-left: 90px;
 }
 .home.page .our-approach .approach .timeline .item .content .text h3, .home.page .our-approach .approach .timeline .item .content .text .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-size: 20px;
   color: #F5F5F5;
   font-weight: 700;
 }
 .home.page .our-approach .approach .timeline .item .content .text p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #F5F5F5;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .approach .timeline .item .content .text p {
@@ -14614,11 +14633,12 @@ header .mobile-menus .ctas a {
   margin-bottom: 50px;
 }
 .home.page .case-notes .heading .tag {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
   color: #EE243D;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes .heading .tag {
@@ -14626,11 +14646,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .case-notes .heading h3, .home.page .case-notes .heading .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes .heading h3, .home.page .case-notes .heading .h3 {
@@ -14638,9 +14659,10 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .case-notes .heading p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes .heading p {
@@ -14688,7 +14710,7 @@ header .mobile-menus .ctas a {
   object-fit: cover;
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .term {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   font-size: 14px;
   color: #F5F5F5;
@@ -14700,14 +14722,15 @@ header .mobile-menus .ctas a {
   margin-bottom: 10px;
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .title {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-size: 22px;
   color: #000F20;
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .excerpt {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .excerpt {
@@ -14715,7 +14738,7 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .read-more {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
 }
@@ -14797,11 +14820,12 @@ header .mobile-menus .ctas a {
   margin-bottom: 30px;
 }
 .home.page #enquire-now .content .heading .tag {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
   color: #EE243D;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .heading .tag {
@@ -14809,11 +14833,12 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page #enquire-now .content .heading h3, .home.page #enquire-now .content .heading .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Serif", serif;
   font-weight: 700;
   font-size: 48px;
   margin-bottom: 20px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .heading h3, .home.page #enquire-now .content .heading .h3 {
@@ -14821,10 +14846,10 @@ header .mobile-menus .ctas a {
   }
 }
 .home.page #enquire-now .content .heading p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
-  margin: 0;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .heading p {
@@ -14835,9 +14860,10 @@ header .mobile-menus .ctas a {
   margin-bottom: 30px;
 }
 .home.page #enquire-now .content .what-to-expect p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .what-to-expect p {
@@ -14853,7 +14879,7 @@ header .mobile-menus .ctas a {
   margin: 0;
 }
 .home.page #enquire-now .content .what-to-expect ul li {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
 }
@@ -14873,7 +14899,7 @@ header .mobile-menus .ctas a {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
   -webkit-transition: color 0.3s;
@@ -14903,13 +14929,13 @@ header .mobile-menus .ctas a {
   cursor: pointer;
 }
 .home.page #enquire-now .gform_wrapper label {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
   font-weight: 600;
 }
 .home.page #enquire-now .gform_wrapper textarea {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
   min-height: 180px;
@@ -14919,7 +14945,7 @@ header .mobile-menus .ctas a {
   --gf-local-shadow: none;
 }
 .home.page #enquire-now .gform_wrapper input[type=submit] {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-weight: 600;
   background-color: #EE243D;
   color: #F5F5F5;
@@ -14933,6 +14959,7 @@ header .mobile-menus .ctas a {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
   border-radius: 0;
 }
 @media (max-width: 991.98px) {
@@ -14944,7 +14971,7 @@ header .mobile-menus .ctas a {
   background-color: rgb(206.936440678, 16.063559322, 39.686440678);
 }
 .home.page #enquire-now .gform_confirmation_wrapper .gform_confirmation_message {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 16px;
   color: #000F20;
 }
@@ -14954,9 +14981,829 @@ header .mobile-menus .ctas a {
   }
 }
 
+.page-template-page-why-drake-case .hero {
+  overflow: hidden;
+}
+.page-template-page-why-drake-case .hero .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .left {
+    margin-bottom: 20px;
+    min-height: 350px;
+  }
+}
+@media (min-width: 992px) {
+  .page-template-page-why-drake-case .hero .left .content {
+    margin-right: 50px;
+  }
+}
+.page-template-page-why-drake-case .hero .left .content h1, .page-template-page-why-drake-case .hero .left .content .h1 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .left .content h1, .page-template-page-why-drake-case .hero .left .content .h1 {
+    font-size: 45px;
+  }
+}
+.page-template-page-why-drake-case .hero .left .content p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .left .content p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .hero .left .content .button {
+  margin-top: 20px;
+  font-family: "Inter", serif;
+  font-weight: 600;
+  background-color: #EE243D;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .left .content .button {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .hero .left .content .button:hover {
+  background-color: rgb(206.936440678, 16.063559322, 39.686440678);
+}
+.page-template-page-why-drake-case .hero .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .right {
+    height: 300px;
+  }
+}
+.page-template-page-why-drake-case .hero .right .first-row-images {
+  padding-right: 10px;
+  height: 700px;
+  opacity: 1;
+}
+.page-template-page-why-drake-case .hero .right .first-row-images img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+.page-template-page-why-drake-case .hero .right .first-row-images img:first-child {
+  margin-top: -50px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .right .first-row-images img {
+    height: 250px;
+  }
+}
+.page-template-page-why-drake-case .hero .right .second-row-images {
+  height: 700px;
+  margin-top: -150px;
+  opacity: 1;
+}
+.page-template-page-why-drake-case .hero .right .second-row-images img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .hero .right .second-row-images img {
+    height: 250px;
+  }
+}
+.page-template-page-why-drake-case .about {
+  margin-bottom: 60px;
+  background: #00375B;
+  padding: 60px 0;
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .about {
+    padding: 40px 0;
+  }
+}
+.page-template-page-why-drake-case .about h2, .page-template-page-why-drake-case .about .h2 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #F5F5F5;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .about h2, .page-template-page-why-drake-case .about .h2 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .about p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #F5F5F5;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .about p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .about img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.page-template-page-why-drake-case .team {
+  margin-bottom: 60px;
+}
+.page-template-page-why-drake-case .team > div {
+  max-width: 1600px;
+  margin: auto;
+}
+.page-template-page-why-drake-case .team .top {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case .team .top .tag {
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .team .top .tag {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .team .top h3, .page-template-page-why-drake-case .team .top .h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .team .top h3, .page-template-page-why-drake-case .team .top .h3 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .team .top p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .team .top p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .team .member {
+  text-align: center;
+}
+.page-template-page-why-drake-case .team .member img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.page-template-page-why-drake-case .team .member h4, .page-template-page-why-drake-case .team .member .h4 {
+  font-family: "Inter", serif;
+  font-size: 20px;
+  color: #000F20;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.page-template-page-why-drake-case .team .member p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .team .member p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .team .member .intro {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+  font-size: 14px !important;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .team .member .intro {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .team .member .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 12px;
+}
+.page-template-page-why-drake-case .team .member .socials svg {
+  height: 18px;
+}
+.page-template-page-why-drake-case .team .member .socials svg path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: #000F20;
+}
+.page-template-page-why-drake-case .team .member .socials a:hover path {
+  fill: #EE243D;
+}
+.page-template-page-why-drake-case .values {
+  margin-bottom: 60px;
+  background: #eeeeee;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .values {
+    padding: 40px 0;
+  }
+}
+.page-template-page-why-drake-case .values .top {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case .values .top h2, .page-template-page-why-drake-case .values .top .h2 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+  opacity: 1;
+  max-width: 1000px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .values .top h2, .page-template-page-why-drake-case .values .top .h2 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .values .top p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+  max-width: 750px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .values .top p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .values .value h3, .page-template-page-why-drake-case .values .value .h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .values .value h3, .page-template-page-why-drake-case .values .value .h3 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .values .value p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .values .value p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .trusted-by {
+  opacity: 1;
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .trusted-by {
+    margin-bottom: 50px;
+  }
+}
+.page-template-page-why-drake-case .trusted-by h2, .page-template-page-why-drake-case .trusted-by .h2 {
+  text-align: center;
+  font-family: "Inter", serif;
+  font-weight: 600;
+  color: #000F20;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .trusted-by h2, .page-template-page-why-drake-case .trusted-by .h2 {
+    font-size: 16px;
+  }
+}
+.page-template-page-why-drake-case .trusted-by h2 span, .page-template-page-why-drake-case .trusted-by .h2 span {
+  font-weight: 700;
+  color: #EE243D;
+}
+.page-template-page-why-drake-case .trusted-by img {
+  -webkit-filter: grayscale(1) brightness(0);
+  filter: grayscale(1) brightness(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 75px;
+}
+@media (max-width: 767.98px) {
+  .page-template-page-why-drake-case .trusted-by img {
+    width: 100%;
+  }
+}
+.page-template-page-why-drake-case .trusted-by img:hover {
+  -webkit-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
+}
+.page-template-page-why-drake-case .our-approach {
+  margin-bottom: 60px;
+  background: #000F20;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach .heading {
+    margin-bottom: 50px;
+  }
+}
+.page-template-page-why-drake-case .our-approach .heading .tag {
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach .heading .tag {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .our-approach .heading h3, .page-template-page-why-drake-case .our-approach .heading .h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #F5F5F5;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach .heading h3, .page-template-page-why-drake-case .our-approach .heading .h3 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .our-approach .heading .button {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  background-color: #EE243D;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach .heading .button {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .our-approach .heading .button:hover {
+  background-color: rgb(206.936440678, 16.063559322, 39.686440678);
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item {
+  position: relative;
+  overflow: hidden;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item:last-child p {
+  margin-bottom: 0;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item:not(:last-child):before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 60px;
+  height: 55%;
+  width: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE243D), to(grey));
+  background: linear-gradient(to bottom, #EE243D var(--line-fill-percentage, 0%), grey var(--line-fill-percentage, 0%));
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item:not(:last-child) .content {
+  min-height: 166px;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item .content {
+  position: relative;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item .content img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text {
+  margin-left: 90px;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text h3, .page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text .h3 {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  color: #F5F5F5;
+  font-weight: 700;
+}
+.page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #F5F5F5;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .feedback {
+  margin-bottom: 60px;
+}
+.page-template-page-why-drake-case .feedback .heading {
+  margin-bottom: 50px;
+}
+.page-template-page-why-drake-case .feedback .heading h2, .page-template-page-why-drake-case .feedback .heading .h2 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .feedback .heading h2, .page-template-page-why-drake-case .feedback .heading .h2 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case .feedback .heading p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+  max-width: 560px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .feedback .heading p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .feedback .heading p a {
+  color: #EE243D;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .stars {
+  margin-bottom: 20px;
+  width: 115px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .testimonial {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  color: #000F20;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .person {
+  width: 55px;
+  height: 55px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .name {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .name {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .job-company {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  margin-bottom: 15px;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .job-company {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__slide .logo {
+  height: 60px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__pagination {
+  display: block !important;
+  opacity: 1 !important;
+  margin-top: -50px;
+  position: relative;
+  padding: 0;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__pagination .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: #CCCCCC;
+  border-radius: 50%;
+  margin: 5px;
+  opacity: 1;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__pagination .splide__pagination__page.is-active {
+  background: #EE243D;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background-color: unset;
+  border: 2px solid #EE243D;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow:hover {
+  background-color: #EE243D;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow:hover path {
+  fill: #F5F5F5;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow svg {
+  height: 1em;
+  width: 1em;
+  margin-bottom: -2px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow.splide__arrow--prev {
+  margin-right: 50px;
+}
+.page-template-page-why-drake-case .feedback #feedback-slider .splide__arrows .splide__arrow.splide__arrow--prev svg {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.page-template-page-why-drake-case .feedback > div {
+  max-width: 1600px;
+  margin: auto;
+}
+.page-template-page-why-drake-case #enquire-now {
+  padding: 60px 0;
+  background-color: #eeeeee;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now {
+    padding: 40px 0;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .heading {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case #enquire-now .content .heading .tag {
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .heading .tag {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .heading h3, .page-template-page-why-drake-case #enquire-now .content .heading .h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .heading h3, .page-template-page-why-drake-case #enquire-now .content .heading .h3 {
+    font-size: 40px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .heading p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .heading p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .what-to-expect {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case #enquire-now .content .what-to-expect p {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .what-to-expect p {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .what-to-expect .bold {
+  font-weight: 600;
+}
+.page-template-page-why-drake-case #enquire-now .content .what-to-expect .heading {
+  font-weight: 600;
+  color: #EE243D;
+  margin: 0;
+}
+.page-template-page-why-drake-case #enquire-now .content .what-to-expect ul li {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .what-to-expect ul li {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .contact-info {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case #enquire-now .content .contact-info i {
+  margin-right: 15px;
+}
+.page-template-page-why-drake-case #enquire-now .content .contact-info a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .content .contact-info a {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .content .contact-info a:hover {
+  color: #EE243D;
+}
+.page-template-page-why-drake-case #enquire-now .content .contact-info a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper .gform_heading {
+  display: none;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper .gform_validation_errors {
+  margin-bottom: 30px;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper .gform_fields {
+  row-gap: 20px !important;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper .ginput_container_consent {
+  cursor: pointer;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper label {
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #000F20;
+  font-weight: 600;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper textarea {
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #000F20;
+  min-height: 180px;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper input:focus, .page-template-page-why-drake-case #enquire-now .gform_wrapper textarea:focus {
+  border-color: #EE243D;
+  --gf-local-shadow: none;
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper input[type=submit] {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  background-color: #EE243D;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  opacity: 1;
+  border-radius: 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .gform_wrapper input[type=submit] {
+    font-size: 14px;
+  }
+}
+.page-template-page-why-drake-case #enquire-now .gform_wrapper input[type=submit]:hover {
+  background-color: rgb(206.936440678, 16.063559322, 39.686440678);
+}
+.page-template-page-why-drake-case #enquire-now .gform_confirmation_wrapper .gform_confirmation_message {
+  font-family: "Inter", serif;
+  font-size: 16px;
+  color: #000F20;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case #enquire-now .gform_confirmation_wrapper .gform_confirmation_message {
+    font-size: 14px;
+  }
+}
+
 footer {
   background-color: #000F20;
   padding-top: 50px;
+}
+footer > div {
+  max-width: 1600px !important;
+  margin: auto;
 }
 @media (max-width: 991.98px) {
   footer .info {
@@ -14967,7 +15814,7 @@ footer .info .logo {
   margin-bottom: 20px;
 }
 footer .info p {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
 }
@@ -14976,7 +15823,7 @@ footer .info p.heading {
   margin-bottom: 0;
 }
 footer .info a {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
   text-decoration: none;
@@ -15030,7 +15877,7 @@ footer .menus .all-footer-menus ul li:not(:last-child) {
   margin-bottom: 10px;
 }
 footer .menus .all-footer-menus ul li a {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
   text-decoration: none;
@@ -15057,7 +15904,7 @@ footer .bottom .content {
   }
 }
 footer .bottom .content p, footer .bottom .content a {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
   text-decoration: none;

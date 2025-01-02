@@ -10,6 +10,7 @@
   display: block;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 
   @include media-breakpoint-down(lg) {
     font-size: 14px;
@@ -32,6 +33,7 @@
   display: block;
   width: fit-content;
   font-size: 16px;
+  opacity: 1;
 
   @include media-breakpoint-down(lg) {
     font-size: 14px;
@@ -49,6 +51,44 @@
   font-size: 16px;
   margin-bottom: 10px;
   color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+}
+
+@mixin dc-h1($color) {
+  font-family: $dc-heading;
+  font-weight: $dc-bold;
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 45px;
+  }
+}
+
+@mixin dc-h3($color) {
+  font-family: $dc-heading;
+  font-weight: $dc-bold;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 40px;
+  }
+}
+
+@mixin dc-p($color) {
+  font-family: $dc-body;
+  font-size: 16px;
+  color: $color;
+  opacity: 1;
 
   @include media-breakpoint-down(lg) {
     font-size: 14px;

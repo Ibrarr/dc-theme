@@ -1,3 +1,16 @@
-.page-template-page-why-drake-case{
-
+.page-template-page-why-drake-case {
+  @import "components/hero";
+  @import "components/about";
+  @import "components/team";
+  @import "components/values";
+  @import "../misc/sections/trusted-by";
+  @import "../misc/sections/our-approach";
+  @import "../misc/sections/client-feedback";
+  .feedback {
+    > div {
+      max-width: 1600px;
+      margin: auto;
+    }
+  }
+  @import "../misc/sections/enquire-bottom-section";
 }

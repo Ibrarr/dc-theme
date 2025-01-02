@@ -10,6 +10,10 @@ function add_custom_scripts() {
         wp_enqueue_script( 'homepage', DC_TEMPLATE_URI . mix('/dist/js/homepage.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_page_template( 'page-templates/page-why-drake-case.php' ) ) {
+        wp_enqueue_script( 'why', DC_TEMPLATE_URI . mix('/dist/js/why.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 
@@ -21,17 +25,3 @@ function mix($path) {
     }
     return $path;
 }
-
-//    wp_enqueue_script( 'global', DC_TEMPLATE_URI . '/dist/js/global.js', [ 'jquery' ], filemtime( DC_TEMPLATE_DIR . '/dist/js/global.js' ), true );
-//
-//    if ( is_singular( 'post' ) ) {
-//        wp_enqueue_script( 'content-blog', DC_TEMPLATE_URI . '/dist/js/content-blog.js', [ 'jquery' ], filemtime( DC_TEMPLATE_DIR . '/dist/js/content-blog.js' ), true );
-//    }
-//
-//    if ( is_singular( 'video' ) ) {
-//        wp_enqueue_script( 'content-blog', DC_TEMPLATE_URI . '/dist/js/content-video.js', [ 'jquery' ], filemtime( DC_TEMPLATE_DIR . '/dist/js/content-video.js' ), true );
-//    }
-//
-//	if ( is_singular( 'event' ) ) {
-//		wp_enqueue_script( 'content-event', DC_TEMPLATE_URI . '/dist/js/content-event.js', [ 'jquery' ], filemtime( DC_TEMPLATE_DIR . '/dist/js/content-event.js' ), true );
-//	}
