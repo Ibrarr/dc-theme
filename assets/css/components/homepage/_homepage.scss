@@ -1,6 +1,9 @@
 .home.page {
-  @import "components/hero";
+  @import "components/hero-slides";
   @import "../misc/sections/trusted-by";
+  .trusted-by {
+    margin-top: 50px;
+  }
   @import "components/service-list";
   @import "../misc/sections/client-feedback";
   @import "../misc/sections/our-approach";

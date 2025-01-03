@@ -1,10 +1,6 @@
 .trusted-by {
   opacity: 1;
-  margin-bottom: 60px;
-
-  @include media-breakpoint-down(lg) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
 
   h2 {
     text-align: center;

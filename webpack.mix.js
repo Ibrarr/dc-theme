@@ -6,6 +6,7 @@ mix.js([
 ], 'js/header.js');
 
 mix.js([
+    'assets/js/homepage/hero.js',
     'assets/js/homepage/trusted-by.js',
     'assets/js/homepage/services.js',
     'assets/js/homepage/feedback.js',

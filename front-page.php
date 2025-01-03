@@ -1,33 +1,38 @@
 <?php
 get_header();
 
-$first_image_column = get_field('first_image_column', get_option( 'page_on_front' ));
-$second_image_column = get_field('second_image_column', get_option( 'page_on_front' ));
 ?>
-<section class="hero">
-    <div class="container px-4">
-        <div class="row">
-            <section class="col-lg-6 left">
-                <div class="content">
-                    <h1><?php the_field( 'hero_heading', get_option( 'page_on_front' ) ); ?></h1>
-                    <?php the_field( 'hero_text', get_option( 'page_on_front' ) ); ?>
+<section class="hero-slides">
+    <?php
+    $counter = 0;
+    while( have_rows('hero_slides')): the_row();
+        $heading = get_sub_field('heading');
+        $text = get_sub_field('text');
+        $text_colour = get_sub_field('text_colour');
+        $background = get_sub_field('background');
+        $counter++; // Increment the counter
+
+        if ($counter === 1): ?>
+            <section class="slide <?php echo $text_colour; ?>">
+                <div class="bg-wrapper" style="background: url(<?php echo $background; ?>) center center / cover no-repeat;"></div>
+                <div class="container px-4">
+                    <h1><?php echo $heading; ?></h1>
+                    <?php echo $text; ?>
                     <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
             </section>
-            <div class="col-lg-6 right">
-                <div class="first-row-images">
-                    <?php foreach( $first_image_column as $image ): ?>
-                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
-                    <?php endforeach; ?>
+        <?php else: ?>
+            <section class="slide <?php echo $text_colour; ?>">
+                <div class="bg-wrapper" style="background: url(<?php echo $background; ?>) center center / cover no-repeat;"></div>
+                <div class="container px-4">
+                    <h2><?php echo $heading; ?></h2>
+                    <?php echo $text; ?>
+                    <a href="#enquire-now" class="button">Enquire now</a>
                 </div>
-                <div class="second-row-images">
-                    <?php foreach( $second_image_column as $image ): ?>
-                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        <?php endif; ?>
+    <?php endwhile; ?>
+
 </section>
 
 <?php include( 'template-parts/sections/trusted-by.php'); ?>
@@ -159,7 +164,7 @@ $second_image_column = get_field('second_image_column', get_option( 'page_on_fro
 <?php include( 'template-parts/sections/case-notes-slider.php'); ?>
 
 <?php
-$enquireFormId = get_field( 'enquire_form', get_option( 'page_on_front' ) );
+$enquireFormId = get_field( 'enquire_form' );
 include( 'template-parts/sections/enquire-bottom-section.php');
 ?>
 

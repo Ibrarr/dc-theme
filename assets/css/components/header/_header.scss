@@ -1,4 +1,8 @@
 header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+
   @import "components/top-menu";
   @import "components/mega-menu";
   @import "components/mobile-menu";

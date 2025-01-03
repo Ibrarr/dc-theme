@@ -25,7 +25,10 @@
                                 <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
                             </article>
                         </li>
-                    <?php endwhile; ?>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                    ?>
                 </ul>
             </div>
             <div class="splide__arrows splide__arrows--ltr">
