@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
                 hoverTimeout = setTimeout(() => {
                     $('.mega-menu').stop(true, true).slideDown('fast');
                     $(this).addClass('active');
+                    $('header').addClass('active-mega-menu');
                 }, 200);
             },
             function() {
@@ -30,6 +31,7 @@ jQuery(document).ready(function($) {
                     if (!$('.mega-menu').is(':hover')) {
                         $('.mega-menu').stop(true, true).slideUp('fast');
                         $(this).removeClass('active');
+                        $('header').removeClass('active-mega-menu');
                     }
                 }, 200);
             }
@@ -42,6 +44,7 @@ jQuery(document).ready(function($) {
                 clearTimeout(closeTimeout);
                 $(this).stop(true, true).slideDown('fast');
                 $('.mega-menu-link').addClass('active');
+                $('header').addClass('active-mega-menu');
             },
             function() {
                 if (isSmallScreen()) return;
@@ -49,6 +52,7 @@ jQuery(document).ready(function($) {
                 closeTimeout = setTimeout(() => {
                     $(this).stop(true, true).slideUp('fast');
                     $('.mega-menu-link').removeClass('active');
+                    $('header').removeClass('active-mega-menu');
                 }, 100);
             }
         );
@@ -65,9 +69,11 @@ jQuery(document).ready(function($) {
             if ($menu.is(':visible')) {
                 $menu.slideUp('fast');
                 $(this).removeClass('active');
+                $('header').removeClass('active-mega-menu');
             } else {
                 $menu.slideDown('fast');
                 $(this).addClass('active');
+                $('header').addClass('active-mega-menu');
             }
         });
     }

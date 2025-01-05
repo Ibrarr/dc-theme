@@ -13420,6 +13420,57 @@ header {
   width: 100%;
   position: fixed;
   z-index: 99;
+  background: #f9f9f9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header.hero-active:not(.active-mega-menu) {
+  background: none !important;
+}
+header.hero-active:not(.active-mega-menu) .top-menu {
+  border: none;
+}
+header.hero-active:not(.active-mega-menu) .top-menu .logo-menu nav ul li a {
+  color: #F5F5F5;
+}
+header.hero-active:not(.active-mega-menu) .top-menu .logo-menu nav ul li.mega-menu-link:after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4zOTc3IDcuNjYyOTJDNy4xNzgwMiA3Ljg4MjU5IDYuODIxOTIgNy44ODI1OSA2LjYwMjI1IDcuNjYyOTJMMC44NjczODcgMS45MjgwNEMwLjY0NzcyIDEuNzA4MzcgMC42NDc3MiAxLjM1MjI3IDAuODY3Mzg3IDEuMTMyNTlMMS4xMzI1NiAwLjg2NzM5M0MxLjM1MjIyIDAuNjQ3NzE4IDEuNzA4MzggMC42NDc3MTggMS45MjgwNSAwLjg2NzM5M0w2Ljk5OTk3IDUuOTM5MzRMMTIuMDcxOSAwLjg2NzM5M0MxMi4yOTE2IDAuNjQ3NzE4IDEyLjY0NzcgMC42NDc3MTggMTIuODY3NCAwLjg2NzM5M0wxMy4xMzI2IDEuMTMyNTlDMTMuMzUyMiAxLjM1MjI3IDEzLjM1MjIgMS43MDgzNyAxMy4xMzI2IDEuOTI4MDRMNy4zOTc3IDcuNjYyOTJaIiBmaWxsPSIjRjVGNUY1Ii8+Cjwvc3ZnPgo=");
+}
+header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  background-color: #f9f9f9;
+  color: #F5F5F5;
+  padding: 10px 23px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 2px solid #F5F5F5;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px;
+  opacity: 1;
+  background: none !important;
+}
+header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary path {
+  fill: #F5F5F5 !important;
+}
+@media (max-width: 991.98px) {
+  header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary {
+    font-size: 12px;
+  }
+}
+header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary:hover {
+  color: rgb(219.5, 219.5, 219.5);
+  border-color: rgb(219.5, 219.5, 219.5);
+}
+header.hero-active:not(.active-mega-menu) .top-menu .mobile-menu .open svg path {
+  fill: #F5F5F5;
+}
+header.hero-active.active-mega-menu, header.hero-active.mobile-menu-active {
+  background: #f9f9f9 !important;
 }
 header .top-menu {
   padding: 25px 0;
@@ -13486,12 +13537,12 @@ header .top-menu .logo-menu nav ul li.mega-menu-link {
   margin-right: 30px !important;
 }
 header .top-menu .logo-menu nav ul li.mega-menu-link.active:after {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1pYyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsPSIjRUUyNDNEIiBkPSJNMTkgNi40MUwxNy41OSA1TDEyIDEwLjU5TDYuNDEgNUw1IDYuNDFMMTAuNTkgMTJMNSAxNy41OUw2LjQxIDE5TDEyIDEzLjQxTDE3LjU5IDE5TDE5IDE3LjU5TDEzLjQxIDEyeiI+PC9wYXRoPgo8L3N2Zz4=");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1pYyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsPSIjRUUyNDNEIiBkPSJNMTkgNi40MUwxNy41OSA1TDEyIDEwLjU5TDYuNDEgNUw1IDYuNDFMMTAuNTkgMTJMNSAxNy41OUw2LjQxIDE5TDEyIDEzLjQxTDE3LjU5IDE5TDE5IDE3LjU5TDEzLjQxIDEyeiI+PC9wYXRoPgo8L3N2Zz4=") !important;
   width: 15px;
   height: 15px;
 }
 header .top-menu .logo-menu nav ul li.mega-menu-link.active a {
-  color: #EE243D;
+  color: #EE243D !important;
 }
 header .top-menu .logo-menu nav ul li.mega-menu-link:after {
   content: "";
@@ -13512,20 +13563,21 @@ header .top-menu .logo-menu nav ul li:not(:last-child) {
   margin-right: 15px;
 }
 header .top-menu .logo-menu nav ul li a {
-  font-family: "Inter", serif;
-  font-size: 16px;
-  color: #000F20;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .top-menu .logo-menu nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .top-menu .logo-menu nav ul li a:hover {
-  color: #EE243D;
+  color: #EE243D !important;
 }
 header .top-menu .ctas {
   display: -webkit-box;
@@ -13552,7 +13604,7 @@ header .top-menu .ctas .button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13563,7 +13615,7 @@ header .top-menu .ctas .button {
 }
 @media (max-width: 991.98px) {
   header .top-menu .ctas .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .top-menu .ctas .button:hover {
@@ -13583,7 +13635,7 @@ header .top-menu .ctas .button-secondary {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 header .top-menu .ctas .button-secondary i {
@@ -13598,7 +13650,7 @@ header .top-menu .ctas .button-secondary:hover path {
 }
 @media (max-width: 991.98px) {
   header .top-menu .ctas .button-secondary {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .top-menu .ctas .button-secondary:hover {
@@ -13628,7 +13680,7 @@ header .top-menu .mobile-menu svg path {
 }
 header .mega-menu, header .mega-menu-mobile {
   position: absolute;
-  top: 98px;
+  top: 95px;
   left: 0;
   width: 100%;
   z-index: 99;
@@ -13683,9 +13735,17 @@ header .mega-menu .service-list ul li, header .mega-menu-mobile .service-list ul
 }
 header .mega-menu .service-list ul li a, header .mega-menu-mobile .service-list ul li a {
   text-decoration: none;
-  color: #000F20;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  header .mega-menu .service-list ul li a, header .mega-menu-mobile .service-list ul li a {
+    font-size: 12px;
+  }
 }
 header .mega-menu .service-list ul li a:hover, header .mega-menu-mobile .service-list ul li a:hover {
   color: #EE243D;
@@ -13704,12 +13764,12 @@ header .mega-menu .service-list .button, header .mega-menu-mobile .service-list 
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .service-list .button, header .mega-menu-mobile .service-list .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mega-menu .service-list .button:hover, header .mega-menu-mobile .service-list .button:hover {
@@ -13727,16 +13787,17 @@ header .mega-menu .business-info .contact-info, header .mega-menu .business-info
 }
 header .mega-menu .business-info .contact-info a, header .mega-menu .business-info .business-hours a, header .mega-menu .business-info .out-of-hours a, header .mega-menu-mobile .business-info .contact-info a, header .mega-menu-mobile .business-info .business-hours a, header .mega-menu-mobile .business-info .out-of-hours a {
   text-decoration: none;
-  font-family: "Inter", serif;
-  font-size: 16px;
-  color: #000F20;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   display: block;
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #000F20;
+  opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .business-info .contact-info a, header .mega-menu .business-info .business-hours a, header .mega-menu .business-info .out-of-hours a, header .mega-menu-mobile .business-info .contact-info a, header .mega-menu-mobile .business-info .business-hours a, header .mega-menu-mobile .business-info .out-of-hours a {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mega-menu .business-info .contact-info a:hover, header .mega-menu .business-info .business-hours a:hover, header .mega-menu .business-info .out-of-hours a:hover, header .mega-menu-mobile .business-info .contact-info a:hover, header .mega-menu-mobile .business-info .business-hours a:hover, header .mega-menu-mobile .business-info .out-of-hours a:hover {
@@ -13744,13 +13805,14 @@ header .mega-menu .business-info .contact-info a:hover, header .mega-menu .busin
 }
 header .mega-menu .business-info .contact-info p, header .mega-menu .business-info .business-hours p, header .mega-menu .business-info .out-of-hours p, header .mega-menu-mobile .business-info .contact-info p, header .mega-menu-mobile .business-info .business-hours p, header .mega-menu-mobile .business-info .out-of-hours p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
+  opacity: 1;
   margin: 0;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .business-info .contact-info p, header .mega-menu .business-info .business-hours p, header .mega-menu .business-info .out-of-hours p, header .mega-menu-mobile .business-info .contact-info p, header .mega-menu-mobile .business-info .business-hours p, header .mega-menu-mobile .business-info .out-of-hours p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mega-menu .business-info .contact-info .heading, header .mega-menu .business-info .business-hours .heading, header .mega-menu .business-info .out-of-hours .heading, header .mega-menu-mobile .business-info .contact-info .heading, header .mega-menu-mobile .business-info .business-hours .heading, header .mega-menu-mobile .business-info .out-of-hours .heading {
@@ -13770,12 +13832,12 @@ header .mega-menu .business-info .button, header .mega-menu-mobile .business-inf
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .business-info .button, header .mega-menu-mobile .business-info .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mega-menu .business-info .button:hover, header .mega-menu-mobile .business-info .button:hover {
@@ -13835,13 +13897,13 @@ header .mega-menu .recent-post .standard-case-note-card a .content .title, heade
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .excerpt, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .excerpt {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   header .mega-menu .recent-post .standard-case-note-card a .content .excerpt, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .excerpt {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mega-menu .recent-post .standard-case-note-card a .content .read-more, header .mega-menu-mobile .recent-post .standard-case-note-card a .content .read-more {
@@ -13942,7 +14004,7 @@ header .mobile-menus nav ul li a {
 }
 @media (max-width: 991.98px) {
   header .mobile-menus nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mobile-menus nav ul li a:hover {
@@ -13987,7 +14049,7 @@ header .mobile-menus .ctas .button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13998,7 +14060,7 @@ header .mobile-menus .ctas .button {
 }
 @media (max-width: 991.98px) {
   header .mobile-menus .ctas .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mobile-menus .ctas .button:hover {
@@ -14018,7 +14080,7 @@ header .mobile-menus .ctas .button-secondary {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 header .mobile-menus .ctas .button-secondary i {
@@ -14033,7 +14095,7 @@ header .mobile-menus .ctas .button-secondary:hover path {
 }
 @media (max-width: 991.98px) {
   header .mobile-menus .ctas .button-secondary {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 header .mobile-menus .ctas .button-secondary:hover {
@@ -14079,7 +14141,7 @@ header .mobile-menus .ctas a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 .home.page .hero-slides .slide > div {
@@ -14138,13 +14200,13 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   z-index: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .hero-slides .slide .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .hero-slides .slide .button:hover {
@@ -14215,14 +14277,14 @@ header .mobile-menus .ctas a {
 .home.page .services .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #F5F5F5;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .services .heading h3, .home.page .services .heading .h3 {
@@ -14240,14 +14302,14 @@ header .mobile-menus .ctas a {
 }
 .home.page .services .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #F5F5F5;
   opacity: 1;
   max-width: 768px;
 }
 @media (max-width: 991.98px) {
   .home.page .services .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -14295,14 +14357,14 @@ header .mobile-menus .ctas a {
 }
 .home.page .services .service-list .service-list-inner ul li {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #F5F5F5;
   opacity: 1;
   margin-bottom: 15px;
 }
 @media (max-width: 991.98px) {
   .home.page .services .service-list .service-list-inner ul li {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .services .service-list .service-list-inner ul li a {
@@ -14328,12 +14390,12 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .services .service-list .service-list-inner .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .services .service-list .service-list-inner .button:hover {
@@ -14360,14 +14422,14 @@ header .mobile-menus .ctas a {
 }
 .home.page .feedback .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
   max-width: 560px;
 }
 @media (max-width: 991.98px) {
   .home.page .feedback .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .feedback .heading p a {
@@ -14496,14 +14558,14 @@ header .mobile-menus .ctas a {
 .home.page .our-approach .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .our-approach .heading h3, .home.page .our-approach .heading .h3 {
@@ -14533,12 +14595,12 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .heading .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .our-approach .heading .button:hover {
@@ -14588,13 +14650,13 @@ header .mobile-menus .ctas a {
 }
 .home.page .our-approach .approach .timeline .item .content .text p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #F5F5F5;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .our-approach .approach .timeline .item .content .text p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .case-notes {
@@ -14610,14 +14672,14 @@ header .mobile-menus .ctas a {
 .home.page .case-notes .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .case-notes .heading h3, .home.page .case-notes .heading .h3 {
@@ -14635,13 +14697,13 @@ header .mobile-menus .ctas a {
 }
 .home.page .case-notes .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .case-notes #case-notes-slider .splide__track {
@@ -14703,13 +14765,13 @@ header .mobile-menus .ctas a {
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .excerpt {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .excerpt {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page .case-notes #case-notes-slider .standard-case-note-card a .content .read-more {
@@ -14797,14 +14859,14 @@ header .mobile-menus .ctas a {
 .home.page #enquire-now .content .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page #enquire-now .content .heading h3, .home.page #enquire-now .content .heading .h3 {
@@ -14822,13 +14884,13 @@ header .mobile-menus .ctas a {
 }
 .home.page #enquire-now .content .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page #enquire-now .content .what-to-expect {
@@ -14836,13 +14898,13 @@ header .mobile-menus .ctas a {
 }
 .home.page #enquire-now .content .what-to-expect p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .content .what-to-expect p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page #enquire-now .content .what-to-expect .bold {
@@ -14933,13 +14995,13 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   border-radius: 0;
 }
 @media (max-width: 991.98px) {
   .home.page #enquire-now .gform_wrapper input[type=submit] {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .home.page #enquire-now .gform_wrapper input[type=submit]:hover {
@@ -15000,13 +15062,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .hero .left .content p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .hero .left .content p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .hero .left .content .button {
@@ -15024,12 +15086,12 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .hero .left .content .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .hero .left .content .button:hover {
@@ -15109,13 +15171,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .about p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #F5F5F5;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .about p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .about img {
@@ -15137,14 +15199,14 @@ header .mobile-menus .ctas a {
 .page-template-page-why-drake-case .team .top .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .team .top .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .team .top h3, .page-template-page-why-drake-case .team .top .h3 {
@@ -15162,13 +15224,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .team .top p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .team .top p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .team .member {
@@ -15190,25 +15252,25 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .team .member p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .team .member p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .team .member .intro {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
   font-size: 14px !important;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .team .member .intro {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .team .member .socials {
@@ -15260,14 +15322,14 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .values .top p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
   max-width: 750px;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .values .top p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .values .value h3, .page-template-page-why-drake-case .values .value .h3 {
@@ -15285,13 +15347,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .values .value p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .values .value p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .trusted-by {
@@ -15349,14 +15411,14 @@ header .mobile-menus .ctas a {
 .page-template-page-why-drake-case .our-approach .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .our-approach .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .our-approach .heading h3, .page-template-page-why-drake-case .our-approach .heading .h3 {
@@ -15386,12 +15448,12 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .our-approach .heading .button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .our-approach .heading .button:hover {
@@ -15441,13 +15503,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #F5F5F5;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .our-approach .approach .timeline .item .content .text p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .feedback {
@@ -15471,14 +15533,14 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .feedback .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
   max-width: 560px;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .feedback .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case .feedback .heading p a {
@@ -15608,14 +15670,14 @@ header .mobile-menus .ctas a {
 .page-template-page-why-drake-case #enquire-now .content .heading .tag {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   color: #EE243D;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case #enquire-now .content .heading .tag {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case #enquire-now .content .heading h3, .page-template-page-why-drake-case #enquire-now .content .heading .h3 {
@@ -15633,13 +15695,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case #enquire-now .content .heading p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case #enquire-now .content .heading p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case #enquire-now .content .what-to-expect {
@@ -15647,13 +15709,13 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case #enquire-now .content .what-to-expect p {
   font-family: "Inter", serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case #enquire-now .content .what-to-expect p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case #enquire-now .content .what-to-expect .bold {
@@ -15744,13 +15806,13 @@ header .mobile-menus .ctas a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   border-radius: 0;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case #enquire-now .gform_wrapper input[type=submit] {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .page-template-page-why-drake-case #enquire-now .gform_wrapper input[type=submit]:hover {

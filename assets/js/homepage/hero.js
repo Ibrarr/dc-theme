@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
     const slides = gsap.utils.toArray('.hero-slides .slide');
+    const header = document.querySelector('header'); // Assuming 'header' is the element with .hero-active
 
     // Initially hide the container to avoid flashes
     gsap.set('.hero-slides', {
@@ -43,6 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let isAnimating = false;
 
+    const updateHeroClass = () => {
+        if (currentIndex === slides.length - 1) {
+            header.classList.remove('hero-active');
+        } else {
+            header.classList.add('hero-active');
+        }
+    };
+
     const moveToSlide = (index) => {
         if (isAnimating || index < 0 || index >= slides.length) return;
 
@@ -67,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     document.body.style.overflow = 'hidden';
                 }
+
+                // Update header class
+                updateHeroClass();
             },
         });
 
@@ -116,4 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Make container visible after setup
     gsap.set('.hero-slides', { visibility: 'visible' });
+
+    // Initial class update
+    updateHeroClass();
 });

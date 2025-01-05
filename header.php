@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
-    <header id="header" role="banner">
+    <header id="header" role="banner" class="<?php if ( is_front_page() ) { echo 'hero-active'; }; ?>">
         <div class="top-menu px-4">
             <div class="logo-menu">
                 <div class="logo">
