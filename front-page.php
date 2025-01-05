@@ -14,13 +14,12 @@ get_header();
 
         if ($counter === 1): ?>
             <section class="slide <?php echo $text_colour; ?>">
-                <div class="bg-wrapper" style="background: url(<?php echo $background; ?>) center center / cover no-repeat;"></div>
-<!--                <div class="bg-wrapper">-->
-<!--                    <video autoplay loop muted playsinline class="bg-video">-->
-<!--                        <source src="http://drakeandcase.test/wp-content/uploads/2025/01/first-slide-video.mp4" type="video/mp4">-->
-<!--                        Your browser does not support the video tag.-->
-<!--                    </video>-->
-<!--                </div>-->
+                <div class="bg-wrapper">
+                    <video autoplay loop muted playsinline class="bg-video">
+                        <source src="http://drakeandcase.test/wp-content/uploads/2025/01/first-slide-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div class="container px-4">
                     <h1><?php echo $heading; ?></h1>
                     <?php echo $text; ?>

@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Stack the slides so the first is on top
     gsap.set(slides, {
+        opacity: 0,
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
         height: '100%',
         zIndex: (i) => slides.length - i,
-        y: 0,
     });
 
     // Set all slides' `.bg-wrapper` to scale: 1.1 initially
@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const makeAllSlidesVisible = () => {
+        gsap.set(slides, { opacity: 1 });
+    };
+
     const moveToSlide = (index) => {
         if (isAnimating || index < 0 || index >= slides.length) return;
 
@@ -61,7 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSlide = slides[currentIndex];
         const nextSlide = slides[index];
 
-        // Set the stacking order for proper stacking effect
+        // Make all slides visible after the first transition
+        makeAllSlidesVisible();
+
+        // Set the stacking order and make the next slide visible
         gsap.set(nextSlide, { zIndex: slides.length - index });
 
         const timeline = gsap.timeline({
@@ -125,6 +132,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listener for scroll
     window.addEventListener('wheel', handleScroll);
+
+    // Enable scrolling when a button inside a slide is clicked
+    document.querySelectorAll('.hero-slides .slide').forEach((button) => {
+        button.addEventListener('click', () => {
+            // Enable scrolling
+            document.body.style.overflow = 'auto';
+
+            // Make all slides visible
+            makeAllSlidesVisible();
+
+            // Move animation state to the last slide
+            const slides = document.querySelectorAll('.hero-slides .slide');
+            const lastSlideIndex = slides.length - 1;
+
+            // Set the last slide position and reset others
+            gsap.set(slides, {
+                y: (i) => (i === lastSlideIndex ? '0%' : '-100%'),
+            });
+
+            // Update z-index for proper stacking
+            slides.forEach((slide, index) => {
+                slide.style.zIndex = index === lastSlideIndex ? slides.length : slides.length - index;
+            });
+
+            // Update currentIndex to the last slide
+            currentIndex = lastSlideIndex;
+
+            // Update hero-active class
+            updateHeroClass();
+
+            // Ensure proper z-index order for scrolling back
+            slides.forEach((slide, index) => {
+                gsap.set(slide, {
+                    zIndex: slides.length - index, // Reset z-index in natural stacking order
+                });
+            });
+        });
+    });
+
+    // Make the first slide visible after setup
+    gsap.set(slides[0], { opacity: 1 });
 
     // Make container visible after setup
     gsap.set('.hero-slides', { visibility: 'visible' });
