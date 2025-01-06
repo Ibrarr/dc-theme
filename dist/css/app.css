@@ -13413,7 +13413,15 @@ textarea.form-control-lg {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  height: 100%;
+}
+
+body:not(.home) main {
+  margin-top: 96px;
+}
+@media (max-width: 991.98px) {
+  body:not(.home) main {
+    margin-top: 63px;
+  }
 }
 
 header {
@@ -13469,8 +13477,26 @@ header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary:hove
 header.hero-active:not(.active-mega-menu) .top-menu .mobile-menu .open svg path {
   fill: #F5F5F5;
 }
+header.hero-active:not(.active-mega-menu) .top-menu .logo .desktop svg > g > g > path {
+  fill: #F5F5F5;
+}
+header.hero-active:not(.active-mega-menu) .top-menu .logo .desktop svg g g g path:nth-child(6),
+header.hero-active:not(.active-mega-menu) .top-menu .logo .desktop svg g g g path:nth-child(7),
+header.hero-active:not(.active-mega-menu) .top-menu .logo .desktop svg g g g path:nth-child(8),
+header.hero-active:not(.active-mega-menu) .top-menu .logo .desktop svg g g g path:nth-child(9) {
+  fill: #F5F5F5;
+}
+header.hero-active:not(.active-mega-menu) .top-menu .logo .mobile svg g g path:nth-child(1),
+header.hero-active:not(.active-mega-menu) .top-menu .logo .mobile svg g g path:nth-child(2) {
+  fill: #F5F5F5;
+}
 header.hero-active.active-mega-menu, header.hero-active.mobile-menu-active {
   background: #f9f9f9 !important;
+}
+header.hero-active.active-mega-menu .logo .mobile svg g g path:nth-child(1),
+header.hero-active.active-mega-menu .logo .mobile svg g g path:nth-child(2), header.hero-active.mobile-menu-active .logo .mobile svg g g path:nth-child(1),
+header.hero-active.mobile-menu-active .logo .mobile svg g g path:nth-child(2) {
+  fill: #000F20 !important;
 }
 header .top-menu {
   padding: 25px 0;
@@ -13504,6 +13530,9 @@ header .top-menu .logo-menu {
 }
 header .top-menu .logo-menu .logo {
   margin-right: 30px;
+}
+header .top-menu .logo-menu .logo .desktop svg {
+  width: 198px;
 }
 header .top-menu .logo-menu .logo .mobile {
   display: none;

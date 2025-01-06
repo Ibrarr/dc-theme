@@ -18,6 +18,12 @@
     .logo {
       margin-right: 30px;
 
+      .desktop {
+        svg {
+          width: 198px;
+        }
+      }
+
       .mobile {
         display: none;
 

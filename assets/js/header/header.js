@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
         let currentScrollPos = window.pageYOffset;
         const header = document.getElementById("header");
 
-        if (prevScrollpos > currentScrollPos || currentScrollPos <= 70) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos <= 97) {
             // Scrolling up or at the top of the page
             header.style.top = "0"; // Adjust to your desired position
             $('.main-menu-text').fadeIn(300);

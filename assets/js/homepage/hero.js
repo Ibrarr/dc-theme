@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         zIndex: (i) => slides.length - i,
     });
 
-    // Set all slides' `.bg-wrapper` to scale: 1.1 initially
+    // Set all slides' `.bg-wrapper` to scale: 1.2 initially
     slides.forEach((slide) => {
-        gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.1 });
+        gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
     });
 
     // Animate the first slide's background on load
@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (direction === 1) {
             // Scrolling down: Current slide moves up, next slide is revealed underneath
             timeline.to(currentSlide, { y: '-100%' }, 0);
-            timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.1 }, 0);
+            timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.2 }, 0);
             timeline.fromTo(
                 nextSlide.querySelector('.bg-wrapper'),
-                { scale: 1.1 },
+                { scale: 1.2 },
                 { scale: 1 },
                 0
             );
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timeline.set(nextSlide, { y: '-100%' }, 0); // Position above the current slide
             timeline.to(nextSlide, { y: '0%' }, 0);
             timeline.to(nextSlide.querySelector('.bg-wrapper'), { scale: 1 }, 0);
-            timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.1 }, 0);
+            timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.2 }, 0);
         }
     };
 
