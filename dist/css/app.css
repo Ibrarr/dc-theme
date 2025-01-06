@@ -13493,6 +13493,18 @@ header.hero-active:not(.active-mega-menu) .top-menu .logo .mobile svg g g path:n
 header.hero-active.active-mega-menu, header.hero-active.mobile-menu-active {
   background: #f9f9f9 !important;
 }
+header.hero-active.active-mega-menu .logo .desktop svg > g > g > path, header.hero-active.mobile-menu-active .logo .desktop svg > g > g > path {
+  fill: #000F20 !important;
+}
+header.hero-active.active-mega-menu .logo .desktop svg g g g path:nth-child(6),
+header.hero-active.active-mega-menu .logo .desktop svg g g g path:nth-child(7),
+header.hero-active.active-mega-menu .logo .desktop svg g g g path:nth-child(8),
+header.hero-active.active-mega-menu .logo .desktop svg g g g path:nth-child(9), header.hero-active.mobile-menu-active .logo .desktop svg g g g path:nth-child(6),
+header.hero-active.mobile-menu-active .logo .desktop svg g g g path:nth-child(7),
+header.hero-active.mobile-menu-active .logo .desktop svg g g g path:nth-child(8),
+header.hero-active.mobile-menu-active .logo .desktop svg g g g path:nth-child(9) {
+  fill: #000F20 !important;
+}
 header.hero-active.active-mega-menu .logo .mobile svg g g path:nth-child(1),
 header.hero-active.active-mega-menu .logo .mobile svg g g path:nth-child(2), header.hero-active.mobile-menu-active .logo .mobile svg g g path:nth-child(1),
 header.hero-active.mobile-menu-active .logo .mobile svg g g path:nth-child(2) {

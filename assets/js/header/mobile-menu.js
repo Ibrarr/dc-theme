@@ -9,11 +9,29 @@ jQuery(document).ready(function($) {
     });
 
     $('.mobile-menu .close').on('click.mobileMenu', function() {
-        $('.mobile-menus').slideUp(); // Slide up the mobile menus
+        // Check if .mega-menu-mobile is visible and slide it up first
+        if ($('.mega-menu-mobile').is(':visible')) {
+            $('.mega-menu-mobile').slideUp(function() {
+                // Once .mega-menu-mobile is hidden, slide up the mobile menus
+                $('.mobile-menus').slideUp(function() {
+                    // Remove the active classes only after animations are complete
+                    $('header').removeClass('mobile-menu-active active-mega-menu');
+                    $('.mega-menu-link').removeClass('active');
+                    $('body').removeClass('no-scroll'); // Enable scrolling on the body
+                });
+            });
+        } else {
+            // If .mega-menu-mobile is not visible, slide up the mobile menus directly
+            $('.mobile-menus').slideUp(function() {
+                // Remove the active classes after sliding up the mobile menus
+                $('header').removeClass('mobile-menu-active active-mega-menu');
+                $('.mega-menu-link').removeClass('active');
+                $('body').removeClass('no-scroll'); // Enable scrolling on the body
+            });
+        }
+
         $(this).hide(); // Hide the close button
         $('.mobile-menu .open').show(); // Show the open button
-        $('header').removeClass('mobile-menu-active');
-        $('body').removeClass('no-scroll'); // Enable scrolling on the body
     });
 
     // Handler for anchor links within the menu
@@ -25,7 +43,7 @@ jQuery(document).ready(function($) {
             $('.mobile-menus').slideUp();
             $('.mobile-menu .close').hide();
             $('.mobile-menu .open').show();
-            $('header').removeClass('mobile-menu-active');
+            $('header').removeClass('mobile-menu-active active-mega-menu');
             $('body').removeClass('no-scroll');
 
             // Navigate to the anchor link

@@ -168,32 +168,48 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('touchend', handleTouchEnd);
 
-    document.querySelectorAll('.hero-slides .slide').forEach((button) => {
-        button.addEventListener('click', () => {
-            document.body.style.overflow = 'auto';
-            makeAllSlidesVisible();
-            const slides = document.querySelectorAll('.hero-slides .slide');
-            const lastSlideIndex = slides.length - 1;
+    // Function to handle the slide navigation logic
+    const moveToLastSlide = () => {
+        document.body.style.overflow = 'auto';
+        makeAllSlidesVisible();
+        const slides = document.querySelectorAll('.hero-slides .slide');
+        const lastSlideIndex = slides.length - 1;
 
-            gsap.set(slides, {
-                y: (i) => (i === lastSlideIndex ? '0%' : '-100%'),
-            });
+        gsap.set(slides, {
+            y: (i) => (i === lastSlideIndex ? '0%' : '-100%'),
+        });
 
-            slides.forEach((slide, index) => {
-                slide.style.zIndex = index === lastSlideIndex ? slides.length : slides.length - index;
-            });
+        slides.forEach((slide, index) => {
+            slide.style.zIndex = index === lastSlideIndex ? slides.length : slides.length - index;
+        });
 
-            currentIndex = lastSlideIndex;
+        currentIndex = lastSlideIndex;
 
-            updateHeroClass();
+        updateHeroClass();
 
-            slides.forEach((slide, index) => {
-                gsap.set(slide, {
-                    zIndex: slides.length - index,
-                });
+        slides.forEach((slide, index) => {
+            gsap.set(slide, {
+                zIndex: slides.length - index,
             });
         });
+    };
+
+// Add event listeners for slide buttons
+    document.querySelectorAll('.hero-slides .slide .button').forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent any propagation issues
+            moveToLastSlide();
+        });
     });
+
+// Add event listeners for header buttons
+    document.querySelectorAll('header .mobile-menus .ctas .button, header .top-menu .ctas .button').forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent any propagation issues
+            moveToLastSlide();
+        });
+    });
+
 
     gsap.set(slides[0], { opacity: 1 });
     gsap.set('.hero-slides', { visibility: 'visible' });
