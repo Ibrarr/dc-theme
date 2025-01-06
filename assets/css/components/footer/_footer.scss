@@ -14,6 +14,14 @@ footer {
 
     .logo {
       margin-bottom: 20px;
+
+      svg {
+        width: 200px;
+
+        path {
+          fill: $dc-text-light;
+        }
+      }
     }
 
     p {

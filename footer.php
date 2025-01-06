@@ -3,7 +3,7 @@
     <div class="container px-4">
         <div class="row">
             <div class="col-lg-6 info">
-                <div class="logo"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/dc-logo-footer.svg' ) ?></div>
+                <div class="logo"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/main-logo.svg' ) ?></div>
                 <p class="heading">Address:</p>
                 <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank" class="address">42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
                 <p class="heading">Contact:</p>

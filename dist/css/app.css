@@ -15907,6 +15907,12 @@ footer > div {
 footer .info .logo {
   margin-bottom: 20px;
 }
+footer .info .logo svg {
+  width: 200px;
+}
+footer .info .logo svg path {
+  fill: #F5F5F5;
+}
 footer .info p {
   font-family: "Inter", serif;
   font-size: 14px;
