@@ -194,7 +194,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-// Add event listeners for slide buttons
+    // Check if the slider section is in full view on page load
+    const checkSliderVisibility = () => {
+        const heroSlidesContainer = document.querySelector('.hero-slides');
+        const heroSlidesRect = heroSlidesContainer.getBoundingClientRect();
+
+        if (heroSlidesRect.top < 0 || heroSlidesRect.bottom > window.innerHeight) {
+            moveToLastSlide();
+        } else {
+            document.body.style.overflow = 'hidden';
+            gsap.set(slides[0], { opacity: 1 });
+            gsap.set('.hero-slides', { visibility: 'visible' });
+            updateHeroClass();
+        }
+    };
+
+    checkSliderVisibility();
+
+    // Add event listeners for slide buttons
     document.querySelectorAll('.hero-slides .slide .button').forEach((button) => {
         button.addEventListener('click', (event) => {
             event.stopPropagation(); // Prevent any propagation issues
@@ -202,14 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-// Add event listeners for header buttons
+    // Add event listeners for header buttons
     document.querySelectorAll('header .mobile-menus .ctas .button, header .top-menu .ctas .button').forEach((button) => {
         button.addEventListener('click', (event) => {
             event.stopPropagation(); // Prevent any propagation issues
             moveToLastSlide();
         });
     });
-
 
     gsap.set(slides[0], { opacity: 1 });
     gsap.set('.hero-slides', { visibility: 'visible' });
