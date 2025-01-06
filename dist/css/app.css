@@ -13573,6 +13573,10 @@ header .top-menu .logo-menu nav ul {
 header .top-menu .logo-menu nav ul li {
   display: inline-block;
 }
+header .top-menu .logo-menu nav ul li.current-menu-item a {
+  color: #EE243D;
+  font-weight: 600;
+}
 header .top-menu .logo-menu nav ul li.mega-menu-link {
   position: relative;
   margin-right: 30px !important;

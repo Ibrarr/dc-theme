@@ -56,6 +56,11 @@
         li {
           display: inline-block;
 
+          &.current-menu-item a {
+            color: $dc-primary;
+            font-weight: $dc-semi-bold;
+          }
+
           &.mega-menu-link {
             position: relative;
             margin-right: 30px !important;
