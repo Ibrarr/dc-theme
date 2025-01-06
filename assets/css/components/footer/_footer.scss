@@ -17,9 +17,7 @@ footer {
     }
 
     p {
-      font-family: $dc-body;
-      font-size: 14px;
-      color: $dc-text-light;
+      @include dc-p($dc-text-light);
 
       &.heading {
         font-weight: $dc-semi-bold;
@@ -27,10 +25,12 @@ footer {
       }
     }
 
+    .address {
+      margin-bottom: 10px;
+    }
+
     a {
-      font-family: $dc-body;
-      font-size: 14px;
-      color: $dc-text-light;
+      @include dc-p($dc-text-light);
       text-decoration: none;
       display: block;
       transition: $dc-transition-all;
@@ -86,9 +86,7 @@ footer {
           }
 
           a {
-            font-family: $dc-body;
-            font-size: 14px;
-            color: $dc-text-light;
+            @include dc-p($dc-text-light);
             text-decoration: none;
             transition: $dc-transition-all;
 
@@ -114,9 +112,7 @@ footer {
       }
 
       p, a {
-        font-family: $dc-body;
-        font-size: 14px;
-        color: $dc-text-light;
+        @include dc-p($dc-text-light);
         text-decoration: none;
         transition: $dc-transition-all;
       }

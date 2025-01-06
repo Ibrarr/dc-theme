@@ -5,7 +5,7 @@
             <div class="col-lg-6 info">
                 <div class="logo"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/dc-logo-footer.svg' ) ?></div>
                 <p class="heading">Address:</p>
-                <p>42 Upper Berkeley Street, Marylebone, London, W1H 5QL</p>
+                <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank" class="address">42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
                 <p class="heading">Contact:</p>
                 <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><?php the_field( 'main_phone_number', 'option' ); ?></a>
                 <a href="mailto:<?php the_field( 'main_email', 'option' ); ?>"><?php the_field( 'main_email', 'option' ); ?></a>

@@ -15911,19 +15911,34 @@ footer .info p {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  footer .info p {
+    font-size: 12px;
+  }
 }
 footer .info p.heading {
   font-weight: 600;
   margin-bottom: 0;
 }
+footer .info .address {
+  margin-bottom: 10px;
+}
 footer .info a {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
+  opacity: 1;
   text-decoration: none;
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (max-width: 991.98px) {
+  footer .info a {
+    font-size: 12px;
+  }
 }
 footer .info a:hover {
   color: #EE243D;
@@ -15974,9 +15989,15 @@ footer .menus .all-footer-menus ul li a {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
+  opacity: 1;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (max-width: 991.98px) {
+  footer .menus .all-footer-menus ul li a {
+    font-size: 12px;
+  }
 }
 footer .menus .all-footer-menus ul li a:hover {
   color: #EE243D;
@@ -16001,9 +16022,15 @@ footer .bottom .content p, footer .bottom .content a {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #F5F5F5;
+  opacity: 1;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (max-width: 991.98px) {
+  footer .bottom .content p, footer .bottom .content a {
+    font-size: 12px;
+  }
 }
 footer .bottom .content a:hover {
   color: #EE243D;
