@@ -13544,13 +13544,13 @@ header .top-menu .logo-menu .logo {
   margin-right: 30px;
 }
 header .top-menu .logo-menu .logo .desktop svg {
-  width: 198px;
+  width: 250px;
 }
 header .top-menu .logo-menu .logo .mobile {
   display: none;
 }
 header .top-menu .logo-menu .logo .mobile svg {
-  width: 40px;
+  width: 35px;
 }
 @media (max-width: 767.98px) {
   header .top-menu .logo-menu .logo .desktop {
@@ -13973,7 +13973,7 @@ header .mobile-menus {
 }
 @media (max-width: 767.98px) {
   header .mobile-menus {
-    top: 62.46px;
+    top: 60px;
   }
 }
 header .mobile-menus .mobile-menu-inner {
