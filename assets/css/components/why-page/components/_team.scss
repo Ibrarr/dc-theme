@@ -41,7 +41,7 @@
     }
 
     p {
-      @include dc-p($dc-text-dark);
+      @include dc-p($dc-primary);
     }
 
     .intro {
