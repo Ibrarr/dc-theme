@@ -25,7 +25,7 @@ header {
             fill: $dc-text-light !important;
           }
 
-          @include dc-button-secondary($dc-text-light, darken($dc-text-light, 10%));
+          @include dc-button-secondary($dc-text-light, darken($dc-text-light, 20%));
           background: none !important;
         }
 

@@ -49,8 +49,8 @@ export const ourApproach = () => {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '.timeline',
-                start: 'top 90%', // Start lower on the screen
-                end: 'bottom 85%',
+                start: 'top 75%', // Start lower on the screen
+                end: 'bottom 55%',
                 scrub: true,
                 pin: false, // No pinning required
                 onUpdate: (self) => {

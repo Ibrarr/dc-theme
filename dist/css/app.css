@@ -13471,8 +13471,8 @@ header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary path
   }
 }
 header.hero-active:not(.active-mega-menu) .top-menu .ctas .button-secondary:hover {
-  color: rgb(219.5, 219.5, 219.5);
-  border-color: rgb(219.5, 219.5, 219.5);
+  color: #c2c2c2;
+  border-color: #c2c2c2;
 }
 header.hero-active:not(.active-mega-menu) .top-menu .mobile-menu .open svg path {
   fill: #F5F5F5;
@@ -13675,7 +13675,7 @@ header .top-menu .ctas .button-secondary i path {
   transition: all 0.3s;
 }
 header .top-menu .ctas .button-secondary:hover path {
-  fill: rgb(0, 85.8241758242, 142);
+  fill: rgb(0, 132.0604395604, 218.5);
 }
 @media (max-width: 991.98px) {
   header .top-menu .ctas .button-secondary {
@@ -13683,8 +13683,8 @@ header .top-menu .ctas .button-secondary:hover path {
   }
 }
 header .top-menu .ctas .button-secondary:hover {
-  color: rgb(0, 85.8241758242, 142);
-  border-color: rgb(0, 85.8241758242, 142);
+  color: rgb(0, 132.0604395604, 218.5);
+  border-color: rgb(0, 132.0604395604, 218.5);
 }
 header .top-menu .mobile-menu {
   display: none;
@@ -14201,17 +14201,12 @@ header .mobile-menus .ctas a {
 .home.page .hero-slides .slide h1, .home.page .hero-slides .slide .h1, .home.page .hero-slides .slide h2, .home.page .hero-slides .slide .h2 {
   font-family: "PT Serif", serif;
   font-weight: 600;
-  font-size: 100px;
   margin-bottom: 20px;
   color: #F5F5F5;
   opacity: 1;
   z-index: 1;
   max-width: 700px;
-}
-@media (max-width: 991.98px) {
-  .home.page .hero-slides .slide h1, .home.page .hero-slides .slide .h1, .home.page .hero-slides .slide h2, .home.page .hero-slides .slide .h2 {
-    font-size: 45px;
-  }
+  font-size: clamp(2.8125rem, -0.5704rem + 5.4563vw, 6.25rem);
 }
 .home.page .hero-slides .slide p {
   font-family: "Inter", serif;

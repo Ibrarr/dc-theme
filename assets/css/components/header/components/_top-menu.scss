@@ -130,10 +130,10 @@
       }
 
       &:hover path {
-        fill: lighten($dc-secondary, 10%);
+        fill: lighten($dc-secondary, 25%);
       }
 
-      @include dc-button-secondary($dc-secondary, lighten($dc-secondary, 10%));
+      @include dc-button-secondary($dc-secondary, lighten($dc-secondary, 25%));
     }
   }
 

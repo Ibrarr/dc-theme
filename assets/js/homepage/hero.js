@@ -6,6 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     const slides = gsap.utils.toArray('.hero-slides .slide');
     const header = document.querySelector('header'); // Assuming 'header' is the element with .hero-active
+    let startY = 0; // For touch events
+    let isTouching = false;
 
     // Initially hide the container to avoid flashes
     gsap.set('.hero-slides', {
@@ -26,19 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         zIndex: (i) => slides.length - i,
     });
 
-    // Set all slides' `.bg-wrapper` to scale: 1.2 initially
     slides.forEach((slide) => {
         gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
     });
 
-    // Animate the first slide's background on load
     gsap.to(slides[0].querySelector('.bg-wrapper'), {
         scale: 1,
         duration: 1.5,
         ease: 'power2.out',
     });
 
-    // Disable native scrolling initially
     document.body.style.overflow = 'hidden';
 
     let currentIndex = 0;
@@ -60,15 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isAnimating || index < 0 || index >= slides.length) return;
 
         isAnimating = true;
-
-        const direction = index > currentIndex ? 1 : -1; // 1 for down, -1 for up
+        const direction = index > currentIndex ? 1 : -1;
         const currentSlide = slides[currentIndex];
         const nextSlide = slides[index];
 
-        // Make all slides visible after the first transition
         makeAllSlidesVisible();
 
-        // Set the stacking order and make the next slide visible
         gsap.set(nextSlide, { zIndex: slides.length - index });
 
         const timeline = gsap.timeline({
@@ -77,20 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = index;
                 isAnimating = false;
 
-                // Allow normal scrolling only when reaching the last slide
                 if (currentIndex === slides.length - 1) {
                     document.body.style.overflow = 'auto';
                 } else {
                     document.body.style.overflow = 'hidden';
                 }
 
-                // Update header class
                 updateHeroClass();
             },
         });
 
         if (direction === 1) {
-            // Scrolling down: Current slide moves up, next slide is revealed underneath
             timeline.to(currentSlide, { y: '-100%' }, 0);
             timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.2 }, 0);
             timeline.fromTo(
@@ -100,8 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 0
             );
         } else {
-            // Scrolling up: Previous slide moves back down, covering the current slide
-            timeline.set(nextSlide, { y: '-100%' }, 0); // Position above the current slide
+            timeline.set(nextSlide, { y: '-100%' }, 0);
             timeline.to(nextSlide, { y: '0%' }, 0);
             timeline.to(nextSlide.querySelector('.bg-wrapper'), { scale: 1 }, 0);
             timeline.to(currentSlide.querySelector('.bg-wrapper'), { scale: 1.2 }, 0);
@@ -110,6 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleScroll = (event) => {
         const delta = event.deltaY;
+
+        // Get the bounding rectangle of the .hero-slides container
+        const heroSlidesContainer = document.querySelector('.hero-slides');
+        const heroSlidesRect = heroSlidesContainer.getBoundingClientRect();
+
+        // Check if the user is in the .hero-slides section
+        if (heroSlidesRect.bottom <= 0 || heroSlidesRect.top >= window.innerHeight) {
+            // User is outside the slides section, no need to trigger the slide logic
+            return;
+        }
 
         if (delta > 0) {
             // Scrolling down
@@ -130,53 +132,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Add event listener for scroll
-    window.addEventListener('wheel', handleScroll);
+    const handleTouchStart = (event) => {
+        startY = event.touches[0].clientY;
+        isTouching = true;
+    };
 
-    // Enable scrolling when a button inside a slide is clicked
+    const handleTouchMove = (event) => {
+        if (!isTouching) return;
+
+        const currentY = event.touches[0].clientY;
+        const deltaY = startY - currentY;
+
+        if (Math.abs(deltaY) > 50) {
+            if (deltaY > 0) {
+                // Swipe up
+                if (!isAnimating && currentIndex < slides.length - 1) {
+                    moveToSlide(currentIndex + 1);
+                }
+            } else {
+                // Swipe down
+                if (!isAnimating && currentIndex > 0) {
+                    moveToSlide(currentIndex - 1);
+                }
+            }
+            isTouching = false; // Prevent multiple triggers
+        }
+    };
+
+    const handleTouchEnd = () => {
+        isTouching = false;
+    };
+
+    window.addEventListener('wheel', handleScroll);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd);
+
     document.querySelectorAll('.hero-slides .slide').forEach((button) => {
         button.addEventListener('click', () => {
-            // Enable scrolling
             document.body.style.overflow = 'auto';
-
-            // Make all slides visible
             makeAllSlidesVisible();
-
-            // Move animation state to the last slide
             const slides = document.querySelectorAll('.hero-slides .slide');
             const lastSlideIndex = slides.length - 1;
 
-            // Set the last slide position and reset others
             gsap.set(slides, {
                 y: (i) => (i === lastSlideIndex ? '0%' : '-100%'),
             });
 
-            // Update z-index for proper stacking
             slides.forEach((slide, index) => {
                 slide.style.zIndex = index === lastSlideIndex ? slides.length : slides.length - index;
             });
 
-            // Update currentIndex to the last slide
             currentIndex = lastSlideIndex;
 
-            // Update hero-active class
             updateHeroClass();
 
-            // Ensure proper z-index order for scrolling back
             slides.forEach((slide, index) => {
                 gsap.set(slide, {
-                    zIndex: slides.length - index, // Reset z-index in natural stacking order
+                    zIndex: slides.length - index,
                 });
             });
         });
     });
 
-    // Make the first slide visible after setup
     gsap.set(slides[0], { opacity: 1 });
-
-    // Make container visible after setup
     gsap.set('.hero-slides', { visibility: 'visible' });
-
-    // Initial class update
     updateHeroClass();
 });
