@@ -195,11 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Check if the slider section is in full view on page load
+// Check if the slider section is in full view on page load
     const checkSliderVisibility = () => {
         const heroSlidesContainer = document.querySelector('.hero-slides');
         const heroSlidesRect = heroSlidesContainer.getBoundingClientRect();
+        const extraMargin = 100; // Extra margin to adjust for partial visibility at the bottom
 
-        if (heroSlidesRect.top < 0 || heroSlidesRect.bottom > window.innerHeight) {
+        if (
+            heroSlidesRect.top < 0 ||
+            heroSlidesRect.bottom > window.innerHeight + extraMargin
+        ) {
             moveToLastSlide();
         } else {
             document.body.style.overflow = 'hidden';
@@ -208,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateHeroClass();
         }
     };
+
 
     checkSliderVisibility();
 
