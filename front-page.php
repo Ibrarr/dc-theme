@@ -8,31 +8,44 @@ get_header();
     while( have_rows('hero_slides')): the_row();
         $heading = get_sub_field('heading');
         $text = get_sub_field('text');
-        $text_colour = get_sub_field('text_colour');
         $background = get_sub_field('background');
-        $counter++; // Increment the counter
+        $image = get_sub_field('image');
+        $video = get_sub_field('video');
+        $button = get_sub_field('button');
+        $counter++;
 
         if ($counter === 1): ?>
-            <section class="slide <?php echo $text_colour; ?>">
-                <div class="bg-wrapper">
-                    <video autoplay loop muted playsinline class="bg-video">
-                        <source src="http://drakeandcase.test/wp-content/uploads/2025/01/first-slide-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <section class="slide">
+                <?php if ($background === 'image') { ?>
+                    <div class="bg-wrapper" style="background: url(<?php echo $image; ?>) center center / cover no-repeat;"></div>
+                <?php } else if ($background === 'video') { ?>
+                    <div class="bg-wrapper">
+                        <video autoplay loop muted playsinline class="bg-video">
+                            <source src="<?php echo $video; ?>" type="video/mp4">
+                        </video>
+                    </div>
+                <?php } ?>
                 <div class="container px-4">
                     <h1><?php echo $heading; ?></h1>
                     <?php echo $text; ?>
-                    <a href="#enquire-now" class="button">Enquire now</a>
+                    <a href="#enquire-now" class="button"><?php echo $button; ?></a>
                 </div>
             </section>
         <?php else: ?>
-            <section class="slide <?php echo $text_colour; ?>">
-                <div class="bg-wrapper" style="background: url(<?php echo $background; ?>) center center / cover no-repeat;"></div>
+            <section class="slide">
+                <?php if ($background === 'image') { ?>
+                    <div class="bg-wrapper" style="background: url(<?php echo $image; ?>) center center / cover no-repeat;"></div>
+                <?php } else if ($background === 'video') { ?>
+                    <div class="bg-wrapper">
+                        <video autoplay loop muted playsinline class="bg-video">
+                            <source src="<?php echo $video; ?>" type="video/mp4">
+                        </video>
+                    </div>
+                <?php } ?>
                 <div class="container px-4">
                     <h2><?php echo $heading; ?></h2>
                     <?php echo $text; ?>
-                    <a href="#enquire-now" class="button">Enquire now</a>
+                    <a href="#enquire-now" class="button"><?php echo $button; ?></a>
                 </div>
             </section>
         <?php endif; ?>
