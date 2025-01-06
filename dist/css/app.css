@@ -15196,7 +15196,7 @@ header .mobile-menus .ctas a {
 }
 .page-template-page-why-drake-case .about {
   margin-bottom: 60px;
-  background: #00375B;
+  background: #000F20;
   padding: 60px 0;
   text-align: center;
 }
@@ -15205,7 +15205,20 @@ header .mobile-menus .ctas a {
     padding: 40px 0;
   }
 }
-.page-template-page-why-drake-case .about h2, .page-template-page-why-drake-case .about .h2 {
+.page-template-page-why-drake-case .about .tag {
+  font-family: "Plus Jakarta Sans", serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-why-drake-case .about .tag {
+    font-size: 12px;
+  }
+}
+.page-template-page-why-drake-case .about h3, .page-template-page-why-drake-case .about .h3 {
   font-family: "Plus Jakarta Sans", serif;
   font-weight: 700;
   font-size: 48px;
@@ -15214,7 +15227,7 @@ header .mobile-menus .ctas a {
   opacity: 1;
 }
 @media (max-width: 991.98px) {
-  .page-template-page-why-drake-case .about h2, .page-template-page-why-drake-case .about .h2 {
+  .page-template-page-why-drake-case .about h3, .page-template-page-why-drake-case .about .h3 {
     font-size: 40px;
   }
 }

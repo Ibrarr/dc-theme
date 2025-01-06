@@ -35,7 +35,8 @@ $second_image_column = get_field('second_image_column');
 
 <section class="about" id="about">
     <div class="container px-4">
-        <h2><?php the_field('about_heading'); ?></h2>
+        <h2 class="tag">The Journey of Drake & Case</h2>
+        <h3><?php the_field('about_heading'); ?></h3>
         <p><?php the_field('about_description'); ?></p>
     </div>
 </section>

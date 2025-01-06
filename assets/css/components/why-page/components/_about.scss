@@ -1,6 +1,6 @@
 .about {
   margin-bottom: 60px;
-  background: $dc-secondary;
+  background: $dc-background-dark-blue;
   padding: 60px 0;
   text-align: center;
 
@@ -8,7 +8,11 @@
     padding: 40px 0;
   }
 
-  h2 {
+  .tag {
+    @include tag($dc-primary);
+  }
+
+  h3 {
     @include dc-h3($dc-text-light)
   }
 
