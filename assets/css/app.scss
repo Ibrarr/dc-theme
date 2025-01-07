@@ -48,6 +48,8 @@ body:not(.home) main {
 
 @import "components/content/blog";
 
-@import "components/archive/category-term";
+@import "components/archive/category-term/category-term";
+@import "components/archive/practice-area-parent/practice-area-parent";
+@import "components/archive/practice-area-child/practice-area-child";
 
 @import "components/footer/footer";

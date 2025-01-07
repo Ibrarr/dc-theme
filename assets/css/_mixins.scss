@@ -84,6 +84,32 @@
   }
 }
 
+@mixin dc-h4($color) {
+  font-family: $dc-heading;
+  font-weight: $dc-bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+}
+
+@mixin dc-h4($color) {
+  font-family: $dc-heading;
+  font-weight: $dc-bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+}
+
 @mixin dc-p($color) {
   font-family: $dc-body;
   font-size: 14px;
@@ -92,6 +118,18 @@
 
   @include media-breakpoint-down(lg) {
     font-size: 12px;
+  }
+}
+
+@mixin dc-p-heading($color) {
+  font-family: $dc-body;
+  font-weight: $dc-bold;
+  font-size: 18px;
+  color: $color;
+  opacity: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
   }
 }
 

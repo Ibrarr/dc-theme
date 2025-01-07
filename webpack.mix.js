@@ -27,6 +27,14 @@ mix.js([
     'assets/js/why/enquire-now.js',
 ], 'js/why.js');
 
+mix.js([
+    'assets/js/practice-area-parent/header.js',
+    'assets/js/practice-area-parent/services.js',
+    'assets/js/practice-area-parent/faq.js',
+    'assets/js/practice-area-parent/case-notes-slider.js',
+    'assets/js/practice-area-parent/enquire-now.js',
+], 'js/practice-area-parent.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false

@@ -69,20 +69,21 @@ function modify_partner_post_link( $url, $post ) {
 /**
  * Add body classes
  */
-//add_filter( 'body_class', 'custom_body_classes' );
-//function custom_body_classes( $classes ) {
-//	if ( 'insight' === get_post_type() ) {
-//		if ( has_term( 'insight-reports', 'type', get_the_ID() ) ) {
-//			$classes[] = 'report';
-//		} elseif ( has_term( 'webinars', 'type', get_the_ID() ) ) {
-//			$classes[] = 'webinar';
-//		} else {
-//			$classes[] = 'standard';
-//		}
-//	}
-//
-//	return $classes;
-//}
+add_filter( 'body_class', 'custom_body_classes' );
+function custom_body_classes( $classes ) {
+    if ( is_tax( 'practice_area' ) ) {
+        $term = get_queried_object();
+        if ( $term ) {
+            if ( $term->parent == 0 ) {
+                $classes[] = 'practice-area-parent';
+            } else {
+                $classes[] = 'practice-area-child';
+            }
+        }
+    }
+
+	return $classes;
+}
 
 /**
  * Fetch all Gravity Forms for ACF dropdown field

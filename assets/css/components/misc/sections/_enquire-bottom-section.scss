@@ -63,14 +63,9 @@
       a {
         display: flex;
         text-decoration: none;
-        font-family: $dc-body;
-        font-size: 16px;
-        color: $dc-text-dark;
         transition: color .3s;
 
-        @include media-breakpoint-down(lg) {
-          font-size: 14px;
-        }
+        @include dc-p($dc-text-dark);
 
         &:hover {
           color: $dc-primary;

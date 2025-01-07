@@ -14,6 +14,14 @@ function add_custom_scripts() {
         wp_enqueue_script( 'why', DC_TEMPLATE_URI . mix('/dist/js/why.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_tax( 'practice_area' ) ) {
+        $term = get_queried_object();
+
+        if ( $term->parent == 0 ) {
+            wp_enqueue_script( 'practice-area-parent', DC_TEMPLATE_URI . mix('/dist/js/practice-area-parent.js'), [ 'jquery' ], null, true );
+        }
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

@@ -8,8 +8,13 @@ if (is_category()) {
 if ( is_tax() ) {
 	$taxonomy = get_query_var( 'taxonomy' );
 	switch ( $taxonomy ) {
-		case 'partner':
-			get_template_part( 'template-parts/archive', 'partner-single' );
+		case 'practice_area':
+            $term = get_queried_object();
+            if ( $term->parent == 0 ) {
+                get_template_part( 'template-parts/archive', 'practice-area-parent' );
+            } else {
+                get_template_part( 'template-parts/archive', 'practice-area-child' );
+            }
 			break;
 		default:
 			wp_redirect( home_url() );
@@ -21,15 +26,9 @@ if ( is_tax() ) {
 
 if ( is_post_type_archive() ) {
 	switch ( get_post_type() ) {
-		case 'video':
-			get_template_part( 'template-parts/archive', 'video' );
+		case 'case_study':
+			get_template_part( 'template-parts/archive', 'case-study' );
 			break;
-        case 'event':
-            get_template_part( 'template-parts/archive', 'event' );
-            break;
-        case 'partner_content':
-            get_template_part( 'template-parts/archive', 'partner' );
-            break;
 		default:
 			wp_redirect( home_url() );
 			break;
