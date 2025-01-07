@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xl-3 service-list">
+    <div class="col-xl-3 service-list-menu">
         <div class="content">
             <span>Individuals</span>
             <ul>
@@ -23,7 +23,7 @@
         </div>
         <a href="<?php echo $individual_term->slug; ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
     </div>
-    <div class="col-xl-3 service-list">
+    <div class="col-xl-3 service-list-menu">
         <div class="content">
             <span>Businesses</span>
             <ul>
