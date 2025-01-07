@@ -10,6 +10,7 @@ $child_terms = get_terms([
 
 <section class="header">
     <div class="container px-4">
+        <div class="breadcrumbs"><?php echo do_shortcode('[wpseo_breadcrumb]') ?></div>
         <h1>Legal services for <?php echo $term->name; ?></h1>
         <?php echo wpautop($term->description); ?>
         <a href="#service-list" class="button">View services</a>
