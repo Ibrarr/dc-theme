@@ -15970,9 +15970,8 @@ header .mobile-menus .ctas a {
   margin-bottom: 20px;
   color: #000F20;
   opacity: 1;
-  text-align: center;
   max-width: 1000px;
-  margin: auto auto 40px;
+  margin-bottom: 40px;
 }
 @media (max-width: 991.98px) {
   .practice-area-parent .service-list h2, .practice-area-parent .service-list .h2 {
@@ -16096,25 +16095,32 @@ header .mobile-menus .ctas a {
   margin-bottom: 20px;
   color: #000F20;
   opacity: 1;
+  text-align: center;
 }
 @media (max-width: 991.98px) {
   .practice-area-parent .faq h2, .practice-area-parent .faq .h2 {
     font-size: 40px;
   }
 }
-.practice-area-parent .faq p {
+.practice-area-parent .faq .faq-description {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
   opacity: 1;
+  text-align: center;
 }
 @media (max-width: 991.98px) {
-  .practice-area-parent .faq p {
+  .practice-area-parent .faq .faq-description {
     font-size: 12px;
   }
 }
 .practice-area-parent .faq .faq-items {
   margin: 40px 0;
+}
+@media (max-width: 991.98px) {
+  .practice-area-parent .faq .faq-items {
+    margin: 30px 0;
+  }
 }
 .practice-area-parent .faq .faq-items .faq-item {
   padding: 30px 0;
@@ -16124,6 +16130,11 @@ header .mobile-menus .ctas a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .practice-area-parent .faq .faq-items .faq-item {
+    padding: 20px 0;
+  }
 }
 .practice-area-parent .faq .faq-items .faq-item:not(:first-child) {
   margin-top: -1px;
@@ -16189,6 +16200,11 @@ header .mobile-menus .ctas a {
 @media (max-width: 991.98px) {
   .practice-area-parent .faq .faq-items .faq-item .faq-answer {
     font-size: 12px;
+  }
+}
+@media (max-width: 991.98px) {
+  .practice-area-parent .faq .faq-items .faq-item .faq-answer {
+    margin-left: 20px;
   }
 }
 .practice-area-parent .faq .bottom {
