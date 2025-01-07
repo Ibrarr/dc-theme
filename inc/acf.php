@@ -57,7 +57,7 @@ function my_acf_json_load_point( $paths ) {
 
 // Remove fields from top level practice areas
 add_filter('acf/load_field', function ($field) {
-    $fields_to_unregister = ['image'];
+    $fields_to_unregister = ['image', 'section_section_heading', 'second_section_image', 'section_section_button', 'services_heading', 'services_description', 'services'];
 
     // Check if the field is in the list
     if (in_array($field['name'], $fields_to_unregister, true)) {
