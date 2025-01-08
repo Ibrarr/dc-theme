@@ -1,0 +1,93 @@
+.header {
+  position: relative;
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  .bg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+  }
+
+  .container {
+    padding: 80px 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: 40px 0;
+    }
+  }
+
+  .row {
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .breadcrumbs {
+    @include tag($dc-text-light);
+
+    span {
+      &:first-child {
+        margin-right: 5px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $dc-primary;
+    }
+  }
+
+  h1 {
+    @include dc-h1($dc-text-light);
+  }
+
+  .cta-box {
+    background-color: $dc-background-off-white;
+    padding: 30px;
+
+    h2 {
+      @include dc-h4($dc-text-dark);
+    }
+
+    p {
+      @include dc-p($dc-text-dark);
+    }
+
+    .button-secondary {
+      @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .button {
+      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

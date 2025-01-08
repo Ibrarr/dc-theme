@@ -5,6 +5,10 @@
   text-align: center;
 
   @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  @include media-breakpoint-down(lg) {
     padding: 40px 0;
   }
 

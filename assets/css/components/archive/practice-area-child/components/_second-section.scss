@@ -1,0 +1,58 @@
+.second-section {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  > div {
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      @include dc-h3($dc-text-dark);
+    }
+
+    p {
+      @include dc-p($dc-text-dark);
+    }
+
+    .ctas {
+      display: flex;
+      gap: 10px;
+
+      .button-secondary {
+        @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+        text-align: center;
+      }
+
+      .button {
+        @include dc-button($dc-primary, darken($dc-primary, 10%));
+        text-align: center;
+      }
+    }
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      max-height: 500px;
+    }
+  }
+}

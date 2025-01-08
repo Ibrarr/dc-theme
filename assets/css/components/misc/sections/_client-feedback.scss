@@ -1,6 +1,10 @@
 .feedback {
   margin-bottom: 60px;
 
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
   .heading {
     margin-bottom: 50px;
 

@@ -1,6 +1,10 @@
 .case-notes {
   margin-bottom: 60px;
 
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
   > div {
     max-width: 1600px;
     margin: auto;

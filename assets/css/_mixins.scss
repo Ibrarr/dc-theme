@@ -97,19 +97,6 @@
   }
 }
 
-@mixin dc-h4($color) {
-  font-family: $dc-heading;
-  font-weight: $dc-bold;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: $color;
-  opacity: 1;
-
-  @include media-breakpoint-down(lg) {
-    font-size: 24px;
-  }
-}
-
 @mixin dc-p($color) {
   font-family: $dc-body;
   font-size: 14px;
