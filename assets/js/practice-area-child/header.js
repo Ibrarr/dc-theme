@@ -25,17 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out',
     }, '-=0.5'); // Overlap slightly with the previous animation
 
-    headerTimeline.from('.header p', {
+    headerTimeline.from('.header .cta-box', {
         opacity: 0,
-        x: -50, // Start from the left
+        y: 20,
         duration: 0.6,
         ease: 'power2.out',
     }, '-=0.5'); // Overlap slightly with the previous animation
-
-    gsap.from('.header .button', {
-        opacity: 0,
-        y: 50, // Start below its final position
-        duration: 0.5,
-        ease: 'power2.out',
-    });
 });

@@ -109,7 +109,7 @@
 }
 
 @mixin dc-p-heading($color) {
-  font-family: $dc-body;
+  font-family: $dc-heading;
   font-weight: $dc-bold;
   font-size: 18px;
   color: $color;
