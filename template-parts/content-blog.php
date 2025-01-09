@@ -29,7 +29,7 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
         <div class="container px-4 content">
             <div class="breadcrumbs"><?php echo do_shortcode('[wpseo_breadcrumb]') ?></div>
             <h1 class="title"><?php the_title(); ?></h1>
-            <p>By <?php the_author(); ?> <span>•</span> <?php the_date('jS F Y'); ?><?php if ($practice_area) { ?> <span>•</span> <a href="<?php echo $practice_area_link; ?>"><?php echo $practice_area; ?></a><?php } ?></p>
+            <p>By <?php the_author(); ?> <span>•</span> <?php the_date('jS M Y'); ?><?php if ($practice_area) { ?> <span>•</span> <a href="<?php echo $practice_area_link; ?>"><?php echo $practice_area; ?></a><?php } ?> <span>•</span> <?php echo ceil(str_word_count(strip_tags(get_field('content'))) / 200); ?> min read</p>
         </div>
     </section>
 
@@ -186,7 +186,7 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
     </section>
 
     <?php
-    $enquireFormId = get_field( 'case_note_enquire_form', 'option' );
+    $enquireFormId = get_field( 'general_enquire_form', 'option' );
     include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');
     ?>
 </article>

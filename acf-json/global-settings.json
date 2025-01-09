@@ -183,8 +183,8 @@
         },
         {
             "key": "field_67800bc268cd0",
-            "label": "Case note enquire form",
-            "name": "case_note_enquire_form",
+            "label": "General enquire form",
+            "name": "general_enquire_form",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -435,5 +435,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736444891
+    "modified": 1736450221
 }
