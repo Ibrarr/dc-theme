@@ -23,7 +23,7 @@
       @include dc-p($dc-text-dark);
     }
 
-    ul {
+    ul, ol {
       margin-bottom: 10px;
 
       li {
