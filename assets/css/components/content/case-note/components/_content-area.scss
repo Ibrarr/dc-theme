@@ -1,0 +1,233 @@
+.content-area {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  > div {
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .content {
+    h2 {
+      @include dc-h3($dc-primary);
+    }
+
+    h3 {
+      @include dc-h4($dc-primary);
+    }
+
+    p, a {
+      @include dc-p($dc-text-dark);
+    }
+
+    ul {
+      margin-bottom: 10px;
+
+      li {
+        @include dc-p($dc-text-dark);
+      }
+    }
+
+    a {
+      color: $dc-primary;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    blockquote {
+      @include dc-blockquote($dc-text-dark);
+    }
+
+    .wp-caption {
+      width: 100% !important;
+      margin: 30px 0;
+
+      .wp-caption-text {
+        font-style: italic;
+        border-left: 3px solid $dc-primary;
+        margin-top: 10px;
+        padding-left: 10px;
+      }
+    }
+
+    .red {
+      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      margin: 10px 0;
+    }
+
+    .blue {
+      @include dc-button($dc-secondary, lighten($dc-secondary, 10%));
+      margin: 10px 0;
+    }
+  }
+
+  .contents-table {
+    position: sticky;
+    top: 110px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+
+    .table-of-contents {
+      background: $dc-background-grey;
+      padding: 30px;
+
+      h3 {
+        @include dc-h4($dc-text-dark);
+      }
+
+      ol {
+        padding-left: 25px;
+
+        li {
+          @include dc-p-heading($dc-text-dark);
+          font-weight: $dc-medium;
+
+          a {
+            text-decoration: none;
+            color: $dc-text-dark;
+            transition: $dc-transition-all;
+
+            &:hover {
+              color: $dc-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .button {
+      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  .bottom-section {
+    margin: 20px 0;
+    padding: 30px 0;
+    border-bottom: 1px solid $dc-primary;
+
+    @include media-breakpoint-down(lg) {
+      margin: 10px 0;
+      padding: 15px 0;
+    }
+
+    .heading-share {
+      @include dc-p-heading($dc-text-dark);
+      margin-bottom: 20px;
+    }
+
+    .socials-categories {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+
+      .socials {
+        display: flex;
+        gap: 10px;
+
+        a {
+          text-decoration: none;
+          background-color: $dc-background-grey;
+          padding: 8px;
+          border-radius: 50px;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover svg path {
+            fill: $dc-primary;
+          }
+
+          svg {
+            height: 20px;
+
+            path {
+              fill: $dc-text-dark;
+              transition: $dc-transition-all;
+            }
+          }
+        }
+      }
+
+      .categories {
+        @include media-breakpoint-down(lg) {
+          margin-top: 20px;
+        }
+
+        a {
+          font-family: $dc-body;
+          font-weight: $dc-semi-bold;
+          font-size: 14px;
+          color: $dc-text-light;
+          background-color: $dc-secondary;
+          padding: 5px 8px;
+          width: fit-content;
+          text-decoration: none;
+          transition: $dc-transition-all;
+          display: inline-block;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+
+            @include media-breakpoint-down(lg) {
+              margin-bottom: 5px;
+            }
+          }
+
+          &:hover {
+            background-color: lighten($dc-secondary, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .author-section {
+    margin-top: 30px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 15px;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50px;
+      }
+
+      .info {
+        margin-left: 15px;
+        p {
+          @include dc-p($dc-text-dark);
+          margin: 0;
+
+          &.name {
+            font-weight: $dc-semi-bold;
+          }
+        }
+      }
+    }
+  }
+
+
+}

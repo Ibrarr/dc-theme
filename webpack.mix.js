@@ -43,6 +43,14 @@ mix.js([
     'assets/js/practice-area-child/enquire-now.js',
 ], 'js/practice-area-child.js');
 
+mix.js([
+    'assets/js/case-note/header.js',
+    'assets/js/case-note/content.js',
+    'assets/js/case-note/newsletter.js',
+    'assets/js/case-note/case-notes-slider.js',
+    'assets/js/case-note/enquire-now.js',
+], 'js/case-note.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false

@@ -1,5 +1,6 @@
 .case-notes {
   margin-bottom: 60px;
+  overflow: hidden;
 
   @include media-breakpoint-down(lg) {
     margin-bottom: 32px;

@@ -1,0 +1,90 @@
+.newsletter-signup {
+  margin-bottom: 60px;
+  background: $dc-background-dark-blue;
+  padding: 60px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    @include dc-h3($dc-text-light);
+    text-align: center;
+  }
+
+  p {
+    @include dc-p($dc-text-light);
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 30px;
+
+    .gform-theme.gform-theme--framework.gform_wrapper {
+      .gform_heading {
+        display: none;
+      }
+
+      .gform_fields {
+        display: flex;
+        justify-content: center;
+      }
+
+      .gform_validation_errors {
+        width: fit-content;
+        margin: auto auto 20px;
+        text-align: center;
+
+        .gform-icon--circle-error {
+          margin: auto;
+        }
+      }
+
+      .validation_message {
+        display: none;
+      }
+
+      input:focus {
+        border-color: $dc-primary;
+        --gf-local-shadow: none;
+      }
+
+      input[type="email"] {
+        font-family: $dc-body;
+        font-size: 14px;
+        border-radius: 0;
+        width: 400px;
+        padding: 15px;
+        height: 50px;
+
+        @include media-breakpoint-down(lg) {
+          width: 200px;
+        }
+      }
+
+      input[type="submit"] {
+        @include dc-button($dc-primary, darken($dc-primary, 10%));
+        border-radius: 0;
+        height: 50px;
+      }
+    }
+
+    .gform_footer {
+      display: none;
+    }
+
+    .gform_confirmation_wrapper {
+      text-align: center;
+      .gform_confirmation_message {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-light;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

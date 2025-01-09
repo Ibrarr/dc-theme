@@ -19,8 +19,8 @@
 }
 
 #wrapper {
-  overflow-x: hidden;
   position: relative;
+  display: flow-root;
 }
 
 .no-scroll {
@@ -33,7 +33,7 @@ body:not(.home) main {
   margin-top: 96px;
 
   @include media-breakpoint-down(lg) {
-    margin-top: 63px;
+    margin-top: 61px;
   }
 }
 
@@ -46,7 +46,7 @@ body:not(.home) main {
 @import "components/404/404";
 @import "components/search/search";
 
-@import "components/content/blog";
+@import "components/content/case-note/case-note";
 
 @import "components/archive/category-term/category-term";
 @import "components/archive/practice-area-parent/practice-area-parent";

@@ -89,6 +89,8 @@ function custom_body_classes( $classes ) {
  * Fetch all Gravity Forms for ACF dropdown field
  */
 add_filter( 'acf/load_field/name=enquire_form', 'acf_populate_gf_forms_ids' );
+add_filter( 'acf/load_field/name=newsletter_form', 'acf_populate_gf_forms_ids' );
+add_filter( 'acf/load_field/name=case_note_enquire_form', 'acf_populate_gf_forms_ids' );
 function acf_populate_gf_forms_ids( $field ) {
 	if ( class_exists( 'GFFormsModel' ) ) {
 		$choices = [];

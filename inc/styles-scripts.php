@@ -24,6 +24,10 @@ function add_custom_scripts() {
         }
     }
 
+    if ( is_singular( 'post' ) ) {
+        wp_enqueue_script( 'case-note', DC_TEMPLATE_URI . mix('/dist/js/case-note.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

@@ -117,10 +117,10 @@
         },
         {
             "key": "field_67727859418a1",
-            "label": "X",
+            "label": "X Handle",
             "name": "x",
             "aria-label": "",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -130,8 +130,11 @@
                 "id": ""
             },
             "default_value": "",
-            "allow_in_bindings": 0,
-            "placeholder": ""
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_6772787150016",
@@ -149,6 +152,60 @@
             },
             "default_value": "",
             "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_677ffb9417e5c",
+            "label": "Newsletter form",
+            "name": "newsletter_form",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Enquire Now",
+                "2": "Newsletter Signup"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67800bc268cd0",
+            "label": "Case note enquire form",
+            "name": "case_note_enquire_form",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Enquire Now",
+                "2": "Newsletter Signup"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
             "placeholder": ""
         },
         {
@@ -378,5 +435,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735571464
+    "modified": 1736444891
 }
