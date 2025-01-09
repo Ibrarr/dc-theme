@@ -16102,17 +16102,17 @@ header .mobile-menus .ctas a {
     font-size: 12px;
   }
 }
-.single-post .content-area .content ul {
+.single-post .content-area .content ul, .single-post .content-area .content ol {
   margin-bottom: 10px;
 }
-.single-post .content-area .content ul li {
+.single-post .content-area .content ul li, .single-post .content-area .content ol li {
   font-family: "Inter", serif;
   font-size: 14px;
   color: #000F20;
   opacity: 1;
 }
 @media (max-width: 991.98px) {
-  .single-post .content-area .content ul li {
+  .single-post .content-area .content ul li, .single-post .content-area .content ol li {
     font-size: 12px;
   }
 }
