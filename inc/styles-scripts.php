@@ -28,6 +28,10 @@ function add_custom_scripts() {
         wp_enqueue_script( 'case-note', DC_TEMPLATE_URI . mix('/dist/js/case-note.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_home() ) {
+        wp_enqueue_script( 'blog', DC_TEMPLATE_URI . mix('/dist/js/blog.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

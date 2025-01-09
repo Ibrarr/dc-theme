@@ -1,0 +1,118 @@
+.posts {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  .categories {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      li {
+        @include dc-p($dc-text-dark);
+        background-color: $dc-background-grey;
+        transition: $dc-transition-all;
+
+        &.active {
+          padding: 8px 15px;
+          background-color: $dc-primary;
+          color: $dc-text-light;
+          font-weight: $dc-bold;
+        }
+
+        &:hover:not(&.active) {
+          background-color: $dc-secondary;
+
+          a {
+            color: $dc-text-light;
+          }
+        }
+
+        a {
+          @include dc-p($dc-text-dark);
+          display: block;
+          padding: 8px 15px;
+          text-decoration: none;
+          transition: $dc-transition-all;
+        }
+      }
+    }
+  }
+
+  .post-list {
+    .standard-case-note-card {
+      @import "../../../misc/standard-case-note-card";
+    }
+  }
+
+  .pagination {
+    align-items: center;
+    margin-top: 40px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+
+    .page-numbers {
+      padding: 0 10px;
+    }
+
+    .prev {
+      margin-right: 5px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .next {
+      margin-left: 5px;
+    }
+
+    .prev, .next {
+      padding: 8px !important;
+      border: 1px solid $dc-primary;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $dc-transition-all;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+
+      &:hover {
+        background-color: rgba(238, 36, 61, 0.10);
+      }
+    }
+
+    span {
+      @include dc-p($dc-primary);
+      font-weight: $dc-semi-bold;
+    }
+
+    a {
+      @include dc-p($dc-text-dark);
+      text-decoration: none;
+      transition: $dc-transition-all;
+
+      &:hover {
+        color: $dc-primary;
+      }
+    }
+  }
+}

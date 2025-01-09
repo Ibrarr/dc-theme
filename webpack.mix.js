@@ -51,6 +51,12 @@ mix.js([
     'assets/js/case-note/enquire-now.js',
 ], 'js/case-note.js');
 
+mix.js([
+    'assets/js/blog/header.js',
+    'assets/js/blog/posts.js',
+    'assets/js/blog/enquire-now.js',
+], 'js/blog.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false

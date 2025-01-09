@@ -140,6 +140,7 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
                             'post_status'    => 'publish',
                             'orderby'        => 'date',
                             'order'          => 'DESC',
+                            'post__not_in'   => [get_the_ID()],
                             'tax_query'      => [
                                 [
                                     'taxonomy' => 'practice_area',

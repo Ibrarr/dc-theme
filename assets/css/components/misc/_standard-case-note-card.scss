@@ -29,15 +29,28 @@ a {
   }
 
   .content {
-    .term {
-      font-family: $dc-body;
-      font-weight: $dc-semi-bold;
-      font-size: 14px;
-      color: $dc-text-light;
-      background-color: $dc-secondary;
-      padding: 5px 8px;
-      width: fit-content;
+    .term-time {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 10px;
+
+      .term {
+        font-family: $dc-body;
+        font-weight: $dc-semi-bold;
+        font-size: 14px;
+        color: $dc-text-light;
+        background-color: $dc-secondary;
+        padding: 5px 8px;
+        width: fit-content;
+        margin: 0;
+      }
+
+      .time {
+        @include dc-p($dc-text-dark);
+        font-weight: $dc-semi-bold;
+        margin: 0;
+      }
     }
 
     .title {
