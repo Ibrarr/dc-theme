@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out', // Smooth easing effect
     });
 
+    postsTimeline.from('.posts .newsletter-signup', {
+        opacity: 0,       // Start with fully transparent
+        y: 25,          // Start from the left
+        duration: 0.6,    // Animation duration
+        ease: 'power2.out', // Smooth easing effect
+    }, '-=0.4'); // Overlap slightly with the previous animation
+
     // Step 2: Stagger fade-in for each article in .post-list from below
     postsTimeline.from('.posts .post-list article', {
         opacity: 0,       // Start with fully transparent
@@ -26,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out', // Smooth easing effect
         stagger: 0.08,     // Stagger delay between articles
     }, '-=0.4'); // Overlap slightly with the previous animation
+
 
     // Step 3: Fade in .pagination from left to right
     postsTimeline.from('.posts .pagination', {

@@ -17341,7 +17341,7 @@ header .mobile-menus .ctas a {
   font-size: 14px;
   border-radius: 0;
   padding: 15px;
-  height: 50px;
+  height: 45px;
 }
 .blog .newsletter-container .form .gform-theme.gform-theme--framework.gform_wrapper input[type=submit] {
   font-family: "Inter", serif;
@@ -17360,7 +17360,7 @@ header .mobile-menus .ctas a {
   font-size: 14px;
   opacity: 1;
   border-radius: 0;
-  height: 50px;
+  height: 45px;
   white-space: nowrap;
 }
 @media (max-width: 991.98px) {

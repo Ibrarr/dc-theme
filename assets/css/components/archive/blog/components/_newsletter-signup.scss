@@ -52,7 +52,7 @@
         font-size: 14px;
         border-radius: 0;
         padding: 15px;
-        height: 50px;
+        height: 45px;
 
         @include media-breakpoint-down(lg) {
         }
@@ -61,7 +61,7 @@
       input[type="submit"] {
         @include dc-button($dc-primary, darken($dc-primary, 10%));
         border-radius: 0;
-        height: 50px;
+        height: 45px;
         white-space: nowrap;
       }
     }
