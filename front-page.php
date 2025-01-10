@@ -87,7 +87,7 @@ get_header();
                             ?>
                         </ul>
                     </div>
-                    <a href="<?php echo $individual_term->slug; ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
+                    <a href="<?php echo get_term_link($individual_term); ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
                 </div>
             </article>
             <article class="col-xl-3 col-lg-6 service-list">
@@ -113,7 +113,7 @@ get_header();
                             ?>
                         </ul>
                     </div>
-                    <a href="<?php echo $business_term->slug; ?>" class="button">All <?php echo $business_term->name; ?> services</a>
+                    <a href="<?php echo get_term_link($business_term); ?>" class="button">All <?php echo $business_term->name; ?> services</a>
                 </div>
             </article>
 
@@ -140,7 +140,7 @@ get_header();
                             ?>
                         </ul>
                     </div>
-                    <a href="<?php echo $family_law_term->slug; ?>" class="button">All <?php echo $family_law_term->name; ?> services</a>
+                    <a href="<?php echo get_term_link($family_law_term); ?>" class="button">All <?php echo $family_law_term->name; ?> services</a>
                 </div>
             </article>
 
@@ -167,7 +167,7 @@ get_header();
                             ?>
                         </ul>
                     </div>
-                    <a href="<?php echo $employment_law_term->slug; ?>" class="button">All <?php echo $employment_law_term->name; ?> services</a>
+                    <a href="<?php echo get_term_link($employment_law_term); ?>" class="button">All <?php echo $employment_law_term->name; ?> services</a>
                 </div>
             </article>
         </div>

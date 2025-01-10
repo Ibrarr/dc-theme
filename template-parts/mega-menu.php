@@ -21,7 +21,7 @@
                 ?>
             </ul>
         </div>
-        <a href="<?php echo $individual_term->slug; ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
+        <a href="<?php echo get_term_link($individual_term); ?>" class="button">All <?php echo $individual_term->name; ?> services</a>
     </div>
     <div class="col-xl-3 service-list-menu">
         <div class="content">
@@ -45,7 +45,7 @@
                 ?>
             </ul>
         </div>
-        <a href="<?php echo $business_term->slug; ?>" class="button">All <?php echo $business_term->name; ?> services</a>
+        <a href="<?php echo get_term_link($business_term); ?>" class="button">All <?php echo $business_term->name; ?> services</a>
     </div>
     <div class="col-xl-3 business-info">
         <div class="contact-info">

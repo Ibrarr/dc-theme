@@ -21,7 +21,7 @@ get_header();
                 <nav class="categories">
                     <?php
                     echo '<ul>';
-                    echo '<li><a href="/case-notes/">View all</a></li>';
+                    echo '<li><a href="/all-case-notes/">View all</a></li>';
                     foreach ($categories as $category) {
                         $is_active = ($term && $term->term_id === $category->term_id);
                         $category_link = get_category_link($category->term_id);
