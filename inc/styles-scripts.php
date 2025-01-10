@@ -32,6 +32,10 @@ function add_custom_scripts() {
         wp_enqueue_script( 'blog', DC_TEMPLATE_URI . mix('/dist/js/blog.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_category() ) {
+        wp_enqueue_script( 'archive-category', DC_TEMPLATE_URI . mix('/dist/js/archive-category.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

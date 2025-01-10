@@ -57,6 +57,12 @@ mix.js([
     'assets/js/blog/enquire-now.js',
 ], 'js/blog.js');
 
+mix.js([
+    'assets/js/archive-category/header.js',
+    'assets/js/archive-category/posts.js',
+    'assets/js/archive-category/enquire-now.js',
+], 'js/archive-category.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false

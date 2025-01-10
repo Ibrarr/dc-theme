@@ -1,6 +1,6 @@
 .blog {
-  @import "components/heading";
-  @import "components/posts";
-  @import "components/newsletter-signup";
+  @import "../components/heading";
+  @import "../components/posts";
+  @import "../components/newsletter-signup";
   @import "../../misc/sections/enquire-bottom-section";
 }

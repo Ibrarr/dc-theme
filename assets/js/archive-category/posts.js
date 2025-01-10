@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 0.6,    // Animation duration
         ease: 'power2.out', // Smooth easing effect
         stagger: 0.08,     // Stagger delay between articles
-    }, '-=0.7'); // Overlap slightly with the previous animation
+    }, '-=0.6'); // Overlap slightly with the previous animation
 
 
     // Step 3: Fade in .pagination from left to right
