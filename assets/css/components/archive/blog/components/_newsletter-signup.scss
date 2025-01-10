@@ -1,0 +1,86 @@
+.newsletter-container {
+  @include media-breakpoint-down(xl) {
+    margin-top: 20px;
+  }
+
+  .newsletter-signup {
+    background: $dc-background-grey;
+    padding: 30px;
+    position: sticky;
+    top: 110px;
+
+    h3 {
+      @include dc-h4($dc-text-dark);
+    }
+
+    p {
+      @include dc-p($dc-text-dark);
+    }
+  }
+
+  .form {
+    .gform-theme.gform-theme--framework.gform_wrapper {
+      .gform_heading {
+        display: none;
+      }
+
+      .gform_fields {
+        display: flex;
+        column-gap: 0;
+      }
+
+      .gform_validation_errors {
+        width: fit-content;
+        margin: auto auto 20px;
+      }
+
+      .validation_message {
+        display: none;
+      }
+
+      input:focus {
+        border-color: $dc-primary;
+        --gf-local-shadow: none;
+      }
+
+      .gfield--type-submit {
+        display: contents;
+      }
+
+      input[type="email"] {
+        font-family: $dc-body;
+        font-size: 14px;
+        border-radius: 0;
+        padding: 15px;
+        height: 50px;
+
+        @include media-breakpoint-down(lg) {
+        }
+      }
+
+      input[type="submit"] {
+        @include dc-button($dc-primary, darken($dc-primary, 10%));
+        border-radius: 0;
+        height: 50px;
+        white-space: nowrap;
+      }
+    }
+
+    .gform_footer {
+      display: none;
+    }
+
+    .gform_confirmation_wrapper {
+      .gform_confirmation_message {
+        font-family: $dc-body;
+        font-size: 16px;
+        color: $dc-text-dark;
+        font-weight: $dc-normal;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

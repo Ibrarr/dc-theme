@@ -15,59 +15,73 @@ get_header();
 
 <section class="posts">
     <div class="container px-4">
-        <nav class="categories">
-            <?php
-            echo '<ul>';
-            echo '<li class="active">View all</li>';
-            foreach ($categories as $category) {
-                $category_link = get_category_link($category->term_id);
+        <div class="row">
+            <div class="col-12">
+                <nav class="categories">
+                    <?php
+                    echo '<ul>';
+                    echo '<li class="active">View all</li>';
+                    foreach ($categories as $category) {
+                        $category_link = get_category_link($category->term_id);
 
-                echo '<li>';
-                echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>';
-                echo '</li>';
-            }
-            echo '</ul>';
-            ?>
-        </nav>
-
-        <div class="row post-list">
-            <?php
-            $args = [
-                'post_type' => 'post',
-                'posts_per_page' => 9,
-                'paged' => $paged,
-            ];
-
-            $query = new WP_Query($args);
-
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();
+                        echo '<li>';
+                        echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>';
+                        echo '</li>';
+                    }
+                    echo '</ul>';
                     ?>
-                    <article class="col-lg-4 mb-4 standard-case-note-card">
-                        <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
-                    </article>
-                <?php
-                endwhile;
-            else :
-                echo '<p>No posts found.</p>';
-            endif;
-            wp_reset_postdata();
-            ?>
-        </div>
+                </nav>
+            </div>
+            <div class="col-xl-9">
+                <div class="row post-list">
+                    <?php
+                    $args = [
+                        'post_type' => 'post',
+                        'posts_per_page' => 9,
+                        'paged' => $paged,
+                    ];
 
-        <div class="pagination">
-            <?php
-            $prev_icon = file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/chevron-arrow.svg');
-            $next_icon = file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/chevron-arrow.svg');
+                    $query = new WP_Query($args);
 
-            echo paginate_links([
-                'total' => $query->max_num_pages,
-                'current' => $paged,
-                'prev_text' => $prev_icon,
-                'next_text' => $next_icon,
-            ]);
-            ?>
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+                            ?>
+                            <article class="col-lg-4 mb-4 standard-case-note-card">
+                                <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
+                            </article>
+                        <?php
+                        endwhile;
+                    else :
+                        echo '<p>No posts found.</p>';
+                    endif;
+                    wp_reset_postdata();
+                    ?>
+                </div>
 
+                <div class="pagination">
+                    <?php
+                    $prev_icon = file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/chevron-arrow.svg');
+                    $next_icon = file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/chevron-arrow.svg');
+
+                    echo paginate_links([
+                        'total' => $query->max_num_pages,
+                        'current' => $paged,
+                        'prev_text' => $prev_icon,
+                        'next_text' => $next_icon,
+                    ]);
+                    ?>
+
+                </div>
+            </div>
+            <div class="col-xl-3 newsletter-container">
+                <div class="newsletter-signup">
+                    <h3>Stay updated with our Case Notes</h3>
+                    <p>Join our community for the latest legal insights and updates straight to your inbox.</p>
+                    <div class="form">
+                        <?php echo do_shortcode( '[gravityform id="'. get_field('newsletter_form', 'option') .'" title="false" description="false" ajax="true"]' ); ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
