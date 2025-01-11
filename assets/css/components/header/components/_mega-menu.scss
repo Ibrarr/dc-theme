@@ -1,3 +1,14 @@
+.mega-menu {
+  background: linear-gradient(to right, #fcfcfc 75%, #f9f9f9 75%);
+
+  .row {
+    position: relative;
+    max-width: 1600px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 .mega-menu, .mega-menu-mobile {
   position: absolute;
   top: 95px;

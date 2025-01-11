@@ -10,27 +10,29 @@
 <div id="wrapper" class="hfeed">
     <header id="header" role="banner" class="<?php if ( is_front_page() ) { echo 'hero-active'; }; ?>">
         <div class="top-menu px-4">
-            <div class="logo-menu">
-                <div class="logo">
-                    <a href="/" aria-label="Home">
-                        <div class="desktop"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/main-logo.svg' ) ?></div>
-                        <div class="mobile"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/favicon.svg' ) ?></div>
-                    </a>
+            <div class="top-menu-container">
+                <div class="logo-menu">
+                    <div class="logo">
+                        <a href="/" aria-label="Home">
+                            <div class="desktop"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/main-logo.svg' ) ?></div>
+                            <div class="mobile"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/logos/favicon.svg' ) ?></div>
+                        </a>
+                    </div>
+                    <nav id="nav" role="navigation" itemscope
+                         itemtype="https://schema.org/SiteNavigationElement">
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'main-menu',
+                        ) ); ?>
+                    </nav>
                 </div>
-                <nav id="nav" role="navigation" itemscope
-                     itemtype="https://schema.org/SiteNavigationElement">
-                    <?php wp_nav_menu( array(
-                        'theme_location' => 'main-menu',
-                    ) ); ?>
-                </nav>
-            </div>
-            <div class="ctas">
-                <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
-                <a href="#enquire-now" class="button">Enquire now</a>
-            </div>
-            <div class="mobile-menu">
-                <div class="open"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/menu.svg' ) ?></div>
-                <div class="close"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/close.svg' ) ?></div>
+                <div class="ctas">
+                    <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
+                    <a href="#enquire-now" class="button">Enquire now</a>
+                </div>
+                <div class="mobile-menu">
+                    <div class="open"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/menu.svg' ) ?></div>
+                    <div class="close"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/close.svg' ) ?></div>
+                </div>
             </div>
         </div>
         <div class="mobile-menus">

@@ -13512,6 +13512,14 @@ header.hero-active.mobile-menu-active .logo .mobile svg g g path:nth-child(2) {
 }
 header .top-menu {
   padding: 25px 0;
+  border-bottom: 0.5px solid #000F20;
+}
+@media (max-width: 767.98px) {
+  header .top-menu {
+    padding: 15px 0;
+  }
+}
+header .top-menu .top-menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13522,12 +13530,8 @@ header .top-menu {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  border-bottom: 0.5px solid #000F20;
-}
-@media (max-width: 767.98px) {
-  header .top-menu {
-    padding: 15px 0;
-  }
+  max-width: 1600px;
+  margin: auto;
 }
 header .top-menu .logo-menu {
   display: -webkit-box;
@@ -13722,6 +13726,18 @@ header .top-menu .mobile-menu svg {
 }
 header .top-menu .mobile-menu svg path {
   fill: #000F20;
+}
+header .mega-menu {
+  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fcfcfc), color-stop(75%, #f9f9f9));
+  background: linear-gradient(to right, #fcfcfc 75%, #f9f9f9 75%);
+}
+header .mega-menu .row {
+  position: relative;
+  max-width: 1600px;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%) !important;
+  transform: translateX(-50%) !important;
 }
 header .mega-menu, header .mega-menu-mobile {
   position: absolute;
