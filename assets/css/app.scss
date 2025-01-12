@@ -37,6 +37,8 @@ body:not(.home) main {
   }
 }
 
+@import "components/misc/preloader";
+
 // Components
 @import "components/header/header";
 

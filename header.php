@@ -7,6 +7,11 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<div id="preloader">
+    <img src="<?php echo esc_url(get_field('logo', 'option')); ?>" alt="Loading...">
+</div>
+
 <div id="wrapper" class="hfeed">
     <header id="header" role="banner" class="<?php if ( is_front_page() ) { echo 'hero-active'; }; ?>">
         <div class="top-menu px-4">

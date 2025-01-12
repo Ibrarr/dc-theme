@@ -71,6 +71,8 @@ function modify_partner_post_link( $url, $post ) {
  */
 add_filter( 'body_class', 'custom_body_classes' );
 function custom_body_classes( $classes ) {
+    $classes[] = 'loading';
+
     if ( is_tax( 'practice_area' ) ) {
         $term = get_queried_object();
         if ( $term ) {
