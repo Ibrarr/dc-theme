@@ -1,0 +1,66 @@
+.locations {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+
+  > div {
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  h2 {
+    @include dc-h3($dc-text-dark);
+  }
+
+  p {
+    @include dc-p($dc-text-dark);
+  }
+
+  .location {
+    margin-top: 20px;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      @include dc-h4($dc-text-dark);
+      margin-bottom: 10px;
+    }
+
+    .location-address {
+      margin-bottom: 10px;
+
+      p {
+        @include dc-p($dc-text-dark);
+        margin: 0;
+      }
+    }
+
+    .location-contact {
+      strong {
+        color: $dc-primary;
+      }
+
+      p {
+        @include dc-p($dc-text-dark);
+        margin: 0;
+
+        a {
+          @include dc-p($dc-text-dark);
+          text-decoration: none;
+          transition: $dc-transition-all;
+
+          &:hover {
+            color: $dc-primary;
+          }
+        }
+      }
+    }
+  }
+}

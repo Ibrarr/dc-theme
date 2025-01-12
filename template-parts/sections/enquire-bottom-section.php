@@ -18,8 +18,8 @@
                     <p class="final-p">After your chat, you’ll receive clear, actionable advice tailored to your needs, sent directly to your inbox.</p>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:hello@drakeandcase.com"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> hello@drakeandcase.com</a>
-                    <a href="tel:02088261200"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> 0208 826 1200</a>
+                    <a href="mailto:<?php the_field( 'main_email', 'option' ) ?>"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> <?php the_field( 'main_email', 'option' ) ?></a>
+                    <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> <?php the_field( 'main_phone_number', 'option' ); ?></a>
                     <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/location.svg' ) ?></i> 42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
                 </div>
             </section>

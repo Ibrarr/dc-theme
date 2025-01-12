@@ -52,7 +52,7 @@
             <i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/person.svg' ) ?></i>
             <div class="content">
                 <p class="heading">Contact Info</p>
-                <a href="tel:02088261200">0208 826 1200</a>
+                <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><?php the_field( 'main_phone_number', 'option' ); ?></a>
                 <a href="mailto:info@drakeandcase.com">info@drakeandcase.com</a>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="content">
                 <p class="heading">Out of Hours Service</p>
                 <p>Mon-Fri: 5pm - 10pm</p>
-                <a href="tel:02088261200">0208 826 1200</a>
+                <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><?php the_field( 'main_phone_number', 'option' ); ?></a>
             </div>
         </div>
         <a href="#" class="button">Pay online</a>

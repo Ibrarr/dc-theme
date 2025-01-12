@@ -7,6 +7,10 @@ footer {
     margin: auto;
   }
 
+  address {
+    margin: 0;
+  }
+
   .info {
     @include media-breakpoint-down(lg) {
       margin-bottom: 40px;
