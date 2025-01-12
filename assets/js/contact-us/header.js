@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Step 1: Fade in .breadcrumbs from left to right
     headerTimeline.from('.header .breadcrumbs', {
-        opacity: 0,       // Start with fully transparent
+        autoAlpha: 0,       // Start with fully transparent
         x: -25,          // Start from the left
         duration: 0.6,    // Animation duration
         ease: 'power2.out', // Smooth easing effect
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Step 2: Fade in h1 and .cta-box simultaneously
     headerTimeline.from(['.header h1', '.header .cta-box'], {
-        opacity: 0,       // Start with fully transparent
+        autoAlpha: 0,       // Start with fully transparent
         x: (index) => index === 0 ? -25 : 0, // h1 fades in from left, .cta-box from below
         y: (index) => index === 1 ? 25 : 0, // Only .cta-box moves vertically
         duration: 0.6,    // Animation duration
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Step 3: Fade in p from below with a small delay
     headerTimeline.from('.header .intro', {
-        opacity: 0,
+        autoAlpha: 0,
         x: -25,
         duration: 0.6,
         ease: 'power2.out',
