@@ -1,17 +1,18 @@
 import gsap from 'gsap';
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.remove('loading');
+jQuery(document).ready(function ($) {
+    $('body').removeClass('loading');
 
-    // Fade out and remove preloader
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500); // Wait for fade-out animation
+    const $preloader = $('#preloader');
+    if ($preloader.length) {
+        $preloader.fadeOut(300, function () {
+            $(this).remove();
+        });
     }
+});
 
+
+document.addEventListener('DOMContentLoaded', () => {
     // Timeline for the .header animations
     const headerTimeline = gsap.timeline({
         scrollTrigger: {
