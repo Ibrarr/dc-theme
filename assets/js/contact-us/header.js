@@ -1,7 +1,5 @@
 import gsap from 'gsap';
 
-document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-
 document.addEventListener('DOMContentLoaded', () => {
     // Timeline for the .header animations
     const headerTimeline = gsap.timeline({

@@ -3,19 +3,10 @@
   @import "components/locations";
   @import "../misc/sections/enquire-bottom-section";
 
-  .no-js .header .breadcrumbs,
-  .no-js .header h1,
-  .no-js .header .intro,
-  .no-js .header .cta-box {
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-  }
-
-  .js .header .breadcrumbs,
-  .js .header h1,
-  .js .header .intro,
-  .js .header .cta-box {
+  .header .breadcrumbs,
+  .header h1,
+  .header .intro,
+  .header .cta-box {
     visibility: hidden;
   }
 }

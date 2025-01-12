@@ -16465,22 +16465,11 @@ header .mobile-menus .ctas a {
     font-size: 14px;
   }
 }
-.page-template-page-contact-us .no-js .header .breadcrumbs,
-.page-template-page-contact-us .no-js .header h1,
-.page-template-page-contact-us .no-js .header .h1,
-.page-template-page-contact-us .no-js .header .intro,
-.page-template-page-contact-us .no-js .header .cta-box {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-.page-template-page-contact-us .js .header .breadcrumbs,
-.page-template-page-contact-us .js .header h1,
-.page-template-page-contact-us .js .header .h1,
-.page-template-page-contact-us .js .header .intro,
-.page-template-page-contact-us .js .header .cta-box {
+.page-template-page-contact-us .header .breadcrumbs,
+.page-template-page-contact-us .header h1,
+.page-template-page-contact-us .header .h1,
+.page-template-page-contact-us .header .intro,
+.page-template-page-contact-us .header .cta-box {
   visibility: hidden;
 }
 
