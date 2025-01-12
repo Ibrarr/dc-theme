@@ -30,10 +30,10 @@
 }
 
 body:not(.home) main {
-  margin-top: 96px;
+  margin-top: 95px;
 
   @include media-breakpoint-down(lg) {
-    margin-top: 61px;
+    margin-top: 60px;
   }
 }
 

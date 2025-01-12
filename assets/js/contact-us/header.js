@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.replace('no-js', 'js');
+
     // Timeline for the .header animations
     const headerTimeline = gsap.timeline({
         scrollTrigger: {
