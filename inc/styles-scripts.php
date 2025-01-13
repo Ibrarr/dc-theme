@@ -40,6 +40,10 @@ function add_custom_scripts() {
         wp_enqueue_script( 'archive-category', DC_TEMPLATE_URI . mix('/dist/js/archive-category.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_404() ) {
+        wp_enqueue_script( '404', DC_TEMPLATE_URI . mix('/dist/js/404.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

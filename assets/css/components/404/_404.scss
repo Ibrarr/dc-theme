@@ -1,3 +1,33 @@
 .error404 {
+  .header {
+    text-align: center;
+    padding: 200px 0;
 
+    > div {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      @include dc-h1($dc-text-dark);
+      margin-bottom: 0;
+      font-size: clamp(2.8125rem, -0.5704rem + 5.4563vw, 6.25rem);
+      line-height: clamp(3.125rem, -0.2579rem + 5.4563vw, 6.5625rem);
+    }
+
+    h2 {
+      @include dc-h4($dc-text-dark);
+    }
+
+    p {
+      @include dc-p($dc-text-dark);
+    }
+
+    .button {
+      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      margin: auto;
+    }
+  }
+
+  @import "../misc/sections/enquire-bottom-section";
 }

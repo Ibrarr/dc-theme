@@ -69,6 +69,11 @@ mix.js([
     'assets/js/contact-us/enquire-now.js',
 ], 'js/contact-us.js');
 
+mix.js([
+    'assets/js/404/header.js',
+    'assets/js/404/enquire-now.js',
+], 'js/404.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false
