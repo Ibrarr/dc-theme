@@ -7,21 +7,21 @@ const contentAnimations = () => {
     // Timeline for the .case-note-heading animations
     const contentTimeline = gsap.timeline({
         scrollTrigger: {
-            trigger: '.content',
+            trigger: '.content-section',
             start: 'top 90%', // Start when the .case-note-heading section enters the viewport
             toggleActions: 'play none none none', // Play once on scroll
         },
     });
 
     // Fade in .content from below
-    contentTimeline.from('.content .title', {
+    contentTimeline.from('.content-section .title', {
         opacity: 0,       // Start with fully transparent
         x: -25,          // Start below its final position
         duration: 0.6,    // Animation duration
         ease: 'power2.out', // Smooth easing effect
     });
 
-    contentTimeline.from('.content .content-area', {
+    contentTimeline.from('.content-section .content-area', {
         opacity: 0,
         x: -25, // Start from the left
         duration: 0.6,
