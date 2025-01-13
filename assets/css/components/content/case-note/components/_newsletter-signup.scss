@@ -48,11 +48,13 @@
       input:focus {
         border-color: $dc-primary;
         --gf-local-shadow: none;
+        --gf-local-outline-color: none;
+        outline: none !important;
       }
 
       input[type="email"] {
         font-family: $dc-body;
-        font-size: 14px;
+        font-size: 16px !important;
         border-radius: 0;
         width: 400px;
         padding: 15px;

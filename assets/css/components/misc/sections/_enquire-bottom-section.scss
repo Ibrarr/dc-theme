@@ -78,7 +78,7 @@
     }
   }
 
-  .gform_wrapper {
+  .gform-theme.gform-theme--framework.gform_wrapper{
     .gform_heading {
       display: none;
     }
@@ -104,7 +104,7 @@
 
     textarea {
       font-family: $dc-body;
-      font-size: 14px;
+      font-size: 16px !important;
       color: $dc-text-dark;
       min-height: 180px;
     }
@@ -112,6 +112,12 @@
     input:focus, textarea:focus {
       border-color: $dc-primary;
       --gf-local-shadow: none;
+      --gf-local-outline-color: none;
+      outline: none !important;
+    }
+
+    input[type="text"] {
+      font-size: 16px !important;
     }
 
     input[type="submit"] {
