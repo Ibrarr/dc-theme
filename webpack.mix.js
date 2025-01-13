@@ -70,6 +70,12 @@ mix.js([
 ], 'js/contact-us.js');
 
 mix.js([
+    'assets/js/faqs/header.js',
+    'assets/js/faqs/faqs.js',
+    'assets/js/faqs/enquire-now.js',
+], 'js/faqs.js');
+
+mix.js([
     'assets/js/404/header.js',
     'assets/js/404/enquire-now.js',
 ], 'js/404.js');

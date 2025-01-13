@@ -311,7 +311,9 @@
                 "id": ""
             },
             "choices": {
-                "1": "Enquire Now"
+                "1": "Enquire Now",
+                "2": "Newsletter Signup",
+                "4": "test"
             },
             "default_value": false,
             "return_format": "value",
@@ -341,5 +343,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736355730
+    "modified": 1736788299
 }

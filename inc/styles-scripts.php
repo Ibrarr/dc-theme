@@ -18,6 +18,10 @@ function add_custom_scripts() {
         wp_enqueue_script( 'contact-us', DC_TEMPLATE_URI . mix('/dist/js/contact-us.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_page_template( 'page-templates/page-faqs.php' ) ) {
+        wp_enqueue_script( 'faqs', DC_TEMPLATE_URI . mix('/dist/js/faqs.js'), [ 'jquery' ], null, true );
+    }
+
     if ( is_tax( 'practice_area' ) ) {
         $term = get_queried_object();
 
