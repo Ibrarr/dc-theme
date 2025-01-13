@@ -16158,6 +16158,119 @@ header .mobile-menus .ctas a {
   }
 }
 
+.page-template-default .content {
+  position: relative;
+  padding: 50px 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content {
+    padding: 25px 0;
+  }
+}
+.page-template-default .content h1, .page-template-default .content .h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content h1, .page-template-default .content .h1 {
+    font-size: 45px;
+  }
+}
+.page-template-default .content h2, .page-template-default .content .h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content h2, .page-template-default .content .h2 {
+    font-size: 40px;
+  }
+}
+.page-template-default .content h3, .page-template-default .content .h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #EE243D;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content h3, .page-template-default .content .h3 {
+    font-size: 24px;
+  }
+}
+.page-template-default .content p, .page-template-default .content a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content p, .page-template-default .content a {
+    font-size: 12px;
+  }
+}
+.page-template-default .content ul, .page-template-default .content ol {
+  margin-bottom: 10px;
+}
+.page-template-default .content ul li, .page-template-default .content ol li {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #000F20;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content ul li, .page-template-default .content ol li {
+    font-size: 12px;
+  }
+}
+.page-template-default .content a {
+  color: #EE243D;
+}
+.page-template-default .content img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: 400px;
+}
+.page-template-default .content blockquote {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #000F20;
+  font-style: italic;
+  border-left: 3px solid #EE243D;
+  padding-left: 10px;
+}
+.page-template-default .content blockquote p {
+  font-size: 16px;
+}
+@media (max-width: 991.98px) {
+  .page-template-default .content blockquote p {
+    font-size: 14px;
+  }
+}
+.page-template-default .content .wp-caption {
+  width: 100% !important;
+  margin: 30px 0;
+}
+.page-template-default .content .wp-caption .wp-caption-text {
+  font-style: italic;
+  border-left: 3px solid #EE243D;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.page-template-default .content thead, .page-template-default .content tbody, .page-template-default .content tfoot, .page-template-default .content tr, .page-template-default .content td, .page-template-default .content th {
+  border-width: 1px;
+}
+
 .error404 .header {
   text-align: center;
   padding: 200px 0;

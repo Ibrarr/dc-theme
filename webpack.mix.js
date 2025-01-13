@@ -80,6 +80,11 @@ mix.js([
     'assets/js/404/enquire-now.js',
 ], 'js/404.js');
 
+mix.js([
+    'assets/js/default-page/content.js',
+    'assets/js/default-page/enquire-now.js',
+], 'js/default-page.js');
+
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false

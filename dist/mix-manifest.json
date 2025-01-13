@@ -8,7 +8,8 @@
     "/js/blog.js": "/js/blog.js?id=74d013f539d73db66f62a27d2b8855ef",
     "/js/archive-category.js": "/js/archive-category.js?id=6a20ddc2f78df2c4093ad405c401c640",
     "/js/contact-us.js": "/js/contact-us.js?id=78fd38c4a2ffcc7e91bb292b27771f50",
-    "/js/faqs.js": "/js/faqs.js?id=461de8ad5234692153f64c43371148d9",
+    "/js/faqs.js": "/js/faqs.js?id=be95551d89ffa5c77165fcd32dfd7a44",
     "/js/404.js": "/js/404.js?id=67d3407e8ccbdd81938ff716da9a7552",
-    "/css/app.css": "/css/app.css?id=7c20425726dc0486a3e9671e8f7e8433"
+    "/js/default-page.js": "/js/default-page.js?id=aa0c18da2d8e2021b9cca986e5889480",
+    "/css/app.css": "/css/app.css?id=f2dde3f36e8d52ca5b43a96290099cdc"
 }

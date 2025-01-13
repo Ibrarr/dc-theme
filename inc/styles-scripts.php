@@ -48,6 +48,10 @@ function add_custom_scripts() {
         wp_enqueue_script( '404', DC_TEMPLATE_URI . mix('/dist/js/404.js'), [ 'jquery' ], null, true );
     }
 
+    if ( is_page() && ! is_page_template() ) {
+        wp_enqueue_script( 'default-page', DC_TEMPLATE_URI . mix('/dist/js/default-page.js'), [ 'jquery' ], null, true );
+    }
+
     wp_enqueue_script( 'header', DC_TEMPLATE_URI . mix('/dist/js/header.js'), [ 'jquery' ], null, true );
 }
 

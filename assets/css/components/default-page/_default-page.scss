@@ -1,3 +1,65 @@
 .page-template-default {
+  .content {
+    position: relative;
+    padding: 50px 0;
 
+    @include media-breakpoint-down(lg) {
+      padding: 25px 0;
+    }
+
+    h1 {
+      @include dc-h1($dc-primary);
+    }
+
+    h2 {
+      @include dc-h3($dc-primary);
+    }
+
+    h3 {
+      @include dc-h4($dc-primary);
+    }
+
+    p, a {
+      @include dc-p($dc-text-dark);
+    }
+
+    ul, ol {
+      margin-bottom: 10px;
+
+      li {
+        @include dc-p($dc-text-dark);
+      }
+    }
+
+    a {
+      color: $dc-primary;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    blockquote {
+      @include dc-blockquote($dc-text-dark);
+    }
+
+    .wp-caption {
+      width: 100% !important;
+      margin: 30px 0;
+
+      .wp-caption-text {
+        font-style: italic;
+        border-left: 3px solid $dc-primary;
+        margin-top: 10px;
+        padding-left: 10px;
+      }
+    }
+
+    thead, tbody, tfoot, tr, td, th {
+      border-width: 1px;
+    }
+  }
 }

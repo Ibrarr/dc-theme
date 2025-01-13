@@ -32,7 +32,7 @@ const startHeaderAnimation = () => {
         },
     }, '-=0.4'); // Overlap slightly with the previous animation
 
-    headerTimeline.from('.header p', {
+    headerTimeline.from('.header .intro', {
         opacity: 0,
         x: -25, // Start from the left
         duration: 0.6,

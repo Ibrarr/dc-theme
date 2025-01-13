@@ -14,8 +14,8 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
             <div class="col-lg-8 content">
                 <div class="breadcrumbs"><?php echo do_shortcode('[wpseo_breadcrumb]') ?></div>
                 <h1>FAQs</h1>
-                <p>We understand that navigating legal matters can be complex, and you may have questions about our services, process, and how we can assist you. To make things easier, we've compiled answers to some of the most common queries we receive from clients.</p>
-                <p>If you don’t see your question here, please don’t hesitate to <a href="#enquire-now">get in touch</a>. Our team is always ready to provide the information and support you need.</p>
+                <p class="intro">We understand that navigating legal matters can be complex, and you may have questions about our services, process, and how we can assist you. To make things easier, we've compiled answers to some of the most common queries we receive from clients.</p>
+                <p class="intro">If you don’t see your question here, please don’t hesitate to <a href="#enquire-now">get in touch</a>. Our team is always ready to provide the information and support you need.</p>
             </div>
             <div class="col-lg-4">
                 <div class="cta-box">
