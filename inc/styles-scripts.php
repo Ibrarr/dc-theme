@@ -2,7 +2,7 @@
 
 add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
 function add_custom_scripts() {
-    wp_enqueue_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', [ 'jquery' ], '1.12.1', true );
+    wp_deregister_script( 'jquery-ui' );
 
     wp_enqueue_style( 'site', DC_TEMPLATE_URI . mix('/dist/css/app.css'), [], null, 'all' );
 
