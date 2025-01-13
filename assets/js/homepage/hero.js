@@ -13,6 +13,11 @@ jQuery(document).ready(function ($) {
     // Ensure the page always scrolls to the top on refresh
     window.scrollTo(0, 0);
 
+    // Prevent the browser from restoring the previous scroll position
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
     const reinitializeSlides = () => {
         const slides = gsap.utils.toArray('.hero-slides .slide');
 
