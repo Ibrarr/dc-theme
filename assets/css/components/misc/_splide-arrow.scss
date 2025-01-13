@@ -13,6 +13,11 @@
     opacity: 1;
     margin-bottom: 5px;
 
+    @include media-breakpoint-down(lg) {
+      width: 2.5em;
+      height: 2.5em;
+    }
+
     &:hover {
       background-color: $dc-primary;
     }
@@ -25,6 +30,11 @@
       height: 1em;
       width: 1em;
       margin-bottom: -2px;
+
+      @include media-breakpoint-down(lg) {
+        height: 0.75em;
+        width: 0.75em;
+      }
     }
 
     path {
