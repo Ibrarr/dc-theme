@@ -17,6 +17,10 @@
   padding: 20px;
   height: auto;
   animation: fadeIn .3s ease-in-out;
+
+  @include media-breakpoint-down(sm) {
+    width: 65%;
+  }
 }
 
 @keyframes fadeIn {
