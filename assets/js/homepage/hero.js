@@ -1,10 +1,67 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { preloader } from '../global/preloader';
 
 gsap.registerPlugin(ScrollTrigger);
 
-preloader();
+jQuery(document).ready(function ($) {
+    $('body').removeClass('loading');
+
+    const MIN_DISPLAY_TIME = 750; // Minimum time for the preloader to be on screen
+    const $preloader = $('#preloader');
+    const startTime = performance.now(); // Record the time when the script starts
+
+    // Ensure the page always scrolls to the top on refresh
+    window.scrollTo(0, 0);
+
+    const reinitializeSlides = () => {
+        const slides = gsap.utils.toArray('.hero-slides .slide');
+
+        // Reset all slides to their initial state
+        gsap.set(slides, {
+            opacity: 0,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: (i) => slides.length - i,
+        });
+
+        // Ensure the first slide is visible
+        gsap.set(slides[0], { opacity: 1 });
+
+        slides.forEach((slide) => {
+            gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
+        });
+
+        // Animate the first slide's background
+        gsap.to(slides[0].querySelector('.bg-wrapper'), {
+            scale: 1,
+            duration: 1.5,
+            ease: 'power2.out',
+        });
+
+        document.body.style.overflow = 'hidden'; // Lock scroll for slides
+    };
+
+    if ($preloader.length) {
+        // Calculate the elapsed time
+        const elapsedTime = performance.now() - startTime;
+
+        // Ensure the preloader stays visible for at least MIN_DISPLAY_TIME
+        setTimeout(() => {
+            window.pageReady = true; // Set the global flag
+
+            // Reinitialize slides just before the preloader starts fading out
+            reinitializeSlides();
+
+            // Start fading out the preloader
+            $preloader.fadeOut(300, function () {
+                $(this).remove(); // Remove preloader after fade-out
+            });
+        }, Math.max(MIN_DISPLAY_TIME - elapsedTime, 0));
+    }
+});
 
 const startHeroAnimation = () => {
     const slides = gsap.utils.toArray('.hero-slides .slide');
@@ -19,29 +76,6 @@ const startHeroAnimation = () => {
         height: '100vh',
         visibility: 'hidden',
     });
-
-    // Stack the slides so the first is on top
-    gsap.set(slides, {
-        opacity: 0,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: (i) => slides.length - i,
-    });
-
-    slides.forEach((slide) => {
-        gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
-    });
-
-    gsap.to(slides[0].querySelector('.bg-wrapper'), {
-        scale: 1,
-        duration: 1.5,
-        ease: 'power2.out',
-    });
-
-    document.body.style.overflow = 'hidden';
 
     let currentIndex = 0;
     let isAnimating = false;
@@ -171,71 +205,6 @@ const startHeroAnimation = () => {
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('touchend', handleTouchEnd);
 
-    // Function to handle the slide navigation logic
-    const moveToLastSlide = () => {
-        document.body.style.overflow = 'auto';
-        makeAllSlidesVisible();
-        const slides = document.querySelectorAll('.hero-slides .slide');
-        const lastSlideIndex = slides.length - 1;
-
-        gsap.set(slides, {
-            y: (i) => (i === lastSlideIndex ? '0%' : '-100%'),
-        });
-
-        slides.forEach((slide, index) => {
-            slide.style.zIndex = index === lastSlideIndex ? slides.length : slides.length - index;
-        });
-
-        currentIndex = lastSlideIndex;
-
-        updateHeroClass();
-
-        slides.forEach((slide, index) => {
-            gsap.set(slide, {
-                zIndex: slides.length - index,
-            });
-        });
-    };
-
-    // Check if the slider section is in full view on page load
-// Check if the slider section is in full view on page load
-    const checkSliderVisibility = () => {
-        const heroSlidesContainer = document.querySelector('.hero-slides');
-        const heroSlidesRect = heroSlidesContainer.getBoundingClientRect();
-        const extraMargin = 100; // Extra margin to adjust for partial visibility at the bottom
-
-        if (
-            heroSlidesRect.top < 0 ||
-            heroSlidesRect.bottom > window.innerHeight + extraMargin
-        ) {
-            moveToLastSlide();
-        } else {
-            document.body.style.overflow = 'hidden';
-            gsap.set(slides[0], { opacity: 1 });
-            gsap.set('.hero-slides', { visibility: 'visible' });
-            updateHeroClass();
-        }
-    };
-
-
-    checkSliderVisibility();
-
-    // Add event listeners for slide buttons
-    document.querySelectorAll('.hero-slides .slide .button').forEach((button) => {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent any propagation issues
-            moveToLastSlide();
-        });
-    });
-
-    // Add event listeners for header buttons
-    document.querySelectorAll('header .mobile-menus .ctas .button, header .top-menu .ctas .button').forEach((button) => {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent any propagation issues
-            moveToLastSlide();
-        });
-    });
-
     gsap.set(slides[0], { opacity: 1 });
     gsap.set('.hero-slides', { visibility: 'visible' });
     updateHeroClass();
@@ -249,5 +218,5 @@ if (window.pageReady) {
             clearInterval(interval); // Stop checking once ready
             startHeroAnimation(); // Run the animation
         }
-    }, 50); // Check every 50ms
+    }, 50);
 }
