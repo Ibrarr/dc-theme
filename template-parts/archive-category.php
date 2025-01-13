@@ -62,7 +62,7 @@ get_header();
                         while ($query->have_posts()) : $query->the_post();
                             ?>
                             <article class="col-lg-4 mb-4 standard-case-note-card">
-                                <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
+                                <?php require get_template_directory() . '/template-parts/standard-case-note-card-h2.php'; ?>
                             </article>
                         <?php
                         endwhile;
