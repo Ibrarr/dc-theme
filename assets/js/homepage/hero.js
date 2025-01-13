@@ -18,6 +18,14 @@ jQuery(document).ready(function ($) {
         history.scrollRestoration = 'manual';
     }
 
+    // Lock the scroll position explicitly during the preloader
+    const lockScroll = () => {
+        window.scrollTo(0, 0); // Keep scroll locked at the top
+    };
+
+    // Add scroll lock during the preloader phase
+    window.addEventListener('scroll', lockScroll);
+
     const reinitializeSlides = () => {
         const slides = gsap.utils.toArray('.hero-slides .slide');
 
@@ -63,6 +71,9 @@ jQuery(document).ready(function ($) {
             // Start fading out the preloader
             $preloader.fadeOut(300, function () {
                 $(this).remove(); // Remove preloader after fade-out
+
+                // Remove scroll lock after preloader is gone
+                window.removeEventListener('scroll', lockScroll);
             });
         }, Math.max(MIN_DISPLAY_TIME - elapsedTime, 0));
     }
