@@ -1,40 +1,5 @@
 import gsap from 'gsap';
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Timeline for the .practice-area-services animations
-    const practiceAreaTimeline = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.practice-area-services',
-            start: 'top 90%', // Start when the .practice-area-services section enters the viewport
-            toggleActions: 'play none none none', // Play once on scroll
-        }
-    });
-
-    // Step 1: Fade in h2 from below
-    practiceAreaTimeline.from('.practice-area-services .top h2', {
-        opacity: 0,       // Start with fully transparent
-        y: 50,           // Start below its final position
-        duration: 0.6,    // Animation duration
-        ease: 'power2.out', // Smooth easing effect
-    });
-
-    // Step 2: Fade in p from below with a small delay
-    practiceAreaTimeline.from('.practice-area-services .top p', {
-        opacity: 0,
-        y: 50,           // Start below its final position
-        duration: 0.6,
-        ease: 'power2.out',
-    }, '-=0.5'); // Overlap slightly with the previous animation
-
-    // Step 3: Fade in .vertical-tabs from below with a small delay
-    practiceAreaTimeline.from('.practice-area-services .vertical-tabs', {
-        opacity: 0,
-        y: 50,           // Start below its final position
-        duration: 0.6,
-        ease: 'power2.out',
-    }, '-=0.5'); // Overlap slightly with the previous animation
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const tabItems = document.querySelectorAll(".tabs-list li");
     const desktopContents = document.querySelectorAll(".desktop-content .tab-content");
@@ -82,3 +47,48 @@ document.addEventListener("DOMContentLoaded", function () {
         isMobile.matches = window.matchMedia("(max-width: 991px)").matches;
     });
 });
+
+const startPracticeAreaAnimations = () => {
+    const practiceAreaTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.practice-area-services',
+            start: 'top 90%', // Start when the .practice-area-services section enters the viewport
+            toggleActions: 'play none none none', // Play once on scroll
+        },
+    });
+
+    // Step 1: Fade in h2 from below
+    practiceAreaTimeline.from('.practice-area-services .top h2', {
+        opacity: 0,       // Start with fully transparent
+        y: 25,            // Start below its final position
+        duration: 0.6,    // Animation duration
+        ease: 'power2.out', // Smooth easing effect
+    });
+
+    // Step 2: Fade in p from below with a small delay
+    practiceAreaTimeline.from('.practice-area-services .top p', {
+        opacity: 0,
+        y: 25,            // Start below its final position
+        duration: 0.6,
+        ease: 'power2.out',
+    }, '-=0.5'); // Overlap slightly with the previous animation
+
+    // Step 3: Fade in .vertical-tabs from below with a small delay
+    practiceAreaTimeline.from('.practice-area-services .vertical-tabs', {
+        opacity: 0,
+        y: 25,            // Start below its final position
+        duration: 0.6,
+        ease: 'power2.out',
+    }, '-=0.5'); // Overlap slightly with the previous animation
+};
+
+if (window.pageReady) {
+    startPracticeAreaAnimations();
+} else {
+    const interval = setInterval(() => {
+        if (window.pageReady) {
+            clearInterval(interval); // Stop checking once ready
+            startPracticeAreaAnimations(); // Initialize animations
+        }
+    }, 50); // Check every 50ms
+}

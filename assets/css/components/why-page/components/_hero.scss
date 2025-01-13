@@ -19,6 +19,7 @@
 
       h1 {
         @include dc-h1($dc-text-dark);
+        margin-bottom: 10px;
       }
 
       p {

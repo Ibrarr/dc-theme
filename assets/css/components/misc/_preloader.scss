@@ -12,7 +12,9 @@
 }
 
 #preloader img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
   height: auto;
   animation: fadeIn .3s ease-in-out;
 }

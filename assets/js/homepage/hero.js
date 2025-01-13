@@ -1,9 +1,12 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { preloader } from '../global/preloader';
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', () => {
+preloader();
+
+const startHeroAnimation = () => {
     const slides = gsap.utils.toArray('.hero-slides .slide');
     const header = document.querySelector('header'); // Assuming 'header' is the element with .hero-active
     let startY = 0; // For touch events
@@ -236,4 +239,15 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.set(slides[0], { opacity: 1 });
     gsap.set('.hero-slides', { visibility: 'visible' });
     updateHeroClass();
-});
+};
+
+if (window.pageReady) {
+    startHeroAnimation();
+} else {
+    const interval = setInterval(() => {
+        if (window.pageReady) {
+            clearInterval(interval); // Stop checking once ready
+            startHeroAnimation(); // Run the animation
+        }
+    }, 50); // Check every 50ms
+}

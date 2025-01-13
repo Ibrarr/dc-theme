@@ -1,37 +1,45 @@
 import gsap from 'gsap';
 
-document.addEventListener('DOMContentLoaded', () => {
+const startLocationsAnimation = () => {
     // Timeline for the .locations animations
     const locationsTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: '.locations',
-            start: 'top 90%', // Start when the .locations section enters the viewport
-            toggleActions: 'play none none none', // Play once on scroll
+            start: 'top 90%',
+            toggleActions: 'play none none none',
         }
     });
 
-    // Step 1: Fade in h2 from left to right
     locationsTimeline.from('.locations h2', {
-        opacity: 0,       // Start with fully transparent
-        x: -50,          // Start from the left
-        duration: 0.6,    // Animation duration
-        ease: 'power2.out', // Smooth easing effect
-    });
-
-    // Step 2: Fade in .location-description from left to right with a small delay
-    locationsTimeline.from('.locations .location-description', {
         opacity: 0,
-        x: -50,          // Start from the left
+        x: -25,
         duration: 0.6,
         ease: 'power2.out',
-    }, '-=0.5'); // Overlap slightly with the previous animation
+    });
 
-    // Step 3: Stagger fade-in for each .location from below
+    locationsTimeline.from('.locations .location-description', {
+        opacity: 0,
+        x: -25,
+        duration: 0.6,
+        ease: 'power2.out',
+    }, '-=0.5');
+
     locationsTimeline.from('.locations .location', {
-        opacity: 0,       // Start with fully transparent
-        y: 50,           // Start below their final position
-        duration: 0.6,    // Animation duration
-        ease: 'power2.out', // Smooth easing effect
-        stagger: 0.08,     // Stagger delay between locations
-    }, '-=0.5'); // Overlap slightly with the previous animation
-});
+        opacity: 0,
+        y: 25,
+        duration: 0.6,
+        ease: 'power2.out',
+        stagger: 0.08,
+    }, '-=0.5');
+};
+
+if (window.pageReady) {
+    startLocationsAnimation();
+} else {
+    const interval = setInterval(() => {
+        if (window.pageReady) {
+            clearInterval(interval); // Stop checking once ready
+            startLocationsAnimation(); // Run the animation
+        }
+    }, 50); // Check every 50ms
+}

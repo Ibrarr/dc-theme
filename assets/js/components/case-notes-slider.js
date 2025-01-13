@@ -2,7 +2,7 @@ import Splide from '@splidejs/splide';
 import gsap from 'gsap';
 
 export const caseNotesSlider = () => {
-    document.addEventListener('DOMContentLoaded', function () {
+    const startCaseNotes = () => {
         new Splide('#case-notes-slider', {
             type: 'loop',
             perPage: 3,
@@ -21,13 +21,11 @@ export const caseNotesSlider = () => {
                 },
             },
         }).mount();
-    });
 
-    document.addEventListener('DOMContentLoaded', () => {
         // Set initial state for cards to hidden
         gsap.set('.case-notes .splide .standard-case-note-card', {
             opacity: 0,
-            y: 50, // Slightly below the final position
+            y: 25, // Slightly below the final position
         });
 
         // Heading animations
@@ -39,22 +37,25 @@ export const caseNotesSlider = () => {
             },
         });
 
-        caseNotesTimeline.from('.case-notes .heading h2', {
-            opacity: 0,
-            x: -50,
-            duration: 0.6,
-            ease: 'power2.out',
-        }).from('.case-notes .heading h3', {
-            opacity: 0,
-            x: -50,
-            duration: 0.6,
-            ease: 'power2.out',
-        }, '-=0.5').from('.case-notes .heading p', {
-            opacity: 0,
-            x: -50,
-            duration: 0.6,
-            ease: 'power2.out',
-        }, '-=0.5');
+        caseNotesTimeline
+            .from('.case-notes .heading h2', {
+                opacity: 0,
+                x: -25,
+                duration: 0.6,
+                ease: 'power2.out',
+            })
+            .from('.case-notes .heading h3', {
+                opacity: 0,
+                x: -25,
+                duration: 0.6,
+                ease: 'power2.out',
+            }, '-=0.5')
+            .from('.case-notes .heading p', {
+                opacity: 0,
+                x: -25,
+                duration: 0.6,
+                ease: 'power2.out',
+            }, '-=0.5');
 
         // Optimize staggered animation for cards
         const cards = document.querySelectorAll('.case-notes #case-notes-slider .standard-case-note-card');
@@ -81,9 +82,20 @@ export const caseNotesSlider = () => {
                 toggleActions: 'play none none none', // Play once on scroll
             },
             opacity: 0,
-            y: 50, // Start below its final position
+            y: 25, // Start below its final position
             duration: 0.6,
             ease: 'power2.out',
         });
-    });
+    };
+
+    if (window.pageReady) {
+        startCaseNotes();
+    } else {
+        const interval = setInterval(() => {
+            if (window.pageReady) {
+                clearInterval(interval); // Stop checking once ready
+                startCaseNotes(); // Initialize everything
+            }
+        }, 50); // Check every 50ms
+    }
 };

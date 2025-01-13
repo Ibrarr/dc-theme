@@ -13444,7 +13444,9 @@ body:not(.home) main {
 }
 
 #preloader img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
   height: auto;
   -webkit-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -15248,6 +15250,7 @@ header .mobile-menus .ctas a {
   margin-bottom: 20px;
   color: #000F20;
   opacity: 1;
+  margin-bottom: 10px;
 }
 @media (max-width: 991.98px) {
   .page-template-page-why-drake-case .hero .left .content h1, .page-template-page-why-drake-case .hero .left .content .h1 {
