@@ -129,6 +129,13 @@ footer {
         transition: $dc-transition-all;
       }
 
+      .creds {
+        a {
+          font-style: italic;
+          font-size: 12px;
+        }
+      }
+
       a:hover {
         color: $dc-primary;
       }

@@ -40,7 +40,10 @@
             </div>
             <div class="col-12 bottom">
                 <div class="content">
-                    <p>© 2024 Drake & Case is Authorised & Regulated by the Solicitors Regulation Authority. SRA number: 644815</p>
+                    <div class="copyright-creds">
+                        <p>© <?php echo date("Y"); ?> Drake & Case is Authorised & Regulated by the Solicitors Regulation Authority. SRA number: 644815</p>
+                        <p class="creds"><a href="https://vulkancreative.com/" target="_blank">Brand Development, Website Design & Development by Vulkan Creative</a></p>
+                    </div>
                     <a href="/privacy-policy">Privacy Policy</a>
                 </div>
             </div>

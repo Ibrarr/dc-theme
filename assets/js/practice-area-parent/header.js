@@ -36,18 +36,6 @@ const startHeaderAnimations = () => {
         ease: 'power2.out',
     }, '-=0.5'); // Overlap slightly with the previous animation
 
-    // Step 4: Fade in .button from below
-    gsap.from('.header .button', {
-        opacity: 0,
-        y: 25, // Start below its final position
-        duration: 0.5,
-        ease: 'power2.out',
-        scrollTrigger: {
-            trigger: '.header .button',
-            start: 'top 90%', // Start when the button enters the viewport
-            toggleActions: 'play none none none',
-        },
-    });
 };
 
 if (window.pageReady) {
