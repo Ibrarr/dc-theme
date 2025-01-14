@@ -18,7 +18,7 @@
                     <a href="<?php the_field( 'linkedin', 'option' ); ?>" target="_blank" aria-label="LinkedIn"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/linkedin.svg' ) ?></a>
                     <a href="<?php the_field( 'instagram', 'option' ); ?>" target="_blank" aria-label="Instagram"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/instagram.svg' ) ?></a>
                     <a href="<?php the_field( 'facebook', 'option' ); ?>" target="_blank" aria-label="Facebook"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/facebook.svg' ) ?></a>
-                    <a href="<?php the_field( 'x', 'option' ); ?>" target="_blank" aria-label="X"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/x.svg' ) ?></a>
+                    <a href="https://x.com/<?php the_field( 'x', 'option' ); ?>" target="_blank" aria-label="X"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/x.svg' ) ?></a>
                     <a href="<?php the_field( 'youtube', 'option' ); ?>" target="_blank" aria-label="YouTube"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/youtube.svg' ) ?></a>
                 </div>
             </div>
