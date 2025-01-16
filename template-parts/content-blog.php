@@ -36,13 +36,13 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
     <section class="content-area">
         <div class="container px-4">
             <div class="row">
-                <div class="col-lg-9 order-2 order-lg-1 contents-area">
+                <div class="col-xl-8 col-lg-8 order-2 order-lg-1 contents-area">
                     <div class="content">
                         <?php
                         $content = get_field('content');
                         if ($content) {
                             $content = preg_replace_callback(
-                                '/<h([1-6])>(.*?)<\/h\1>/',
+                                '/<h([1-2])>(.*?)<\/h\1>/',
                                 function ($matches) {
                                     $id = sanitize_title($matches[2]);
                                     return '<h' . $matches[1] . ' id="' . esc_attr($id) . '">' . $matches[2] . '</h' . $matches[1] . '>';
@@ -90,13 +90,13 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 order-1 order-lg-2 table-of-contents-area">
+                <div class="col-xl-4 col-lg-4 order-1 order-lg-2 table-of-contents-area">
                     <div class="contents-table">
                         <div class="table-of-contents">
                             <h3>Table of Contents</h3>
-                            <ol>
+                            <ul>
                                 <?php
-                                preg_match_all('/<h[1-6]>(.*?)<\/h[1-6]>/', get_field('content'), $matches, PREG_SET_ORDER);
+                                preg_match_all('/<h[1-2]>(.*?)<\/h[1-2]>/', get_field('content'), $matches, PREG_SET_ORDER);
 
                                 foreach ($matches as $match) {
                                     $heading = strip_tags($match[1]);
@@ -104,7 +104,7 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
                                     echo '<li><a href="#' . esc_attr($anchor) . '">' . esc_html($heading) . '</a></li>';
                                 }
                                 ?>
-                            </ol>
+                            </ul>
                         </div>
                         <a href="<?php echo get_field('sticky_button_text')['url']; ?>" class="button"><?php echo get_field('sticky_button_text')['title']; ?></a>
                     </div>
@@ -130,59 +130,63 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
                 <h3>Case Notes for <?php echo $practice_area; ?></h3>
                 <p>Explore valuable perspectives on <?php echo $practice_area; ?>, ranging from complex litigation strategies to the latest legal trends, empowering you with knowledge to navigate the legal landscape.</p>
             </section>
-            <section class="splide" id="case-notes-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <?php
-                        $args = [
-                            'post_type'      => 'post',
-                            'posts_per_page' => 12,
-                            'post_status'    => 'publish',
-                            'orderby'        => 'date',
-                            'order'          => 'DESC',
-                            'post__not_in'   => [get_the_ID()],
-                            'tax_query'      => [
-                                [
-                                    'taxonomy' => 'practice_area',
-                                    'field'    => 'slug',
-                                    'terms'    => $practice_area_slug,
-                                ],
-                            ],
-                        ];
+            <?php
+            $args = [
+                'post_type'      => 'post',
+                'posts_per_page' => 12,
+                'post_status'    => 'publish',
+                'orderby'        => 'date',
+                'order'          => 'DESC',
+                'post__not_in'   => [get_the_ID()],
+                'tax_query'      => [
+                    [
+                        'taxonomy' => 'practice_area',
+                        'field'    => 'slug',
+                        'terms'    => $practice_area_slug,
+                    ],
+                ],
+            ];
 
-                        $query = new WP_Query($args);
-                        while ($query->have_posts()) : $query->the_post();
-                            ?>
-                            <li class="splide__slide">
-                                <article class="standard-case-note-card">
-                                    <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
-                                </article>
-                            </li>
-                        <?php
-                        endwhile;
-                        wp_reset_postdata();
-                        ?>
-                    </ul>
-                </div>
-                <div class="splide__arrows splide__arrows--ltr">
-                    <button
-                            class="splide__arrow splide__arrow--prev"
-                            type="button"
-                            aria-label="Previous slide"
-                            aria-controls="splide01-track"
-                    >
-                        <?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/left-arrow.svg' ) ?>
-                    </button>
-                    <button
-                            class="splide__arrow splide__arrow--next"
-                            type="button"
-                            aria-label="Next slide"
-                            aria-controls="splide01-track"
-                    >
-                        <?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/right-arrow.svg' ) ?>
-                    </button>
-                </div>
-            </section>
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) : ?>
+                <section class="splide" id="case-notes-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <?php while ($query->have_posts()) : $query->the_post(); ?>
+                                <li class="splide__slide">
+                                    <article class="standard-case-note-card">
+                                        <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
+                                    </article>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                    <div class="splide__arrows splide__arrows--ltr">
+                        <button
+                                class="splide__arrow splide__arrow--prev"
+                                type="button"
+                                aria-label="Previous slide"
+                                aria-controls="splide01-track"
+                        >
+                            <?php echo file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/left-arrow.svg'); ?>
+                        </button>
+                        <button
+                                class="splide__arrow splide__arrow--next"
+                                type="button"
+                                aria-label="Next slide"
+                                aria-controls="splide01-track"
+                        >
+                            <?php echo file_get_contents(DC_TEMPLATE_DIR . '/assets/images/icons/right-arrow.svg'); ?>
+                        </button>
+                    </div>
+                </section>
+            <?php else : ?>
+                <p>No related posts found. Explore more content <a href="/all-case-notes/">here</a>.</p>
+            <?php endif;
+
+            wp_reset_postdata();
+            ?>
         </div>
     </section>
 

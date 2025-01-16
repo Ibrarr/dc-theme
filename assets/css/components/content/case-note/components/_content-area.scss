@@ -12,11 +12,11 @@
 
   .content {
     h2 {
-      @include dc-h3($dc-primary);
+      @include dc-h4($dc-primary);
     }
 
-    h3 {
-      @include dc-h4($dc-primary);
+    h3, h4, h5, h6 {
+      @include dc-h5($dc-primary);
     }
 
     p, a {
@@ -85,12 +85,20 @@
         @include dc-h4($dc-text-dark);
       }
 
-      ol {
+      ul {
         padding-left: 25px;
 
         li {
-          @include dc-p-heading($dc-text-dark);
+          @include dc-h6($dc-text-dark);
           font-weight: $dc-medium;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+
+            @include media-breakpoint-down(lg) {
+              margin-bottom: 5px;
+            }
+          }
 
           a {
             text-decoration: none;

@@ -27,6 +27,14 @@
     }
   }
 
+  p {
+    @include dc-p($dc-text-dark);
+
+    a {
+      color: $dc-primary;
+    }
+  }
+
   #case-notes-slider {
     .splide__track {
       overflow: visible;
