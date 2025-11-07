@@ -78,7 +78,7 @@ get_header();
                                 'orderby'    => 'mame',
                                 'order'      => 'ASC',
                                 'hide_empty' => false,
-                                'number'     => 10,
+                                'number'     => -1,
                             ]);
 
                             foreach ($child_terms as $term) {
@@ -104,7 +104,7 @@ get_header();
                                 'orderby'    => 'mame',
                                 'order'      => 'ASC',
                                 'hide_empty' => false,
-                                'number'     => 10,
+                                'number'     => -1,
                             ]);
 
                             foreach ($business_child_terms as $term) {
