@@ -69,6 +69,20 @@
         }
       }
 
+      &.individuals {
+        ul {
+          columns: 3;
+
+          @include media-breakpoint-down(lg) {
+            columns: 2;
+          }
+
+          @include media-breakpoint-down(md) {
+            columns: 1;
+          }
+        }
+      }
+
       ul {
         list-style: none;
         padding: 0;
