@@ -9,7 +9,7 @@
                 $individual_child_terms = get_terms([
                     'taxonomy'   => 'practice_area',
                     'parent'     => $individual_term->term_id,
-                    'orderby'    => 'term_id',
+                    'orderby'    => 'name',
                     'order'      => 'ASC',
                     'hide_empty' => false,
                     'number'     => 10,
@@ -33,7 +33,7 @@
                 $business_child_terms = get_terms([
                     'taxonomy'   => 'practice_area',
                     'parent'     => $business_term->term_id,
-                    'orderby'    => 'term_id',
+                    'orderby'    => 'name',
                     'order'      => 'ASC',
                     'hide_empty' => false,
                     'number'     => 10,

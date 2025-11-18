@@ -75,7 +75,7 @@ get_header();
                             $child_terms = get_terms([
                                 'taxonomy'   => 'practice_area',
                                 'parent'     => $individual_term->term_id,
-                                'orderby'    => 'mame',
+                                'orderby'    => 'name',
                                 'order'      => 'ASC',
                                 'hide_empty' => false,
                             ]);
@@ -100,7 +100,7 @@ get_header();
                             $business_child_terms = get_terms([
                                 'taxonomy'   => 'practice_area',
                                 'parent'     => $business_term->term_id,
-                                'orderby'    => 'mame',
+                                'orderby'    => 'name',
                                 'order'      => 'ASC',
                                 'hide_empty' => false,
                             ]);
