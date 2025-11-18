@@ -105,7 +105,6 @@ $second_image_column = get_field('second_image_column');
 <?php include( get_template_directory() . '/template-parts/sections/client-feedback.php'); ?>
 
 <?php
-$enquireFormId = get_field( 'enquire_form' );
 include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');
 ?>
 <?php

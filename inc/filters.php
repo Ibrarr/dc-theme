@@ -116,3 +116,28 @@ add_filter(
         return $link_output;
     }
 );
+
+/**
+ * Custom Gravity Forms merge tag for pages, posts & taxonomies
+ */
+add_filter( 'gform_replace_merge_tags', function( $text, $form, $entry, $url_encode, $esc_html, $nl2br, $format ) {
+    if ( strpos( $text, '{page_context}' ) === false ) {
+        return $text;
+    }
+
+    $page_context = '';
+
+    if ( is_tax() || is_category() || is_tag() ) {
+        $term = get_queried_object();
+        $taxonomy_label = get_taxonomy( $term->taxonomy )->labels->singular_name;
+        $page_context = $taxonomy_label . ' - ' . $term->name;
+    } elseif ( is_singular( 'post' ) ) {
+        $page_context = 'Post - ' . get_the_title();
+    } elseif ( is_singular() ) {
+        $page_context = get_the_title();
+    } elseif ( is_home() ) {
+        $page_context = get_the_title( get_option( 'page_for_posts' ) );
+    }
+
+    return str_replace( '{page_context}', $page_context, $text );
+}, 10, 7 );

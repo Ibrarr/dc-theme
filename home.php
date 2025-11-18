@@ -87,7 +87,6 @@ get_header();
 </section>
 
 <?php
-$enquireFormId = get_field( 'general_enquire_form', 'option' );
 include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');
 ?>
 

@@ -24,7 +24,7 @@
                 </div>
             </section>
             <section class="col-lg-6 form">
-                <?php echo do_shortcode( '[gravityform id="'.$enquireFormId.'" title="false" description="false" ajax="true"]' ); ?>
+                <?php echo do_shortcode( '[gravityform id="'.get_field( 'main_enquire_form', 'option' ).'" title="false" description="false" ajax="true"]' ); ?>
             </section>
         </div>
     </div>

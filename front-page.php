@@ -125,7 +125,6 @@ get_header();
 <?php include( 'template-parts/sections/case-notes-slider.php'); ?>
 
 <?php
-$enquireFormId = get_field( 'enquire_form' );
 include( 'template-parts/sections/enquire-bottom-section.php');
 ?>
 

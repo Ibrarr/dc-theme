@@ -108,7 +108,6 @@ $image_srcset = wp_get_attachment_image_srcset( $thumbnail_id );
 </section>
 
 <?php
-$enquireFormId = get_field( 'general_enquire_form', 'option' );
 include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');
 
 get_footer();

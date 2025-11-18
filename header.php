@@ -32,7 +32,7 @@
                 </div>
                 <div class="ctas">
                     <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
-                    <a href="#enquire-now" class="button">Enquire now</a>
+                    <a href="/contact-us" class="button">Enquire now</a>
                 </div>
                 <div class="mobile-menu">
                     <div class="open"><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/menu.svg' ) ?></div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="ctas">
                     <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone-button.svg' ) ?></i><?php the_field( 'main_phone_number', 'option' ); ?></a>
-                    <a href="#enquire-now" class="button">Enquire now</a>
+                    <a href="/contact-us" class="button">Enquire now</a>
                 </div>
             </div>
         </div>

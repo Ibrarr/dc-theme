@@ -295,34 +295,6 @@
                     "parent_repeater": "field_677cfe9edb54d"
                 }
             ]
-        },
-        {
-            "key": "field_677d6df4b72f4",
-            "label": "Enquire form",
-            "name": "enquire_form",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "1": "Enquire Now",
-                "2": "Newsletter Signup",
-                "4": "test"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -343,5 +315,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736788299
+    "modified": 1763470694
 }

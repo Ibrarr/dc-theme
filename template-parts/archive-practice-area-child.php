@@ -140,6 +140,5 @@ $term = get_queried_object();
 </section>
 
 <?php
-$enquireFormId = get_field( 'enquire_form', $term );
 include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');
 ?>
