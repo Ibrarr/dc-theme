@@ -60,18 +60,18 @@
             <i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/clock.svg' ) ?></i>
             <div class="content">
                 <p class="heading">Business Hours</p>
-                <p>Mon-Fri: 9am - 5pm</p>
+                <p>Mon-Fri: 8am - 6:30pm</p>
             </div>
         </div>
         <div class="out-of-hours">
             <i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/clock.svg' ) ?></i>
             <div class="content">
                 <p class="heading">Out of Hours Service</p>
-                <p>Mon-Fri: 5pm - 10pm</p>
+                <p>Mon-Fri: 6:30pm - 10pm</p>
                 <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><?php the_field( 'main_phone_number', 'option' ); ?></a>
             </div>
         </div>
-        <a href="#" class="button">Pay online</a>
+<!--        <a href="#" class="button">Pay online</a>-->
     </div>
     <div class="col-xl-3 recent-post">
         <p class="heading">Latest Case Note</p>

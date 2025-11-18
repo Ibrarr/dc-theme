@@ -22,7 +22,6 @@
                             <?php endif; ?>
                             <p class="name"><?php echo $name; ?></p>
                             <p class="job-company"><?php echo $company_job_title; ?></p>
-                            <img src="<?php echo $company_logo['url']; ?>" class="logo" alt="<?php echo $company_logo['url']; ?>">
                         </li>
                     <?php endwhile; ?>
                 </ul>
