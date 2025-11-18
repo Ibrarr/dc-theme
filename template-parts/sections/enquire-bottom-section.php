@@ -20,7 +20,7 @@
                 <div class="contact-info">
                     <a href="mailto:<?php the_field( 'main_email', 'option' ) ?>"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> <?php the_field( 'main_email', 'option' ) ?></a>
                     <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> <?php the_field( 'main_phone_number', 'option' ); ?></a>
-                    <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/location.svg' ) ?></i> 42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
+                    <a href="https://maps.app.goo.gl/xcLTeCkCQc2hCuFz5" target="_blank"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/location-point.svg' ) ?></i> 42 Upper Berkeley Street, Marylebone, London, W1H 5QL</a>
                 </div>
             </section>
             <section class="col-lg-6 form">

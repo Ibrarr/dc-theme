@@ -326,7 +326,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -335,5 +335,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736704403
+    "modified": 1763486610
 }
