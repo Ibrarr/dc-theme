@@ -136,6 +136,11 @@ footer {
         }
       }
 
+      .legal {
+        display: flex;
+        gap: 20px;
+      }
+
       a:hover {
         color: $dc-primary;
       }

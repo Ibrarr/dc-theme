@@ -44,7 +44,11 @@
                         <p>© <?php echo date("Y"); ?> Drake & Case is Authorised & Regulated by the Solicitors Regulation Authority. SRA number: 644815</p>
                         <p class="creds"><a href="https://vulkancreative.com/" target="_blank">Brand Development, Website Design & Development by Vulkan Creative</a></p>
                     </div>
-                    <a href="/privacy-policy">Privacy Policy</a>
+                    <div class="legal">
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/cookie-policy">Cookie Policy</a>
+                        <a href="/terms-and-conditions">Terms & Conditions</a>
+                    </div>
                 </div>
             </div>
         </div>
