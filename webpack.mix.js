@@ -88,6 +88,15 @@ mix.js([
 mix.sass('assets/css/app.scss', 'css/app.css')
     .options({
         processCssUrls: false
+    })
+    .browserSync({
+        proxy: 'http://koresystems.test',
+        files: [
+            'dist/css/**/*.css',
+            'dist/js/**/*.js',
+            '**/*.php'
+        ],
+        notify: false
     });
 
 mix.options({
