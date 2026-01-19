@@ -71,6 +71,7 @@
 
     .button {
       @include dc-button($dc-primary, darken($dc-primary, 10%));
+      margin-bottom: 10px;
     }
   }
 
