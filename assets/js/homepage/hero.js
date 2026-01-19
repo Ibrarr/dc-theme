@@ -38,6 +38,7 @@ jQuery(document).ready(function ($) {
             width: '100%',
             height: '100%',
             zIndex: (i) => slides.length - i,
+            y: '0%', // FIX: Ensure all slides start at y: 0%
         });
 
         // Ensure the first slide is visible
@@ -108,6 +109,28 @@ const startHeroAnimation = () => {
         gsap.set(slides, { opacity: 1 });
     };
 
+    // FIX: Reset slides to proper state based on current index
+    const resetSlidesToCurrentState = () => {
+        slides.forEach((slide, index) => {
+            if (index < currentIndex) {
+                // Slides before current should be above (already scrolled past)
+                gsap.set(slide, { y: '-100%', opacity: 1 });
+            } else {
+                // Current and future slides should be at 0
+                gsap.set(slide, { y: '0%', opacity: index === currentIndex ? 1 : 0 });
+            }
+        });
+    };
+
+    // FIX: Lock scroll immediately and scroll hero into view
+    const lockScrollAndSnapToHero = () => {
+        document.body.style.overflow = 'hidden';
+        const heroSlidesContainer = document.querySelector('.hero-slides');
+        if (heroSlidesContainer) {
+            heroSlidesContainer.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+    };
+
     const moveToSlide = (index) => {
         if (isAnimating || index < 0 || index >= slides.length) return;
 
@@ -115,6 +138,19 @@ const startHeroAnimation = () => {
         const direction = index > currentIndex ? 1 : -1;
         const currentSlide = slides[currentIndex];
         const nextSlide = slides[index];
+
+        // FIX: Lock scroll IMMEDIATELY when moving to a non-last slide
+        // Also snap to hero if we're going backwards from the last slide (user may have scrolled down the page)
+        if (index !== slides.length - 1) {
+            const wasOnLastSlide = currentIndex === slides.length - 1;
+            document.body.style.overflow = 'hidden';
+
+            if (wasOnLastSlide && direction === -1) {
+                // Going backwards from last slide - snap to hero and reset slide states
+                lockScrollAndSnapToHero();
+                resetSlidesToCurrentState();
+            }
+        }
 
         makeAllSlidesVisible();
 
@@ -173,7 +209,8 @@ const startHeroAnimation = () => {
             }
         } else if (delta < 0) {
             // Scrolling up - allow scrolling back through all slides
-            if (!isAnimating && currentIndex > 0) {
+            // FIX: Only trigger slide change when hero is FULLY in view (top of hero at or above viewport top)
+            if (!isAnimating && currentIndex > 0 && heroSlidesRect.top >= 0) {
                 moveToSlide(currentIndex - 1);
             }
         }
@@ -187,18 +224,28 @@ const startHeroAnimation = () => {
     const handleTouchMove = (event) => {
         if (!isTouching) return;
 
+        // Check if we're in the hero section for touch events
+        const heroSlidesContainer = document.querySelector('.hero-slides');
+        const heroSlidesRect = heroSlidesContainer.getBoundingClientRect();
+
+        if (heroSlidesRect.bottom <= 0 || heroSlidesRect.top >= window.innerHeight) {
+            // User is outside the slides section
+            return;
+        }
+
         const currentY = event.touches[0].clientY;
         const deltaY = startY - currentY;
 
         if (Math.abs(deltaY) > 50) {
             if (deltaY > 0) {
-                // Swipe up
+                // Swipe up (to next slide)
                 if (!isAnimating && currentIndex < slides.length - 1) {
                     moveToSlide(currentIndex + 1);
                 }
             } else {
-                // Swipe down
-                if (!isAnimating && currentIndex > 0) {
+                // Swipe down (to previous slide)
+                // FIX: Only trigger slide change when hero is FULLY in view (top of hero at or above viewport top)
+                if (!isAnimating && currentIndex > 0 && heroSlidesRect.top >= 0) {
                     moveToSlide(currentIndex - 1);
                 }
             }
@@ -216,9 +263,66 @@ const startHeroAnimation = () => {
 
         // If there's an anchor in the URL, skip to the last slide and enable scrolling
         if (hash) {
-            moveToSlide(slides.length - 1);
+            // FIX: Set all previous slides to their 'scrolled past' state
+            slides.forEach((slide, index) => {
+                if (index < slides.length - 1) {
+                    gsap.set(slide, { y: '-100%', opacity: 1 });
+                    gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
+                } else {
+                    gsap.set(slide, { y: '0%', opacity: 1 });
+                    gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1 });
+                }
+            });
+            currentIndex = slides.length - 1;
+            isAnimating = false;
+            document.body.style.overflow = 'auto';
+            updateHeroClass();
         }
     };
+
+    // FIX: Handle anchor link clicks within hero slides
+    const handleAnchorClick = (event) => {
+        const target = event.target.closest('a[href^="#"]');
+        if (!target) return;
+
+        const hash = target.getAttribute('href');
+        if (!hash || hash === '#') return;
+
+        const targetElement = document.querySelector(hash);
+        if (!targetElement) return;
+
+        event.preventDefault();
+
+        // Enable scrolling first
+        document.body.style.overflow = 'auto';
+        isAnimating = false;
+
+        // Start scrolling to target immediately
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+
+        // Update hash without triggering hashchange
+        history.pushState(null, null, hash);
+
+        // FIX: Delay slide state change so user doesn't see the flash
+        // Wait until scrolling has started and hero is moving out of view
+        setTimeout(() => {
+            slides.forEach((slide, index) => {
+                if (index < slides.length - 1) {
+                    gsap.set(slide, { y: '-100%', opacity: 1 });
+                    gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1.2 });
+                } else {
+                    gsap.set(slide, { y: '0%', opacity: 1 });
+                    gsap.set(slide.querySelector('.bg-wrapper'), { scale: 1 });
+                }
+            });
+            currentIndex = slides.length - 1;
+            updateHeroClass();
+        }, 150); // Small delay to let scroll start and hero move out of view
+    };
+
+    // Add click listener to hero slides for anchor links
+    const heroSlidesContainer = document.querySelector('.hero-slides');
+    heroSlidesContainer.addEventListener('click', handleAnchorClick);
 
     window.addEventListener('wheel', handleScroll);
     window.addEventListener('touchstart', handleTouchStart, { passive: true });
