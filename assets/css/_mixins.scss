@@ -9,11 +9,12 @@
   text-decoration: none;
   display: block;
   width: fit-content;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 1;
+  border-radius: 5px !important;
 
   @include media-breakpoint-down(lg) {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   &:hover {
@@ -32,11 +33,12 @@
   text-decoration: none;
   display: block;
   width: fit-content;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 1;
+  border-radius: 5px !important;
 
   @include media-breakpoint-down(lg) {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   &:hover {
@@ -137,12 +139,12 @@
 
 @mixin dc-p($color) {
   font-family: $dc-body;
-  font-size: 14px;
+  font-size: 16px;
   color: $color;
   opacity: 1;
 
   @include media-breakpoint-down(lg) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

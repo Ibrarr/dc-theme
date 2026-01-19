@@ -61,7 +61,7 @@ get_header();
                 <div class="heading">
                     <h2 class="tag">Expertise</h2>
                     <h3>Legal Services</h3>
-                    <p>At Drake & Case, we offer tailored legal solutions for individuals and businesses alike. Our dedicated team is here to guide you through every legal challenge with professionalism and care.</p>
+                    <p>At Drake & Case, we offer tailored legal solutions for individuals and businesses alike. Our dedicated team is here to guide you through your legal challenges with professionalism and care.</p>
                 </div>
             </section>
             <article class="col-xl-9 col-lg-8 service-list">

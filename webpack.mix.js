@@ -90,7 +90,7 @@ mix.sass('assets/css/app.scss', 'css/app.css')
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'http://koresystems.test',
+        proxy: 'http://drakeandcase.test',
         files: [
             'dist/css/**/*.css',
             'dist/js/**/*.js',

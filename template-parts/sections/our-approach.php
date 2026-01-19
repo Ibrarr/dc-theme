@@ -12,7 +12,7 @@
                         <div class="content">
                             <img src="<?php echo DC_TEMPLATE_URI . '/assets/images/icons/consultation.gif'; ?>" alt="Consultation Icon">
                             <div class="text">
-                                <h3>Tailored Solutions</h3>
+                                <h3>Initial Consultation</h3>
                                 <p>We start with a comprehensive consultation to understand your unique legal needs.</p>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                         <div class="content">
                             <img src="<?php echo DC_TEMPLATE_URI . '/assets/images/icons/solutions.gif'; ?>" alt="Solutions Icon">
                             <div class="text">
-                                <h3>Tailored Solutions</h3>
+                                <h3>Bespoke Strategy</h3>
                                 <p>Our team crafts personalised strategies designed to effectively address your specific challenges.</p>
                             </div>
                         </div>

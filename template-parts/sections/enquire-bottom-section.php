@@ -8,7 +8,7 @@
                     <p>We’re here to assist you with your legal needs.</p>
                 </div>
                 <div class="what-to-expect">
-                    <p class="bold">Book a quick chat to take the first step toward resolving your legal challenges with expert advice.</p>
+                    <p class="bold">Schedule a Consultation to take the first step toward resolving your legal challenges with expert advice.</p>
                     <ul>
                         <li>Free 10-minute consultation</li>
                         <li>Discuss your case and objectives</li>

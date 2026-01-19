@@ -46,7 +46,7 @@ $second_image_column = get_field('second_image_column');
         <div class="row">
             <section class="col-lg-12 top">
                 <h2 class="tag">Team</h2>
-                <h3>Our Leadership Team</h3>
+                <h3>Our Team</h3>
                 <p>Meet our dedicated team of legal professionals.</p>
             </section>
             <?php while( have_rows('team_members') ): the_row();

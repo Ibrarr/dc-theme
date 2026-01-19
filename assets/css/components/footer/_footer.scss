@@ -1,6 +1,10 @@
 footer {
   background-color: $dc-background-dark-blue;
-  padding-top: 50px;
+  padding-top: 80px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 50px;
+  }
 
   > div {
     max-width: 1600px !important;
@@ -125,11 +129,14 @@ footer {
 
       p, a {
         @include dc-p($dc-text-light);
+        font-size: 14px;
         text-decoration: none;
         transition: $dc-transition-all;
       }
 
       .creds {
+        margin: 0;
+
         a {
           font-style: italic;
           font-size: 12px;
