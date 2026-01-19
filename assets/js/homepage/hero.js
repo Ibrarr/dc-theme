@@ -317,7 +317,7 @@ const startHeroAnimation = () => {
             });
             currentIndex = slides.length - 1;
             updateHeroClass();
-        }, 150); // Small delay to let scroll start and hero move out of view
+        }, 500); // Small delay to let scroll start and hero move out of view
     };
 
     // Add click listener to hero slides for anchor links
