@@ -87,7 +87,7 @@
         while ($query->have_posts()) : $query->the_post();
             ?>
             <article class="standard-case-note-card">
-                <?php require get_template_directory() . '/template-parts/standard-case-note-card.php'; ?>
+                <?php require get_template_directory() . '/template-parts/standard-case-note-card-no-heading.php'; ?>
             </article>
         <?php
         endwhile;
