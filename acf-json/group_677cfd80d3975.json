@@ -29,29 +29,8 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_677d94f1a97ee",
-            "label": "Section section heading",
-            "name": "section_section_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_677d9a548983e",
-            "label": "Section section button",
+            "label": "Second section button",
             "name": "section_section_button",
             "aria-label": "",
             "type": "text",
@@ -63,7 +42,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Enquire now",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -95,27 +74,6 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
-        },
-        {
-            "key": "field_677d9514a97ef",
-            "label": "Services heading",
-            "name": "services_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         },
         {
             "key": "field_677d9532a97f0",
@@ -201,7 +159,7 @@
                     "tabs": "visual",
                     "toolbar": "basic",
                     "media_upload": 0,
-                    "delay": 1,
+                    "delay": 0,
                     "parent_repeater": "field_677d9540a97f1"
                 },
                 {
@@ -218,7 +176,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "Enquire now",
                     "maxlength": "",
                     "allow_in_bindings": 0,
                     "placeholder": "",
@@ -315,5 +273,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763470694
+    "display_title": "",
+    "modified": 1768927221
 }

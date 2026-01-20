@@ -26,7 +26,7 @@ $term = get_queried_object();
     <div class="container px-4">
         <div class="row">
             <div class="col-lg-7 content">
-                <h2><?php the_field('section_section_heading', $term); ?></h2>
+                <h2>Expert <?php echo $term->name; ?> Services & Advice</h2>
                 <?php echo wpautop($term->description); ?>
                 <div class="ctas">
                     <a href="tel:<?php the_field( 'main_phone_number', 'option' ); ?>" class="button-secondary">Call <?php the_field( 'main_phone_number', 'option' ); ?></a>
@@ -43,7 +43,7 @@ $term = get_queried_object();
 <section class="practice-area-services">
     <div class="container px-4">
         <div class="top">
-            <h2><?php the_field('services_heading', $term); ?></h2>
+            <h2><?php echo $term->name; ?> Services</h2>
             <p><?php the_field('services_description', $term); ?></p>
         </div>
 
