@@ -65,8 +65,14 @@
           }
         }
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-up(lg) {
           &:not(:last-child) a {
+            border-bottom: 1px solid $dc-text-dark;
+          }
+        }
+
+        @include media-breakpoint-down(lg) {
+          a {
             border-bottom: 1px solid $dc-text-dark;
           }
         }
