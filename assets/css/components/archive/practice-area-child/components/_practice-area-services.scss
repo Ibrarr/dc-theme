@@ -57,9 +57,12 @@
           display: block;
           padding: 15px;
           cursor: pointer;
-          border-bottom: 1px solid $dc-text-dark;
           background-color: $dc-background-grey;
           transition: $dc-transition-all;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $dc-text-dark;
+          }
 
           &:hover {
             background-color: lighten($dc-background-off-white, 10%);
