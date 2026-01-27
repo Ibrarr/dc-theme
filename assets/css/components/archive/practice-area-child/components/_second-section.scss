@@ -40,6 +40,14 @@
         @include dc-button($dc-primary, darken($dc-primary, 10%));
         text-align: center;
       }
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+
+        a {
+          width: 100% !important;
+        }
+      }
     }
   }
 

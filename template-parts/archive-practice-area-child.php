@@ -34,7 +34,7 @@ $term = get_queried_object();
                 </div>
             </div>
             <div class="offset-lg-1 col-lg-4 image">
-                <img src="<?php echo get_field( 'second_section_image', $term )['url']; ?>" alt="<?php echo get_field( 'second_section_image', $term )['alt']; ?>">
+                <img src="<?php echo get_field( 'second_section_image', $term )['url']; ?>" alt="<?php echo $term->name; ?>">
             </div>
         </div>
     </div>

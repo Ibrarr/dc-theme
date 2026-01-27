@@ -10,7 +10,7 @@
                 <div class="what-to-expect">
                     <p class="bold">Schedule a Consultation to take the first step toward resolving your legal challenges with expert advice.</p>
                     <ul>
-                        <li>Free 10-minute consultation</li>
+                        <li>Free 15 minute consultation</li>
                         <li>Discuss your case and objectives</li>
                         <li>No obligations – just clarity and next steps</li>
                     </ul>
