@@ -40,53 +40,55 @@ $term = get_queried_object();
     </div>
 </section>
 
-<section class="practice-area-services">
-    <div class="container px-4">
-        <div class="top">
-            <h2><?php echo $term->name; ?> Services</h2>
-            <p><?php the_field('services_description', $term); ?></p>
-        </div>
+<?php if (have_rows('services', $term)) : ?>
+    <section class="practice-area-services">
+        <div class="container px-4">
+            <div class="top">
+                <h2><?php echo $term->name; ?> Services</h2>
+                <p><?php the_field('services_description', $term); ?></p>
+            </div>
 
-        <div class="vertical-tabs">
-            <ul class="tabs-list">
-                <?php $index = 1; ?>
-                <?php while (have_rows('services', $term)): the_row(); ?>
-                    <?php
-                    $heading = get_sub_field('heading');
-                    $description = get_sub_field('description');
-                    $button = get_sub_field('button');
-                    ?>
-                    <li class="<?php echo $index === 1 ? 'active' : ''; ?>">
-                        <a href="#service-<?php echo $index; ?>"><?php echo $heading; ?></a>
-                        <div class="tab-content-mobile" id="service-<?php echo $index; ?>-mobile">
+            <div class="vertical-tabs">
+                <ul class="tabs-list">
+                    <?php $index = 1; ?>
+                    <?php while (have_rows('services', $term)): the_row(); ?>
+                        <?php
+                        $heading = get_sub_field('heading');
+                        $description = get_sub_field('description');
+                        $button = get_sub_field('button');
+                        ?>
+                        <li class="<?php echo $index === 1 ? 'active' : ''; ?>">
+                            <a href="#service-<?php echo $index; ?>"><?php echo $heading; ?></a>
+                            <div class="tab-content-mobile" id="service-<?php echo $index; ?>-mobile">
+                                <h3><?php echo $heading; ?></h3>
+                                <?php echo $description; ?>
+                                <a href="#enquire-now" class="button"><?php echo $button; ?></a>
+                            </div>
+                        </li>
+                        <?php $index++; ?>
+                    <?php endwhile; ?>
+                </ul>
+
+                <div class="desktop-content">
+                    <?php $index = 1; ?>
+                    <?php while (have_rows('services', $term)): the_row(); ?>
+                        <?php
+                        $heading = get_sub_field('heading');
+                        $description = get_sub_field('description');
+                        $button = get_sub_field('button');
+                        ?>
+                        <div class="tab-content <?php echo $index === 1 ? 'active' : ''; ?>" id="service-<?php echo $index; ?>">
                             <h3><?php echo $heading; ?></h3>
                             <?php echo $description; ?>
                             <a href="#enquire-now" class="button"><?php echo $button; ?></a>
                         </div>
-                    </li>
-                    <?php $index++; ?>
-                <?php endwhile; ?>
-            </ul>
-
-            <div class="desktop-content">
-                <?php $index = 1; ?>
-                <?php while (have_rows('services', $term)): the_row(); ?>
-                    <?php
-                    $heading = get_sub_field('heading');
-                    $description = get_sub_field('description');
-                    $button = get_sub_field('button');
-                    ?>
-                    <div class="tab-content <?php echo $index === 1 ? 'active' : ''; ?>" id="service-<?php echo $index; ?>">
-                        <h3><?php echo $heading; ?></h3>
-                        <?php echo $description; ?>
-                        <a href="#enquire-now" class="button"><?php echo $button; ?></a>
-                    </div>
-                    <?php $index++; ?>
-                <?php endwhile; ?>
+                        <?php $index++; ?>
+                    <?php endwhile; ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <section class="faq">
     <div class="container px-4">
