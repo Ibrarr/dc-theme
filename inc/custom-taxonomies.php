@@ -37,3 +37,12 @@ function practice_areas_taxonomy() {
     );
     register_taxonomy( 'practice_area', array( 'post', 'case_study' ), $args );
 }
+
+
+add_action( 'template_redirect', 'redirect_old_practice_area_urls' );
+function redirect_old_practice_area_urls() {
+    if ( preg_match( '#^/practice-area/(.+)$#', $_SERVER['REQUEST_URI'], $matches ) ) {
+        wp_redirect( home_url( '/' . $matches[1] ), 301 );
+        exit;
+    }
+}
