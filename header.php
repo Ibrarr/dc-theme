@@ -11,6 +11,10 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KZZKRR5K');</script>
     <!-- End Google Tag Manager -->
+
+    <link rel="preload" href="<?php echo DC_TEMPLATE_URI . '/assets/fonts/PlusJakartaSans-VariableFont_wght.woff2'; ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?php echo DC_TEMPLATE_URI . '/assets/fonts/Inter-VariableFont_opsz,wght.woff2'; ?>" as="font" type="font/woff2" crossorigin>
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
