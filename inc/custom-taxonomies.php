@@ -33,11 +33,41 @@ function practice_areas_taxonomy() {
         'show_in_nav_menus' => true,
         'show_tagcloud'     => true,
         'show_in_rest'      => true,
-        'rewrite'           => array(
-            'slug'          => 'practice-area',
-            'with_front'    => false,
-            'hierarchical'  => true,
-        ),
+        'rewrite'           => false,
     );
     register_taxonomy( 'practice_area', array( 'post', 'case_study' ), $args );
+}
+
+/**
+* Get hierarchical term path
+*/
+function get_practice_area_path( $term ) {
+    $ancestors = array_reverse( get_ancestors( $term->term_id, 'practice_area', 'taxonomy' ) );
+    $slugs = array_map( fn( $id ) => get_term( $id )->slug, $ancestors );
+    $slugs[] = $term->slug;
+    return implode( '/', $slugs );
+}
+
+/**
+ * Add rewrite rules for practice areas
+ */
+add_action( 'init', 'practice_area_rewrite_rules', 20 );
+function practice_area_rewrite_rules() {
+    $terms = get_terms( array( 'taxonomy' => 'practice_area', 'hide_empty' => false ) );
+
+    if ( empty( $terms ) || is_wp_error( $terms ) ) return;
+
+    foreach ( $terms as $term ) {
+        $path = preg_quote( get_practice_area_path( $term ), '/' );
+        add_rewrite_rule( "^{$path}/?$", "index.php?practice_area={$term->slug}", 'top' );
+        add_rewrite_rule( "^{$path}/page/([0-9]+)/?$", "index.php?practice_area={$term->slug}&paged=\$matches[1]", 'top' );
+    }
+}
+
+/**
+ * Filter term links
+ */
+add_filter( 'term_link', 'practice_area_term_link', 10, 3 );
+function practice_area_term_link( $url, $term, $taxonomy ) {
+    return 'practice_area' === $taxonomy ? home_url( '/' . get_practice_area_path( $term ) . '/' ) : $url;
 }
