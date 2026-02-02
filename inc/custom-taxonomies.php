@@ -111,3 +111,51 @@ function practice_area_yoast_schema( $data ) {
     }
     return $data;
 }
+
+/**
+ * Add Practice Areas to Yoast Sitemap
+ */
+add_filter( 'wpseo_sitemap_index', 'add_practice_area_sitemap_index' );
+function add_practice_area_sitemap_index( $sitemap_custom_items ) {
+    $sitemap_custom_items .= '<sitemap>
+        <loc>' . home_url( '/practice_area-sitemap.xml' ) . '</loc>
+        <lastmod>' . date( 'c' ) . '</lastmod>
+    </sitemap>';
+    return $sitemap_custom_items;
+}
+
+add_action( 'wpseo_register_extra_replacements', 'register_practice_area_sitemap' );
+function register_practice_area_sitemap() {
+    global $wpseo_sitemaps;
+    if ( isset( $wpseo_sitemaps ) && is_object( $wpseo_sitemaps ) ) {
+        $wpseo_sitemaps->register_sitemap( 'practice_area', 'generate_practice_area_sitemap' );
+    }
+}
+
+add_filter( 'wpseo_sitemap_practice_area_content', 'generate_practice_area_sitemap' );
+function generate_practice_area_sitemap() {
+    $terms = get_terms( array(
+        'taxonomy'   => 'practice_area',
+        'hide_empty' => false,
+        'get'        => 'all',
+    ) );
+
+    if ( empty( $terms ) || is_wp_error( $terms ) ) {
+        return '';
+    }
+
+    $sitemap = '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+    foreach ( $terms as $term ) {
+        $url = home_url( '/' . get_practice_area_path( $term ) . '/' );
+
+        $sitemap .= '<url>';
+        $sitemap .= '<loc>' . esc_url( $url ) . '</loc>';
+        $sitemap .= '<lastmod>' . date( 'c' ) . '</lastmod>';
+        $sitemap .= '</url>';
+    }
+
+    $sitemap .= '</urlset>';
+
+    return $sitemap;
+}
