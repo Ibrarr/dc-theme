@@ -95,3 +95,19 @@ function practice_area_yoast_og_url( $url ) {
     }
     return $url;
 }
+
+/**
+ * Fix Yoast Schema URLs for practice areas
+ */
+add_filter( 'wpseo_schema_webpage', 'practice_area_yoast_schema' );
+function practice_area_yoast_schema( $data ) {
+    if ( is_tax( 'practice_area' ) ) {
+        $term = get_queried_object();
+        $url = home_url( '/' . get_practice_area_path( $term ) . '/' );
+
+        $data['@id'] = $url;
+        $data['url'] = $url;
+        $data['breadcrumb']['@id'] = $url . '#breadcrumb';
+    }
+    return $data;
+}
