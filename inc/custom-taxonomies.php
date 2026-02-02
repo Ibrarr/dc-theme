@@ -71,3 +71,27 @@ add_filter( 'term_link', 'practice_area_term_link', 10, 3 );
 function practice_area_term_link( $url, $term, $taxonomy ) {
     return 'practice_area' === $taxonomy ? home_url( '/' . get_practice_area_path( $term ) . '/' ) : $url;
 }
+
+/**
+ * Fix Yoast canonical URL for practice areas
+ */
+add_filter( 'wpseo_canonical', 'practice_area_yoast_canonical' );
+function practice_area_yoast_canonical( $canonical ) {
+    if ( is_tax( 'practice_area' ) ) {
+        $term = get_queried_object();
+        $canonical = home_url( '/' . get_practice_area_path( $term ) . '/' );
+    }
+    return $canonical;
+}
+
+/**
+ * Fix Yoast OG URL for practice areas
+ */
+add_filter( 'wpseo_opengraph_url', 'practice_area_yoast_og_url' );
+function practice_area_yoast_og_url( $url ) {
+    if ( is_tax( 'practice_area' ) ) {
+        $term = get_queried_object();
+        $url = home_url( '/' . get_practice_area_path( $term ) . '/' );
+    }
+    return $url;
+}
