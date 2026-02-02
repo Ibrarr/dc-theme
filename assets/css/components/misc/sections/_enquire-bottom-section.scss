@@ -116,12 +116,12 @@
       outline: none !important;
     }
 
-    input[type="text"] {
+    input[type="text"], input[type="email"], input[type="tel"] {
       font-size: 16px !important;
     }
 
     input[type="submit"] {
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      @include dc-button($dc-primary, lighten(#ff0020, 10%));
       border-radius: 0;
     }
   }

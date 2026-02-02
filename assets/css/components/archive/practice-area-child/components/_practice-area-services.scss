@@ -117,7 +117,7 @@
           }
 
           .button {
-            @include dc-button($dc-primary, darken($dc-primary, 10%));
+            @include dc-button($dc-primary, lighten(#ff0020, 10%));
             margin-top: 20px;
           }
         }
@@ -162,7 +162,7 @@
         }
 
         .button {
-          @include dc-button($dc-primary, darken($dc-primary, 10%));
+          @include dc-button($dc-primary, lighten(#ff0020, 10%));
           margin-top: 20px;
         }
       }

@@ -59,7 +59,7 @@
     }
 
     .red {
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      @include dc-button($dc-primary, lighten(#ff0020, 10%));
       margin: 10px 0;
     }
 
@@ -114,7 +114,7 @@
     }
 
     .button {
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      @include dc-button($dc-primary, lighten(#ff0020, 10%));
       width: 100%;
       text-align: center;
       margin-top: 20px;

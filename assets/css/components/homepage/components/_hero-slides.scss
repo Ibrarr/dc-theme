@@ -75,7 +75,7 @@
 
     .button {
       margin-top: 20px;
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      @include dc-button($dc-primary, lighten(#ff0020, 10%));
       z-index: 1;
     }
   }

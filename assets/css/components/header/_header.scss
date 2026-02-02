@@ -25,8 +25,12 @@ header {
             fill: $dc-text-light !important;
           }
 
-          @include dc-button-secondary($dc-text-light, darken($dc-text-light, 20%));
+          @include dc-button-secondary($dc-text-light, $dc-text-light);
           background: none !important;
+
+          &:hover {
+            background: lighten($dc-secondary, 10%) !important;
+          }
         }
 
         .mobile-menu .open svg path {

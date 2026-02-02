@@ -68,7 +68,7 @@
     }
 
     .button {
-      @include dc-button($dc-primary, darken($dc-primary, 10%));
+      @include dc-button($dc-primary, lighten(#ff0020, 10%));
       text-align: center;
       width: 100%;
     }
