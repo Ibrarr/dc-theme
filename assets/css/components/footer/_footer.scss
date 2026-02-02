@@ -137,6 +137,10 @@ footer {
       .creds {
         margin: 0;
 
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 20px;
+        }
+
         a {
           font-style: italic;
           font-size: 12px;

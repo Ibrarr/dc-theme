@@ -98,11 +98,11 @@ $second_image_column = get_field('second_image_column');
     </div>
 </section>
 
-<?php include( get_template_directory() . '/template-parts/sections/trusted-by.php'); ?>
+<?php //include( get_template_directory() . '/template-parts/sections/trusted-by.php'); ?>
 
 <?php include( get_template_directory() . '/template-parts/sections/our-approach.php'); ?>
 
-<?php include( get_template_directory() . '/template-parts/sections/client-feedback.php'); ?>
+<?php //include( get_template_directory() . '/template-parts/sections/client-feedback.php'); ?>
 
 <?php
 include( get_template_directory() . '/template-parts/sections/enquire-bottom-section.php');

@@ -74,24 +74,24 @@
 <!--        <a href="#" class="button">Pay online</a>-->
     </div>
     <div class="col-xl-3 recent-post">
-        <p class="heading">Latest Case Note</p>
-        <?php
-        $args = [
-            'post_type'      => 'post',
-            'posts_per_page' => 1,
-            'post_status'    => 'publish',
-            'orderby'        => 'date',
-            'order'          => 'DESC',
-        ];
-        $query = new WP_Query($args);
-        while ($query->have_posts()) : $query->the_post();
-            ?>
-            <article class="standard-case-note-card">
-                <?php require get_template_directory() . '/template-parts/standard-case-note-card-no-heading.php'; ?>
-            </article>
-        <?php
-        endwhile;
-        wp_reset_postdata();
-        ?>
+<!--        <p class="heading">Latest Case Note</p>-->
+<!--        --><?php
+//        $args = [
+//            'post_type'      => 'post',
+//            'posts_per_page' => 1,
+//            'post_status'    => 'publish',
+//            'orderby'        => 'date',
+//            'order'          => 'DESC',
+//        ];
+//        $query = new WP_Query($args);
+//        while ($query->have_posts()) : $query->the_post();
+//            ?>
+<!--            <article class="standard-case-note-card">-->
+<!--                --><?php //require get_template_directory() . '/template-parts/standard-case-note-card-no-heading.php'; ?>
+<!--            </article>-->
+<!--        --><?php
+//        endwhile;
+//        wp_reset_postdata();
+//        ?>
     </div>
 </div>

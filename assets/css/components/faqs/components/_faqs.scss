@@ -54,6 +54,8 @@
         @include dc-p-heading($dc-text-dark);
         margin: 0;
         transition: $dc-transition-all;
+        padding-right: 30px;
+        line-height: 150%;
       }
 
       .faq-arrow {

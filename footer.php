@@ -47,7 +47,7 @@
                     <div class="legal">
                         <a href="/privacy-policy">Privacy Policy</a>
                         <a href="/cookie-policy">Cookie Policy</a>
-                        <a href="/terms-and-conditions">Terms & Conditions</a>
+<!--                        <a href="/terms-and-conditions">Terms & Conditions</a>-->
                     </div>
                 </div>
             </div>

@@ -52,7 +52,7 @@ get_header();
     <?php endwhile; ?>
 </section>
 
-<?php include( 'template-parts/sections/trusted-by.php'); ?>
+<?php //include( 'template-parts/sections/trusted-by.php'); ?>
 
 <section class="services">
     <div class="container px-4">
@@ -118,11 +118,11 @@ get_header();
     </div>
 </section>
 
-<?php include( 'template-parts/sections/client-feedback.php'); ?>
+<?php //include( 'template-parts/sections/client-feedback.php'); ?>
 
 <?php include( 'template-parts/sections/our-approach.php'); ?>
 
-<?php include( 'template-parts/sections/case-notes-slider.php'); ?>
+<?php //include( 'template-parts/sections/case-notes-slider.php'); ?>
 
 <?php
 include( 'template-parts/sections/enquire-bottom-section.php');
