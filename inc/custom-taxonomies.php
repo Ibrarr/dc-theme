@@ -33,16 +33,11 @@ function practice_areas_taxonomy() {
         'show_in_nav_menus' => true,
         'show_tagcloud'     => true,
         'show_in_rest'      => true,
-        'rewrite' => array( 'slug' => '/', 'with_front' => false, 'hierarchical' => true ),
+        'rewrite'           => array(
+            'slug' => 'practice-areas',
+            'with_front' => false,
+            'hierarchical' => true
+        ),
     );
     register_taxonomy( 'practice_area', array( 'post', 'case_study' ), $args );
-}
-
-
-add_action( 'template_redirect', 'redirect_old_practice_area_urls' );
-function redirect_old_practice_area_urls() {
-    if ( preg_match( '#^/practice-area/(.+)$#', $_SERVER['REQUEST_URI'], $matches ) ) {
-        wp_redirect( home_url( '/' . $matches[1] ), 301 );
-        exit;
-    }
 }
