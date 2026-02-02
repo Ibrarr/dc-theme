@@ -41,3 +41,5 @@ function practice_areas_taxonomy() {
     );
     register_taxonomy( 'practice_area', array( 'post', 'case_study' ), $args );
 }
+
+add_filter( 'wpseo_sitemap_exclude_empty_terms', '__return_false' );
