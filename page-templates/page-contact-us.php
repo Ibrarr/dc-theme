@@ -109,8 +109,8 @@ $location_index = 0;
                                     </address>
                                 </div>
                                 <div class="location-contact">
-                                    <p class="email"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
-                                    <p class="phone"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+                                    <p class="email"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/phone.svg' ) ?></i> <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
+                                    <p class="phone"><i><?php echo file_get_contents( DC_TEMPLATE_DIR . '/assets/images/icons/email.svg' ) ?></i> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
                                 </div>
                             </div>
                         </div>
